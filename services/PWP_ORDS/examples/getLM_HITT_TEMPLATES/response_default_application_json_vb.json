@@ -1,0 +1,33 @@
+{
+    "items": [
+        {
+            "state_name": "Arizona",
+            "conditional_partial": "Yes",
+            "unconditional_partial": "Yes",
+            "conditional_final": "Yes",
+            "unconditional_final": "Yes",
+            "documentid_conditional_partial": "5908130",
+            "documentid_unconditional_partial": "5908135",
+            "documentid_conditional_final": "5908152",
+            "documentid_unconditional_final": "5908161"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_HITT_TEMPLATES"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_HITT_TEMPLATES"
+        }
+    ]
+}

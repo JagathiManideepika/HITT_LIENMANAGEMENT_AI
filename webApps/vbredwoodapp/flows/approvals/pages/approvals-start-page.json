@@ -1,0 +1,1009 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "allFilters": {
+      "type": "filterChip[]",
+      "defaultValue": "{{$page.variables.selectContextValueItem && $page.variables.selectContextValueItem.key ? (($page.variables.appliedFilters || []).concat([{ 'filter': 'keyword', 'label': $page.variables.selectContextValueItem.data ? $page.variables.selectContextValueItem.data.label : $page.variables.selectContextValueItem.key, 'value': $page.variables.selectContextValueItem.key }])) :  $page.variables.appliedFilters }}"
+    },
+    "apInvoiceDtls": {
+      "type": "string"
+    },
+    "APinvoicesearchselectvalue": {
+      "type": "any",
+      "defaultValue": "dgv"
+    },
+    "appliedFilters": {
+      "type": "filterChip[]",
+      "defaultValue": "{{ $page.variables.appliedFiltersStr && $page.variables.appliedFiltersStr.length > 0 ? JSON.parse($page.variables.appliedFiltersStr) : [] }}",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "updateAllFilters",
+            "parameters": {
+              "value": "[[ $page.variables.appliedFilters ]]"
+            }
+          }
+        ]
+      }
+    },
+    "appliedFiltersStr": {
+      "type": "string",
+      "input": "fromUrl",
+      "defaultValue": "",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "updateAppliedFilters",
+            "parameters": {}
+          }
+        ]
+      }
+    },
+    "approvalADP": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getLienManagement_Approval_Search",
+        "keyAttributes": "workbench_pk"
+      }
+    },
+    "arapdata": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "arapdataf"
+      }
+    },
+    "askHint": {
+      "type": "string",
+      "defaultValue": "Search"
+    },
+    "collabration2ADP": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getGetaraplinkdetails"
+      }
+    },
+    "displayMode": {
+      "type": "string"
+    },
+    "expanded": {
+      "type": "string",
+      "defaultValue": "auto"
+    },
+    "fileName": {
+      "type": "string"
+    },
+    "functionalPrimaryActions": {
+      "type": "action[]"
+    },
+    "functionalSecondaryActions": {
+      "type": "action[]"
+    },
+    "getGetaraplinkdetailsListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "getarapdetails/getGetaraplinkdetails",
+        "keyAttributes": "project_number",
+        "itemsPath": "items",
+        "responseType": "getGetaraplinkdetailsResponse"
+      }
+    },
+    "getLienManagementApprovalStatusLOVListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "attchment_status",
+        "itemsPath": "items",
+        "responseType": "getLienManagementApprovalStatusLOVResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "attchment_status"
+          ]
+        },
+        "fetchChain": "getLienManagement_approval_StatusLOVFetch"
+      }
+    },
+    "getLienManagementInvoiceLOVSearchListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "ap_invoice",
+        "itemsPath": "items",
+        "responseType": "getLienManagementInvoiceLOVSearchResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "ap_invoice"
+          ]
+        },
+        "fetchChain": "getLienManagement_InvoiceLOV_SearchFetch"
+      }
+    },
+    "getLienManagementProjectLOVAppSearchListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLienManagement_ProjectLOV_AppSearch",
+        "keyAttributes": "project_number",
+        "itemsPath": "items",
+        "responseType": "getLienManagementProjectLOVAppSearchResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "project_number"
+          ]
+        }
+      }
+    },
+    "getLienManagementProjectLOVAppSearchListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLienManagement_ProjectLOV_AppSearch",
+        "keyAttributes": "project_number",
+        "itemsPath": "items",
+        "responseType": "getLienManagementProjectLOVAppSearchResponse2",
+        "uriParameters": {
+          "USERNAME": "{{ $application.variables.user }}"
+        },
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "project_number"
+          ]
+        }
+      }
+    },
+    "getLienManagementSupplierLOVAppSearchListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "supplier_name",
+        "itemsPath": "items",
+        "responseType": "getLienManagementSupplierLOVAppSearchResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "supplier_name"
+          ]
+        },
+        "fetchChain": "getLienManagement_supplierLOV_AppSearchFetch"
+      }
+    },
+    "getLMPROJECTSLOVSYNC1ProjectsListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "LM_OIC/getLM_PROJECTS_LOV_SYNC1_0Projects",
+        "keyAttributes": "PROJECT_NUMBER",
+        "itemsPath": "projects",
+        "responseType": "getLMPROJECTSLOVSYNC1ProjectsResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "PROJECT_NUMBER"
+          ]
+        }
+      }
+    },
+    "getLMPROJECTSLOVSYNC1ProjectsListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "PROJECT_NAME",
+        "itemsPath": "projects",
+        "responseType": "getLMPROJECTSLOVSYNC1ProjectsResponse2",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "PROJECT_NAME"
+          ]
+        },
+        "fetchChain": "getLM_PROJECTS_LOV_SYNC1_0ProjectsFetch"
+      }
+    },
+    "getPWPAPInvoiceNumbersListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getPWP_APInvoiceNumbers",
+        "keyAttributes": "ap_invoice",
+        "itemsPath": "items",
+        "responseType": "getPWPAPInvoiceNumbersResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "ap_invoice"
+          ]
+        }
+      }
+    },
+    "getPWPProjectNumbersListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getPWP_ProjectNumbers",
+        "keyAttributes": "project_number",
+        "itemsPath": "items",
+        "responseType": "getPWPProjectNumbersResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "project_number"
+          ]
+        }
+      }
+    },
+    "getPWPSupplierDetailsListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getPWP_SupplierDetails",
+        "keyAttributes": "supplier_name",
+        "itemsPath": "items",
+        "responseType": "getPWPSupplierDetailsResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "supplier_name"
+          ]
+        }
+      }
+    },
+    "goToParentOption": {
+      "type": "any"
+    },
+    "headers": {
+      "type": {
+        "apInvoice": "any",
+        "invoice_id": "any",
+        "project": "any",
+        "status": "string",
+        "supplier": "any"
+
+      }
+    },
+    "illustrationBackground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-bg-01.png"
+    },
+    "illustrationForeground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-fg-01.png"
+    },
+    "initialString": {
+      "type": "string"
+    },
+    "iscomplete": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "isreject": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "isRelease": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "pageName": {
+      "type": "string"
+    },
+    "primaryAction": {
+      "type": "action"
+    },
+    "pWPCollaborationListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse",
+        "filterCriterion": {
+          "op": "$and",
+          "criteria": [
+            {
+              "op": "$co",
+              "attribute": "projectnumber",
+              "value": "{{ $variables.searchingpwpagedatatotable3 }}"
+            },
+            {
+              "op": "$co",
+              "attribute": "APInvoice",
+              "value": "{{ $variables.searchingpwppagedatatotable }}"
+            }
+          ]
+        }
+      }
+    },
+    "releaseapprojectnumber": {
+      "type": "string"
+    },
+    "RowFileContent": {
+      "type": "any"
+    },
+    "searchingpwpagedatatotable2": {
+      "type": "string"
+    },
+    "searchingpwpagedatatotable3": {
+      "type": "string"
+    },
+    "searchingpwppagedatatotable": {
+      "type": "string"
+    },
+    "searchResultsDP": {
+      "type": "oj-sp/data-provider/SmartSearchAndFilterDataProvider",
+      "defaultValue": {
+        "//": "specify endpoint for search all below",
+        "endpoint": null,
+        "options": {
+          "filterCriterion": {
+            "op": "$eq",
+            "value": {
+              "filters": "{{$page.variables.allFilters}}"
+            }
+          },
+          "parameters": {
+            "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+          },
+          "recentSearches": {
+            "//": "specify endpoint where recent search data is saved below",
+            "endpoint": null
+          }
+        }
+      }
+    },
+    "searchSuggestionsDP": {
+      "type": "oj-sp/data-provider/SmartSuggestionChipsDataProvider",
+      "defaultValue": {
+        "dataProviders": {
+          "recentSearches": {
+            "//": "specify endpoint for recent search below",
+            "endpoint": null,
+            "uriParameters": {
+              "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+            }
+          },
+          "autocompleteSearch": {
+            "//": "specify endpoint for search all below",
+            "endpoint": null,
+            "uriParameters": {
+              "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+            }
+          },
+          "suggestionFiltersSearch": {
+            "//": "specify endpoint for suggest search below",
+            "endpoint": null,
+            "uriParameters": {
+              "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+            }
+          }
+        }
+      }
+    },
+    "secondaryActions": {
+      "type": "action[]"
+    },
+    "select_mutliple_rows_release": {
+      "type": "string"
+    },
+    "selectContextData": {
+      "type": "vb/ArrayDataProvider"
+    },
+    "selectContextItemText": {
+      "type": "string",
+      "defaultValue": "label"
+    },
+    "selectContextLabelHint": {
+      "type": "string"
+    },
+    "selectContextValue": {
+      "type": "string",
+      "defaultValue": null,
+      "persisted": "device",
+      "input": "fromUrl"
+    },
+    "selectContextValueItem": {
+      "type": "any",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "updateAllFilters",
+            "parameters": {
+              "value": "[[ $page.variables.appliedFilters ]]"
+            }
+          }
+        ]
+      }
+    },
+    "selectedRecords": {
+      "type": "object[]"
+    },
+    "selectsearchpwpprojectvalue": {
+      "type": "string"
+    },
+    "showAllTotalCount": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "status": {
+      "type": "string"
+    },
+    "statusListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_Status",
+        "keyAttributes": "statusName",
+        "itemsPath": "items",
+        "responseType": "getallStatusResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "statusName"
+          ]
+        }
+      }
+    },
+    "suggestionFiltersDP": {
+      "type": "oj-sp/data-provider/SuggestionFiltersDataProvider",
+      "defaultValue": {
+        "//": "specify endpoint for suggest search below",
+        "endpoint": null,
+        "uriParameters": {
+          "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+        }
+      }
+    },
+    "suppliersearchselectedvalue": {
+      "type": "string"
+    },
+    "variable1": {
+      "type": "string"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getallPWPCollaborationResponse": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallStatusResponse": {
+      "endpoint": "getall_Status",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getGetaraplinkdetails": {
+      "endpoint": "getGetaraplinkdetails",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getGetaraplinkdetailsResponse": {
+      "endpoint": "getGetaraplinkdetails",
+      "service": "getarapdetails",
+      "path": "response"
+    },
+    "@decorators.getLienManagement_Approval_Search": {
+      "endpoint": "getLienManagement_Approval_Search",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getLienManagementApprovalStatusLOVResponse": {
+      "endpoint": "getLienManagement_approval_StatusLOV",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLienManagementInvoiceLOVSearchResponse": {
+      "endpoint": "getLienManagement_InvoiceLOV_Search",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLienManagementProjectLOVAppSearchResponse": {
+      "endpoint": "getLienManagement_ProjectLOV_AppSearch",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLienManagementProjectLOVAppSearchResponse2": {
+      "endpoint": "getLienManagement_ProjectLOV_AppSearch",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLienManagementSupplierLOVAppSearchResponse": {
+      "endpoint": "getLienManagement_supplierLOV_AppSearch",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMPROJECTSLOVSYNC1ProjectsResponse": {
+      "endpoint": "getLM_PROJECTS_LOV_SYNC1_0Projects",
+      "service": "LM_OIC",
+      "path": "response"
+    },
+    "@decorators.getLMPROJECTSLOVSYNC1ProjectsResponse2": {
+      "endpoint": "getLM_PROJECTS_LOV_SYNC1_0Projects",
+      "service": "LM_OIC",
+      "path": "response"
+    },
+    "@decorators.getPWPAPInvoiceNumbersResponse": {
+      "endpoint": "getPWP_APInvoiceNumbers",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getPWPProjectNumbersResponse": {
+      "endpoint": "getPWP_ProjectNumbers",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getPWPSupplierDetailsResponse": {
+      "endpoint": "getPWP_SupplierDetails",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "action": {
+      "id": "string",
+      "label": "string",
+      "display": "string",
+      "icon": "string"
+    },
+    "arapdataf": {
+      "ap_invoice": "string",
+      "ap_invoice_amount": "number",
+      "ap_invoice_date": "any",
+      "ar_invoice": "string",
+      "ar_invoice_amount": "number",
+      "attribute1": "string",
+      "customer_name": "string",
+      "hold_date": "string",
+      "lag_days": "number",
+      "project_number": "string",
+      "supplier_name": "string"
+    },
+    "contextSelectType": {
+      "value": "string",
+      "label": "string"
+    },
+    "filterChip": {
+      "count": "number",
+      "dependencies": "string[]",
+      "filter": "string",
+      "filterLabel": "string",
+      "label": "string",
+      "value": "any"
+    },
+    "getallPWPCollaborationResponse": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "APInvoiceDate": "string",
+          "ARInvoice": "string",
+          "ARInvoiceAmount": "number",
+          "customerName": "string",
+          "holdDate": "string",
+          "holdReleaseDate": "string",
+          "id": "number",
+          "lagDays": "number",
+          "projectnumber": "string",
+          "suppliername": "string"
+        }
+      ]
+    },
+    "field1": {
+      "field2": "string"
+    },
+    "getallStatusResponse": {
+      "items": [
+        {
+          "statusName": "string"
+        }
+      ]
+    },
+    "getGetaraplinkdetails": {
+      "ap_invoice": "string",
+      "ap_invoice_amount": "number",
+      "ap_invoice_date": "string",
+      "ar_invoice": "string",
+      "ar_invoice_amount": "number",
+      "attachment": "string",
+      "currency_code": "string",
+      "customer_name": "string",
+      "hold_date": "string",
+      "hold_name": "string",
+      "lag_days": "number",
+      "po_number": "string",
+      "project_number": "string",
+      "receipt_number": "string",
+      "status": "string",
+      "supplier_name": "string"
+
+    },
+    "getGetaraplinkdetailsResponse": {
+      "items": [
+        {
+          "ap_invoice": "string",
+          "ap_invoice_amount": "number",
+          "ap_invoice_date": "string",
+          "ar_invoice": "string",
+          "ar_invoice_amount": "number",
+          "attribute1": "string",
+          "customer_name": "string",
+          "hold_date": "string",
+          "lag_days": "number",
+          "project_number": "string",
+          "supplier_name": "string"
+        }
+      ]
+    },
+    "getLienManagement_Approval_Search": {
+      "ap_invoice": "string",
+      "ap_invoice_amount": "number",
+      "ap_invoice_date": "any",
+      "ar_invoice": "any",
+      "ar_invoice_amount": "any",
+      "attchment_status": "string",
+      "comments": "any",
+      "con_file_name": "string",
+      "con_file_type": "string",
+      "cond_uncond_flag": "string",
+      "conditional_signed_doc": "string",
+      "currency_code": "string",
+      "customer_name": "string",
+      "file_content": "any",
+      "file_name": "any",
+      "file_type": "any",
+      "hold_date": "string",
+      "hold_id": "number",
+      "hold_name": "string",
+      "hold_released_date": "any",
+      "installment_amount": "string",
+      "installment_remain_amount": "string",
+      "inv_installment_number": "string",
+      "inv_line_number": "any",
+      "lag_days": "any",
+      "lien_number": "any",
+      "next_status": "string",
+      "payment_type": "string",
+      "po_number": "string",
+      "project_number": "string",
+      "receipt_number": "string",
+      "show_cond_doc": "string",
+      "show_uncond_doc": "string",
+      "supplier_email": "any",
+      "supplier_name": "string",
+      "supplier_number": "string",
+      "template_code": "string",
+      "uncon_file_name": "string",
+      "uncon_file_type": "string",
+      "unconditional_signed_doc": "string",
+      "workbench_pk": "string"
+
+    },
+    "getLienManagementApprovalStatusLOVResponse": {
+      "items": [
+        {
+          "attchment_status": "string"
+        }
+      ]
+    },
+    "getLienManagementInvoiceLOVSearchResponse": {
+      "items": [
+        {
+          "ap_invoice": "string",
+          "invoice_id": "number"
+        }
+      ]
+    },
+    "getLienManagementProjectLOVAppSearchResponse": {
+      "items": [
+        {
+          "project_number": "string"
+        }
+      ]
+    },
+    "getLienManagementProjectLOVAppSearchResponse2": {
+      "items": [
+        {
+          "project_number": "string"
+        }
+      ]
+    },
+    "getLienManagementSupplierLOVAppSearchResponse": {
+      "items": [
+        {
+          "supplier_name": "string"
+        }
+      ]
+    },
+    "getLMPROJECTSLOVSYNC1ProjectsResponse": {
+      "projects": [
+        {
+          "LIEN_NUMBER": "string",
+          "PROJECT_ID": "string",
+          "PROJECT_NAME": "string",
+          "PROJECT_NUMBER": "string",
+          "PROJECT_SITE_LOCATION": "string",
+          "PROJECT_STATUS_CODE": "string"
+        }
+      ]
+    },
+    "getLMPROJECTSLOVSYNC1ProjectsResponse2": {
+      "projects": [
+        {
+          "LIEN_NUMBER": "string",
+          "PROJECT_ID": "string",
+          "PROJECT_NAME": "string",
+          "PROJECT_NUMBER": "string",
+          "PROJECT_SITE_LOCATION": "string",
+          "PROJECT_STATUS_CODE": "string"
+        }
+      ]
+    },
+    "getPWPAPInvoiceNumbersResponse": {
+      "items": [
+        {
+          "ap_invoice": "string"
+        }
+      ]
+    },
+    "getPWPProjectNumbersResponse": {
+      "items": [
+        {
+          "project_number": "string"
+        }
+      ]
+    },
+    "getPWPSupplierDetailsResponse": {
+      "items": [
+        {
+          "supplier_name": "string"
+        }
+      ]
+    }
+
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "SearchBtnAction"
+        }
+      ]
+    },
+    "buttonAction2": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain1"
+        }
+      ]
+    },
+    "buttonAction3": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain2"
+        }
+      ]
+    },
+    "buttonAction4": {
+      "chains": [
+        {
+          "chain": "ApproveRejectAction"
+        }
+      ]
+    },
+    "buttonAction5": {
+      "chains": [
+        {
+          "chain": "CloseViewDlgAction"
+        }
+      ]
+    },
+    "buttonAction6": {
+      "chains": [
+        {
+          "chain": "ApproveBtnAction"
+        }
+      ]
+    },
+    "buttonAction7": {
+      "chains": [
+        {
+          "chain": "RejectBtnAction"
+        }
+      ]
+    },
+    "buttonAction8": {
+      "chains": [
+        {
+          "chain": "resetButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "filePickerSelect": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain",
+          "parameters": {
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]",
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick": {
+      "chains": [
+        {
+          "chain": "downloadFileAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick2": {
+      "chains": [
+        {
+          "chain": "ViewBtnAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "ojSpGoToParent": {
+      "chains": [
+        {
+          "chain": "goToParent",
+          "parameters": {}
+        }
+      ]
+    },
+    "ojSpSmartFiltersChangedAction": {
+      "chains": [
+        {
+          "chain": "updateAllFilters",
+          "parameters": {
+            "value": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "ojSsp1SpPrimaryAction": {
+      "chains": [
+        {
+          "chain": "SmartSearchPageTemplateSpPrimaryActionChain"
+        }
+      ]
+    },
+    "selectKeyup": {
+      "chains": [
+        {
+          "chain": "SelectKeyupChain",
+          "parameters": {
+            "event": "{{$event}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem2": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain1",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem3": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain2",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "switchValue": {
+      "chains": [
+        {
+          "chain": "SwitchValueChangeChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{ $event.detail.value }}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}"
+          }
+        }
+      ]
+    },
+    "tableFirstSelectedRow": {
+      "chains": [
+        {
+          "chain": "TableFirstSelectedRowChangeChain",
+          "parameters": {
+            "rowKey": "{{$event.detail.value.key}}",
+            "rowData": "{{$event.detail.value.data}}"
+          }
+        }
+      ]
+    },
+    "tableSelected": {
+      "chains": [
+        {
+          "chain": "TableSelectedChangeChain",
+          "parameters": {
+            "keys": "{{ $event.detail.value.row.values ? Array.from($event.detail.value.row.values()) : [] }}",
+            "selected": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "parameters": {},
+          "chain": "SearchBtnAction"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-dialog": {
+        "path": "ojs/ojdialog"
+      },
+      "oj-file-picker": {
+        "path": "ojs/ojfilepicker"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-label": {
+        "path": "ojs/ojlabel"
+      },
+      "oj-progress-bar": {
+        "path": "ojs/ojprogress-bar"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-collection-container": {
+        "path": "oj-sp/collection-container/loader"
+      },
+      "oj-sp-smart-search-page": {
+        "path": "oj-sp/smart-search-page/loader"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-switch": {
+        "path": "ojs/ojswitch"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+
+    }
+  },
+  "@dt": {
+    "iconClass": "vbdt-dynamic-icon-90-icoSmartSearchPage48Svg"
+  }
+}

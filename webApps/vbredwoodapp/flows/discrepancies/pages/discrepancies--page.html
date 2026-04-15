@@ -1,0 +1,34 @@
+<oj-sp-data-management-page id="oj_dmp1" end-opened="{{$page.variables.endOpenStatus}}"
+  end-display="{{$page.variables.endDisplayStatus}}" bottom-opened="{{$page.variables.bottomOpenStatus}}"
+  bottom-display="{{$page.variables.bottomDisplayStatus}}" on-sp-cancel="[[$listeners.ojSpCancel]]">
+  <!-- default slot -->
+  <oj-sp-collection-container-advanced functional-primary-actions="[[ $page.variables.functionalPrimaryActions ]]"
+    on-sp-primary-action="[[$listeners.onContainerPrimaryActions]]">
+    <oj-data-grid scroll-policy="loadMoreOnScroll" :style.css-text="[['height: 100%; width: 100%']]"></oj-data-grid>
+  </oj-sp-collection-container-advanced> 
+
+  <!-- messages slot -->
+  <oj-defer slot="messages">
+    <oj-bind-if test="[[$variables.enableMessageBanner]]">
+      <oj-sp-messages-banner data="[[ $page.variables.msgsBanner ]]"
+        on-sp-close="[[$listeners.onRemoveBannerMessage ]]" ></oj-sp-messages-banner>
+    </oj-bind-if>
+  </oj-defer>
+
+  <!-- outer end drawer slot -->
+  <oj-sp-general-drawer-template slot="outerEnd" drawer-title="{{$page.variables.outerEndDrawerTitle}}"
+    drawer-size="{{$page.variables.endDrawerSize}}" on-sp-close="[[$listeners.onOuterEndDrawerCloseAction ]]">
+    <!-- default slot: Content of this drawer -->
+    <div></div>
+  </oj-sp-general-drawer-template>
+
+  <!-- inner bottom drawer slot -->
+  <oj-sp-bottom-drawer-template slot="innerBottom" drawer-title="{{$page.variables.innerBottomDrawerTitle}}"
+    drawer-state="{{$page.variables.innerBottomDrawerState}}">
+    <!-- default slot: Content of this drawer -->
+    <div></div>
+  </oj-sp-bottom-drawer-template>
+</oj-sp-data-management-page>
+<oj-sp-message-unsaved-changes id="dirtyDataWarningDialog" open-dialog="[[ $page.variables.dirtyDialogOpen ]]"
+  on-oj-sp-discard-changes="[[ $listeners.confirmYesOjAction ]]" on-oj-sp-cancel="[[ $listeners.confirmNoOjAction ]]">
+</oj-sp-message-unsaved-changes>

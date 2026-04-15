@@ -1,0 +1,5 @@
+id,creationDate,lastUpdateDate,createdBy,lastUpdatedBy,selectApplicableLienWaiverType
+1,2025-06-12T05:50:42,2025-06-12T05:50:42.015,OIC_USER1,OIC_USER1,Programs Payments Conditional Lien Waiver
+2,2025-06-12T05:50:54,2025-06-12T05:50:54.005,OIC_USER1,OIC_USER1,Programs Payments UnConditional Lien Waiver
+3,2025-06-12T05:51:03,2025-06-12T05:51:03.003,OIC_USER1,OIC_USER1,Final Payments Conditional Lien Waiver
+4,2025-06-12T05:51:10,2025-06-12T05:51:10.007,OIC_USER1,OIC_USER1,Final Payments UnConditional Lien Waiver

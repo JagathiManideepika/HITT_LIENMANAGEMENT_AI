@@ -1,0 +1,398 @@
+{
+    "items": [
+        {
+            "expenditure_type_name": "0100-0100 Travel Expenses"
+        },
+        {
+            "expenditure_type_name": "0100-0120 Mileage"
+        },
+        {
+            "expenditure_type_name": "0100-0120- Mileage"
+        },
+        {
+            "expenditure_type_name": "0100-0200 Jobsite Expenses"
+        },
+        {
+            "expenditure_type_name": "0100-0210 Small Tools"
+        },
+        {
+            "expenditure_type_name": "0100-0220 Consumables"
+        },
+        {
+            "expenditure_type_name": "0100-0300 General Expenses"
+        },
+        {
+            "expenditure_type_name": "013 - Administrative Support"
+        },
+        {
+            "expenditure_type_name": "0131-0000 Project Mgmt"
+        },
+        {
+            "expenditure_type_name": "0131-1000 Project ODC"
+        },
+        {
+            "expenditure_type_name": "0131-1010 Construction Management"
+        },
+        {
+            "expenditure_type_name": "0131-1050 Safety"
+        },
+        {
+            "expenditure_type_name": "0131-1100 Site Supervision"
+        },
+        {
+            "expenditure_type_name": "0131-1200 Contracts"
+        },
+        {
+            "expenditure_type_name": "0131-1210 Purchasing"
+        },
+        {
+            "expenditure_type_name": "0131-8001 Operations"
+        },
+        {
+            "expenditure_type_name": "014 - Report Preparation"
+        },
+        {
+            "expenditure_type_name": "015 - APR/Quality Review"
+        },
+        {
+            "expenditure_type_name": "018 - Project Mgmt / Supervision"
+        },
+        {
+            "expenditure_type_name": "019 - Driving Time"
+        },
+        {
+            "expenditure_type_name": "020 - Mobilization Time"
+        },
+        {
+            "expenditure_type_name": "1001 - General Contractor"
+        },
+        {
+            "expenditure_type_name": "1002 - Project Scheduling"
+        },
+        {
+            "expenditure_type_name": "1003 - Engineering Services"
+        },
+        {
+            "expenditure_type_name": "1004 - Site Services"
+        },
+        {
+            "expenditure_type_name": "1005 - Traffic Controls"
+        },
+        {
+            "expenditure_type_name": "1007 - Allowances"
+        },
+        {
+            "expenditure_type_name": "11001 - Transportation Vehicles"
+        },
+        {
+            "expenditure_type_name": "11005 - Heavy Vehicles"
+        },
+        {
+            "expenditure_type_name": "11006 - Transportation Vehicles (Mileage)"
+        },
+        {
+            "expenditure_type_name": "112 - Lab Soil Testing (incl calculations/hand plot)"
+        },
+        {
+            "expenditure_type_name": "128 - Earthwork Observation & Testing"
+        },
+        {
+            "expenditure_type_name": "130 - Materials Testing & Observation"
+        },
+        {
+            "expenditure_type_name": "150 - Transport Vehicles"
+        },
+        {
+            "expenditure_type_name": "15001 - Mechanical Insulation"
+        },
+        {
+            "expenditure_type_name": "153 - Equip - Concrete Cylinder and Beam Testing"
+        },
+        {
+            "expenditure_type_name": "16004 - Electrical Equipment"
+        },
+        {
+            "expenditure_type_name": "16031 - Electrical Labor"
+        },
+        {
+            "expenditure_type_name": "17001 - Unit Billing"
+        },
+        {
+            "expenditure_type_name": "2001 - Site Preparation"
+        },
+        {
+            "expenditure_type_name": "2002 - Site Direct Labor"
+        },
+        {
+            "expenditure_type_name": "2002 - Site Direct Labor DT"
+        },
+        {
+            "expenditure_type_name": "2004 - Dewatering Labor"
+        },
+        {
+            "expenditure_type_name": "21001 - FICA"
+        },
+        {
+            "expenditure_type_name": "21002 - FUI"
+        },
+        {
+            "expenditure_type_name": "21003 - SUI"
+        },
+        {
+            "expenditure_type_name": "21004 - Workers Comp"
+        },
+        {
+            "expenditure_type_name": "21005 - General Liability Insurance"
+        },
+        {
+            "expenditure_type_name": "21006 - Union Dues"
+        },
+        {
+            "expenditure_type_name": "2200-2000 Plumbing Hangers"
+        },
+        {
+            "expenditure_type_name": "2200-4000 Plumbing Rough In"
+        },
+        {
+            "expenditure_type_name": "2330-2000 Sheet Metal Hangers"
+        },
+        {
+            "expenditure_type_name": "3001 - Concrete Materials"
+        },
+        {
+            "expenditure_type_name": "3002 - Concrete Labor"
+        },
+        {
+            "expenditure_type_name": "3003 - Formwork"
+        },
+        {
+            "expenditure_type_name": "474 - Field Services"
+        },
+        {
+            "expenditure_type_name": "6003 - Fabricated Wood"
+        },
+        {
+            "expenditure_type_name": "7003 - Fire Protection"
+        },
+        {
+            "expenditure_type_name": "7004 - Roofing"
+        },
+        {
+            "expenditure_type_name": "958 - Database Reports"
+        },
+        {
+            "expenditure_type_name": "981 - Company Mileage"
+        },
+        {
+            "expenditure_type_name": "982 - Personal Mileage"
+        },
+        {
+            "expenditure_type_name": "Administrative"
+        },
+        {
+            "expenditure_type_name": "Airfare"
+        },
+        {
+            "expenditure_type_name": "Allocation"
+        },
+        {
+            "expenditure_type_name": "Architects Fees"
+        },
+        {
+            "expenditure_type_name": "Building Works"
+        },
+        {
+            "expenditure_type_name": "Bulk Materials"
+        },
+        {
+            "expenditure_type_name": "Casing Pipe"
+        },
+        {
+            "expenditure_type_name": "Computer Supplies"
+        },
+        {
+            "expenditure_type_name": "Computers"
+        },
+        {
+            "expenditure_type_name": "Concrete Material"
+        },
+        {
+            "expenditure_type_name": "Construction"
+        },
+        {
+            "expenditure_type_name": "Contract Services"
+        },
+        {
+            "expenditure_type_name": "Contractor Fees"
+        },
+        {
+            "expenditure_type_name": "Detailer Burden"
+        },
+        {
+            "expenditure_type_name": "Direct Labor - OT"
+        },
+        {
+            "expenditure_type_name": "Direct Labor - ST"
+        },
+        {
+            "expenditure_type_name": "Electrical Supplies"
+        },
+        {
+            "expenditure_type_name": "Electrical Works"
+        },
+        {
+            "expenditure_type_name": "Equipment"
+        },
+        {
+            "expenditure_type_name": "F&A"
+        },
+        {
+            "expenditure_type_name": "FUTA"
+        },
+        {
+            "expenditure_type_name": "Faculty Salaries"
+        },
+        {
+            "expenditure_type_name": "Fee"
+        },
+        {
+            "expenditure_type_name": "Fixtures"
+        },
+        {
+            "expenditure_type_name": "Fringe"
+        },
+        {
+            "expenditure_type_name": "Furniture"
+        },
+        {
+            "expenditure_type_name": "Hardware"
+        },
+        {
+            "expenditure_type_name": "Hotel"
+        },
+        {
+            "expenditure_type_name": "Intercompany Charge"
+        },
+        {
+            "expenditure_type_name": "Interest"
+        },
+        {
+            "expenditure_type_name": "Lab Supplies"
+        },
+        {
+            "expenditure_type_name": "Major Equipment"
+        },
+        {
+            "expenditure_type_name": "Material"
+        },
+        {
+            "expenditure_type_name": "Meals"
+        },
+        {
+            "expenditure_type_name": "Medicare Employer"
+        },
+        {
+            "expenditure_type_name": "Minor Equipment"
+        },
+        {
+            "expenditure_type_name": "Miscellaneous"
+        },
+        {
+            "expenditure_type_name": "Miscellaneous Labor"
+        },
+        {
+            "expenditure_type_name": "Other Direct Costs"
+        },
+        {
+            "expenditure_type_name": "Overhead"
+        },
+        {
+            "expenditure_type_name": "Professional"
+        },
+        {
+            "expenditure_type_name": "Professional Services"
+        },
+        {
+            "expenditure_type_name": "Project Management"
+        },
+        {
+            "expenditure_type_name": "Purchased Equipment"
+        },
+        {
+            "expenditure_type_name": "Rebar Cage"
+        },
+        {
+            "expenditure_type_name": "Roofing Works"
+        },
+        {
+            "expenditure_type_name": "SUTA"
+        },
+        {
+            "expenditure_type_name": "Services"
+        },
+        {
+            "expenditure_type_name": "Shop Burden"
+        },
+        {
+            "expenditure_type_name": "Social Security Employer"
+        },
+        {
+            "expenditure_type_name": "Software"
+        },
+        {
+            "expenditure_type_name": "Staff Salaries"
+        },
+        {
+            "expenditure_type_name": "Subcontract 1"
+        },
+        {
+            "expenditure_type_name": "Subcontract 2"
+        },
+        {
+            "expenditure_type_name": "Supplies"
+        },
+        {
+            "expenditure_type_name": "Supply Chain Labor"
+        },
+        {
+            "expenditure_type_name": "Supply Chain Resources"
+        },
+        {
+            "expenditure_type_name": "Surveyors Fees"
+        },
+        {
+            "expenditure_type_name": "WA Family Paid Leave ER"
+        },
+        {
+            "expenditure_type_name": "WA Paid Leave"
+        },
+        {
+            "expenditure_type_name": "Work Orders"
+        },
+        {
+            "expenditure_type_name": "Workers Comp"
+        }
+    ],
+    "hasMore": false,
+    "limit": 150,
+    "offset": 0,
+    "count": 124,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getexptypename"
+        },
+        {
+            "rel": "edit",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getexptypename"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getexptypename"
+        }
+    ]
+}

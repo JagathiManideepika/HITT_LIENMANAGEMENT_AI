@@ -1,0 +1,49 @@
+<oj-sp-welcome-page id="oj-sp-wp1" page-title="Supplier Signed Documents"
+  illustration-background="[[ $variables.illustrationBackground ]]"
+  illustration-foreground="[[ $variables.illustrationForeground ]]" background-color="dark-pebble">
+
+  <oj-form-layout columns="4" label-edge="top">
+    <oj-select-single label-hint="Project Name" style="width:22vw" value="{{ $variables.headerObj.projectNumber }}"
+      item-text="project_number" data="[[$variables.getPWPProjectNumbersListSDP]]"></oj-select-single>
+
+    <oj-select-single label-hint="Supplier" style="width:22vw" value="{{ $variables.headerObj.supplierName}}"
+      item-text="supplier_name" data="[[$variables.getPWPSupplierDetailsListSDP]]"></oj-select-single>
+
+    <oj-select-single label-hint="Invoice Number" style="width:22vw" value="{{ $variables.headerObj.invoiceNumber }}"
+      item-text="ap_invoice" data="[[$variables.getPWPAPInvoiceNumbersListSDP]]"></oj-select-single>
+
+    <!-- <oj-select-single label-hint="Attachment Status" style="width:22vw" value="{{ $variables.headerObj.attachedDoc }}"></oj-select-single> -->
+
+    <oj-input-date label-hint="Start Date" value="{{ $variables.headerObj.startDate }}">
+    </oj-input-date>
+    <oj-input-date label-hint="End Date" value="{{ $variables.headerObj.endDate }}">
+    </oj-input-date>
+    <div class="oj-flex-item oj-sm-align-self-center" style="margin-top:13px">
+      <oj-toolbar>
+        <oj-button label="Search" chroming="callToAction" class="oj-button-sm"
+          on-oj-action="[[$listeners.buttonAction]]">
+        </oj-button>
+      </oj-toolbar>
+    </div>
+  </oj-form-layout>
+  <div class="oj-helper-text-align-end" style="margin-top:-30px">
+    <oj-button chroming="callToAction" class="oj-button-sm oj-helper-text-align-end" label="Generate ZIP"
+      on-oj-action="[[$listeners.buttonAction2]]">
+      <span class="oj-ux-ico-file-zip" slot="startIcon"></span>
+    </oj-button>
+  </div>
+  <oj-table scroll-policy="loadMoreOnScroll" style="width:95vw;height:60vh" display="grid"
+    columns-default.resizable="enabled" data="[[ $variables.docData ]]"
+    columns='[{"headerText":"Project Number","field":"project_number"},{"headerText":"AP Invoice ","field":"ap_invoice"},{"headerText":"Invoice Date","field":"ap_invoice_date"},{"headerText":"Conditional File Name","field":"con_file_name"},{"headerText":"Unconditional File Name","field":"uncon_file_name"}]'>
+  </oj-table>
+</oj-sp-welcome-page>
+
+<oj-dialog dialog-title="" id="loadingDialog" class="myloader" style="width: 350px">
+  <div slot="body">
+    <div class="oj-flex-item">
+      <span style="font-size:20px;color:#006AA2;font-weight:600;margin-top:-2vh">Loading .....</span>
+      <br />
+      <oj-progress-bar value="-1" class="oj-sm-margin-3x-top"></oj-progress-bar>
+    </div>
+  </div>
+</oj-dialog>

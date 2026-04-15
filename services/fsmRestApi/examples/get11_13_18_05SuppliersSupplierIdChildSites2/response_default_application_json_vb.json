@@ -1,0 +1,1138 @@
+{
+    "items": [
+        {
+            "SupplierSiteId": 300001691975976,
+            "SupplierSite": "Northbrook",
+            "ProcurementBUId": 300000046987012,
+            "ProcurementBU": "US1 Business Unit",
+            "SupplierAddressId": 300001372759889,
+            "SupplierAddressName": "Northbrook",
+            "InactiveDate": null,
+            "Status": "ACTIVE",
+            "SitePurposeSourcingOnlyFlag": false,
+            "SitePurposePurchasingFlag": true,
+            "SitePurposeProcurementCardFlag": false,
+            "SitePurposePayFlag": false,
+            "SitePurposePrimaryPayFlag": false,
+            "IncomeTaxReportingSiteFlag": false,
+            "AlternateSiteName": null,
+            "CustomerNumber": null,
+            "B2BCommunicationMethodCode": "NONE",
+            "B2BCommunicationMethod": "No",
+            "B2BSupplierSiteCode": null,
+            "CommunicationMethodCode": null,
+            "CommunicationMethod": null,
+            "Email": null,
+            "FaxCountryCode": null,
+            "FaxAreaCode": null,
+            "FaxNumber": null,
+            "HoldAllNewPurchasingDocumentsFlag": false,
+            "PurchasingHoldReason": null,
+            "AllNewPurchasingDocumentsHoldDate": null,
+            "AllNewPurchasingDocumentsHoldBy": null,
+            "RequiredAcknowledgmentCode": null,
+            "RequiredAcknowledgment": null,
+            "AcknowledgmentWithinDays": null,
+            "CarrierId": null,
+            "Carrier": null,
+            "ModeOfTransportCode": null,
+            "ModeOfTransport": null,
+            "ServiceLevelCode": null,
+            "ServiceLevel": null,
+            "FreightTermsCode": null,
+            "FreightTerms": null,
+            "PayOnReceiptFlag": null,
+            "FOBCode": null,
+            "FOB": null,
+            "CountryOfOriginCode": null,
+            "CountryOfOrigin": null,
+            "BuyerManagedTransportationCode": null,
+            "BuyerManagedTransportation": null,
+            "PayOnUseFlag": null,
+            "AgingOnsetPointCode": null,
+            "AgingOnsetPoint": null,
+            "AgingPeriodDays": null,
+            "ConsumptionAdviceFrequencyCode": null,
+            "ConsumptionAdviceFrequency": null,
+            "ConsumptionAdviceSummaryCode": null,
+            "ConsumptionAdviceSummary": null,
+            "AlternatePaySiteId": null,
+            "AlternatePaySite": null,
+            "InvoiceSummaryLevelCode": null,
+            "InvoiceSummaryLevel": null,
+            "GaplessInvoiceNumberingFlag": false,
+            "SellingCompanyIdentifier": null,
+            "CreateDebitMemoFromReturnFlag": false,
+            "ShipToExceptionCode": null,
+            "ShipToException": null,
+            "ReceiptRoutingId": null,
+            "ReceiptRouting": null,
+            "OverReceiptTolerance": null,
+            "OverReceiptActionCode": null,
+            "OverReceiptAction": null,
+            "EarlyReceiptToleranceInDays": null,
+            "LateReceiptToleranceInDays": null,
+            "AllowSubstituteReceiptsCode": null,
+            "AllowSubstituteReceipts": null,
+            "AllowUnorderedReceiptsFlag": null,
+            "ReceiptDateExceptionCode": null,
+            "ReceiptDateException": null,
+            "InvoiceCurrencyCode": null,
+            "InvoiceCurrency": null,
+            "InvoiceAmountLimit": null,
+            "InvoiceMatchOptionCode": null,
+            "InvoiceMatchOption": null,
+            "MatchApprovalLevelCode": null,
+            "MatchApprovalLevel": null,
+            "QuantityTolerancesId": null,
+            "QuantityTolerances": null,
+            "AmountTolerancesId": null,
+            "AmountTolerances": null,
+            "InvoiceChannelCode": null,
+            "InvoiceChannel": null,
+            "PaymentCurrencyCode": null,
+            "PaymentCurrency": null,
+            "PaymentPriority": null,
+            "PayGroupCode": null,
+            "PayGroup": null,
+            "HoldAllInvoicesFlag": false,
+            "HoldUnmatchedInvoicesCode": "D",
+            "HoldUnmatchedInvoices": "Default from Payables Options",
+            "HoldUnvalidatedInvoicesFlag": false,
+            "PaymentHoldDate": null,
+            "PaymentHoldReason": null,
+            "PaymentTermsId": null,
+            "PaymentTerms": null,
+            "PaymentTermsDateBasisCode": null,
+            "PaymentTermsDateBasis": null,
+            "PayDateBasisCode": null,
+            "PayDateBasis": null,
+            "BankChargeDeductionTypeCode": "D",
+            "BankChargeDeductionType": "Default from Payables Options",
+            "AlwaysTakeDiscountCode": "D",
+            "AlwaysTakeDiscount": "Default from Payables Options",
+            "ExcludeFreightFromDiscountCode": "D",
+            "ExcludeFreightFromDiscount": "Default from Payables Options",
+            "ExcludeTaxFromDiscountCode": "D",
+            "ExcludeTaxFromDiscount": "Default from Payables Options",
+            "CreateInterestInvoicesCode": "D",
+            "CreateInterestInvoices": "Default from Payables Options",
+            "CreationDate": "2025-01-27T05:02:17.202+00:00",
+            "CreatedBy": "RITE.DEVELOPER",
+            "LastUpdateDate": "2025-05-01T08:49:35.976+00:00",
+            "LastUpdatedBy": "SCM_IMPL",
+            "OverrideB2BCommunicationforSpecialHandlingOrdersFlag": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976",
+                    "name": "sites",
+                    "kind": "item",
+                    "properties": {
+                        "changeIndicator": "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000378"
+                    }
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976",
+                    "name": "sites",
+                    "kind": "item"
+                },
+                {
+                    "rel": "parent",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293",
+                    "name": "suppliers",
+                    "kind": "item"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/InvoiceSummaryLevelLookup",
+                    "name": "InvoiceSummaryLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/MatchApprovalLevelLookup",
+                    "name": "MatchApprovalLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/CommunicationMethodLookup",
+                    "name": "CommunicationMethodLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/ConsumptionAdviceSummaryLookup",
+                    "name": "ConsumptionAdviceSummaryLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/ProcurementBULookup",
+                    "name": "ProcurementBULookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/ServiceLevelLookup",
+                    "name": "ServiceLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/ReceivingOptionLookup",
+                    "name": "ReceivingOptionLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/QuantityTolerancesLookup",
+                    "name": "QuantityTolerancesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/HoldUnmatchedInvoicesLookup",
+                    "name": "HoldUnmatchedInvoicesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/BuyerManagedTransportationLookup",
+                    "name": "BuyerManagedTransportationLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/InvoiceCurrencyLookup",
+                    "name": "InvoiceCurrencyLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/ModeOfTransportLookup",
+                    "name": "ModeOfTransportLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/PayDateBasisLookup",
+                    "name": "PayDateBasisLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/RequiredAcknowledgmentLookup",
+                    "name": "RequiredAcknowledgmentLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/B2BCommunicationMethodLookup",
+                    "name": "B2BCommunicationMethodLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/AlternatePaySiteLookup",
+                    "name": "AlternatePaySiteLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/CarrierLookup",
+                    "name": "CarrierLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/CountryOfOriginLookup",
+                    "name": "CountryOfOriginLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/FreightTermsLookup",
+                    "name": "FreightTermsLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/YesNoLookup",
+                    "name": "YesNoLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/InvoiceChannelLookup",
+                    "name": "InvoiceChannelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/PayGroupLookup",
+                    "name": "PayGroupLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/SupplierAddressNameLookup",
+                    "name": "SupplierAddressNameLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/AmountTolerancesLookup",
+                    "name": "AmountTolerancesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/PaymentTermsLookup",
+                    "name": "PaymentTermsLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/AgingOnsetPointLookup",
+                    "name": "AgingOnsetPointLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/PaymentTermsDateBasisLookup",
+                    "name": "PaymentTermsDateBasisLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/BankChargeDeductionTypeLookup",
+                    "name": "BankChargeDeductionTypeLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/ConsumptionAdviceFrequencyLookup",
+                    "name": "ConsumptionAdviceFrequencyLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/ReceiptRoutingLookup",
+                    "name": "ReceiptRoutingLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/InvoiceMatchOptionLookup",
+                    "name": "InvoiceMatchOptionLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/FOBLookup",
+                    "name": "FOBLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/lov/FaxCountryCodeLookup",
+                    "name": "FaxCountryCodeLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/child/DFF",
+                    "name": "DFF",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/child/assignments",
+                    "name": "assignments",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/child/attachments",
+                    "name": "attachments",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/child/globalDFF",
+                    "name": "globalDFF",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691975976/child/thirdPartyPaymentRelationships",
+                    "name": "thirdPartyPaymentRelationships",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "SupplierSiteId": 300001375657182,
+            "SupplierSite": "Site1",
+            "ProcurementBUId": 300000347908106,
+            "ProcurementBU": "112BU",
+            "SupplierAddressId": 300001372759889,
+            "SupplierAddressName": "Northbrook",
+            "InactiveDate": null,
+            "Status": "ACTIVE",
+            "SitePurposeSourcingOnlyFlag": null,
+            "SitePurposePurchasingFlag": null,
+            "SitePurposeProcurementCardFlag": null,
+            "SitePurposePayFlag": true,
+            "SitePurposePrimaryPayFlag": null,
+            "IncomeTaxReportingSiteFlag": null,
+            "AlternateSiteName": null,
+            "CustomerNumber": null,
+            "B2BCommunicationMethodCode": "NONE",
+            "B2BCommunicationMethod": "No",
+            "B2BSupplierSiteCode": null,
+            "CommunicationMethodCode": null,
+            "CommunicationMethod": null,
+            "Email": null,
+            "FaxCountryCode": null,
+            "FaxAreaCode": null,
+            "FaxNumber": null,
+            "HoldAllNewPurchasingDocumentsFlag": null,
+            "PurchasingHoldReason": null,
+            "AllNewPurchasingDocumentsHoldDate": null,
+            "AllNewPurchasingDocumentsHoldBy": null,
+            "RequiredAcknowledgmentCode": null,
+            "RequiredAcknowledgment": null,
+            "AcknowledgmentWithinDays": null,
+            "CarrierId": null,
+            "Carrier": null,
+            "ModeOfTransportCode": null,
+            "ModeOfTransport": null,
+            "ServiceLevelCode": null,
+            "ServiceLevel": null,
+            "FreightTermsCode": null,
+            "FreightTerms": null,
+            "PayOnReceiptFlag": null,
+            "FOBCode": null,
+            "FOB": null,
+            "CountryOfOriginCode": null,
+            "CountryOfOrigin": null,
+            "BuyerManagedTransportationCode": null,
+            "BuyerManagedTransportation": null,
+            "PayOnUseFlag": null,
+            "AgingOnsetPointCode": null,
+            "AgingOnsetPoint": null,
+            "AgingPeriodDays": null,
+            "ConsumptionAdviceFrequencyCode": null,
+            "ConsumptionAdviceFrequency": null,
+            "ConsumptionAdviceSummaryCode": null,
+            "ConsumptionAdviceSummary": null,
+            "AlternatePaySiteId": null,
+            "AlternatePaySite": null,
+            "InvoiceSummaryLevelCode": null,
+            "InvoiceSummaryLevel": null,
+            "GaplessInvoiceNumberingFlag": null,
+            "SellingCompanyIdentifier": null,
+            "CreateDebitMemoFromReturnFlag": null,
+            "ShipToExceptionCode": null,
+            "ShipToException": null,
+            "ReceiptRoutingId": null,
+            "ReceiptRouting": null,
+            "OverReceiptTolerance": null,
+            "OverReceiptActionCode": null,
+            "OverReceiptAction": null,
+            "EarlyReceiptToleranceInDays": null,
+            "LateReceiptToleranceInDays": null,
+            "AllowSubstituteReceiptsCode": null,
+            "AllowSubstituteReceipts": null,
+            "AllowUnorderedReceiptsFlag": null,
+            "ReceiptDateExceptionCode": null,
+            "ReceiptDateException": null,
+            "InvoiceCurrencyCode": null,
+            "InvoiceCurrency": null,
+            "InvoiceAmountLimit": null,
+            "InvoiceMatchOptionCode": null,
+            "InvoiceMatchOption": null,
+            "MatchApprovalLevelCode": null,
+            "MatchApprovalLevel": null,
+            "QuantityTolerancesId": null,
+            "QuantityTolerances": null,
+            "AmountTolerancesId": null,
+            "AmountTolerances": null,
+            "InvoiceChannelCode": null,
+            "InvoiceChannel": null,
+            "PaymentCurrencyCode": null,
+            "PaymentCurrency": null,
+            "PaymentPriority": null,
+            "PayGroupCode": null,
+            "PayGroup": null,
+            "HoldAllInvoicesFlag": null,
+            "HoldUnmatchedInvoicesCode": "D",
+            "HoldUnmatchedInvoices": "Default from Payables Options",
+            "HoldUnvalidatedInvoicesFlag": null,
+            "PaymentHoldDate": null,
+            "PaymentHoldReason": null,
+            "PaymentTermsId": null,
+            "PaymentTerms": null,
+            "PaymentTermsDateBasisCode": null,
+            "PaymentTermsDateBasis": null,
+            "PayDateBasisCode": null,
+            "PayDateBasis": null,
+            "BankChargeDeductionTypeCode": "D",
+            "BankChargeDeductionType": "Default from Payables Options",
+            "AlwaysTakeDiscountCode": "D",
+            "AlwaysTakeDiscount": "Default from Payables Options",
+            "ExcludeFreightFromDiscountCode": "D",
+            "ExcludeFreightFromDiscount": "Default from Payables Options",
+            "ExcludeTaxFromDiscountCode": "D",
+            "ExcludeTaxFromDiscount": "Default from Payables Options",
+            "CreateInterestInvoicesCode": "D",
+            "CreateInterestInvoices": "Default from Payables Options",
+            "CreationDate": "2024-07-03T10:13:36+00:00",
+            "CreatedBy": "LISA.JONES",
+            "LastUpdateDate": "2024-07-03T10:13:40.302+00:00",
+            "LastUpdatedBy": "LISA.JONES",
+            "OverrideB2BCommunicationforSpecialHandlingOrdersFlag": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182",
+                    "name": "sites",
+                    "kind": "item",
+                    "properties": {
+                        "changeIndicator": "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000278"
+                    }
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182",
+                    "name": "sites",
+                    "kind": "item"
+                },
+                {
+                    "rel": "parent",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293",
+                    "name": "suppliers",
+                    "kind": "item"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/InvoiceSummaryLevelLookup",
+                    "name": "InvoiceSummaryLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/MatchApprovalLevelLookup",
+                    "name": "MatchApprovalLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/CommunicationMethodLookup",
+                    "name": "CommunicationMethodLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/ConsumptionAdviceSummaryLookup",
+                    "name": "ConsumptionAdviceSummaryLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/ProcurementBULookup",
+                    "name": "ProcurementBULookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/ServiceLevelLookup",
+                    "name": "ServiceLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/ReceivingOptionLookup",
+                    "name": "ReceivingOptionLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/QuantityTolerancesLookup",
+                    "name": "QuantityTolerancesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/HoldUnmatchedInvoicesLookup",
+                    "name": "HoldUnmatchedInvoicesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/BuyerManagedTransportationLookup",
+                    "name": "BuyerManagedTransportationLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/InvoiceCurrencyLookup",
+                    "name": "InvoiceCurrencyLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/ModeOfTransportLookup",
+                    "name": "ModeOfTransportLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/PayDateBasisLookup",
+                    "name": "PayDateBasisLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/RequiredAcknowledgmentLookup",
+                    "name": "RequiredAcknowledgmentLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/B2BCommunicationMethodLookup",
+                    "name": "B2BCommunicationMethodLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/AlternatePaySiteLookup",
+                    "name": "AlternatePaySiteLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/CarrierLookup",
+                    "name": "CarrierLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/CountryOfOriginLookup",
+                    "name": "CountryOfOriginLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/FreightTermsLookup",
+                    "name": "FreightTermsLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/YesNoLookup",
+                    "name": "YesNoLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/InvoiceChannelLookup",
+                    "name": "InvoiceChannelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/PayGroupLookup",
+                    "name": "PayGroupLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/SupplierAddressNameLookup",
+                    "name": "SupplierAddressNameLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/AmountTolerancesLookup",
+                    "name": "AmountTolerancesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/PaymentTermsLookup",
+                    "name": "PaymentTermsLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/AgingOnsetPointLookup",
+                    "name": "AgingOnsetPointLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/PaymentTermsDateBasisLookup",
+                    "name": "PaymentTermsDateBasisLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/BankChargeDeductionTypeLookup",
+                    "name": "BankChargeDeductionTypeLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/ConsumptionAdviceFrequencyLookup",
+                    "name": "ConsumptionAdviceFrequencyLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/ReceiptRoutingLookup",
+                    "name": "ReceiptRoutingLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/InvoiceMatchOptionLookup",
+                    "name": "InvoiceMatchOptionLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/FOBLookup",
+                    "name": "FOBLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/lov/FaxCountryCodeLookup",
+                    "name": "FaxCountryCodeLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/child/DFF",
+                    "name": "DFF",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/child/assignments",
+                    "name": "assignments",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/child/attachments",
+                    "name": "attachments",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/child/globalDFF",
+                    "name": "globalDFF",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001375657182/child/thirdPartyPaymentRelationships",
+                    "name": "thirdPartyPaymentRelationships",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "SupplierSiteId": 300001691941890,
+            "SupplierSite": "Northbrook",
+            "ProcurementBUId": 300001690071768,
+            "ProcurementBU": "MMX India Business Unit",
+            "SupplierAddressId": 300001372759889,
+            "SupplierAddressName": "Northbrook",
+            "InactiveDate": null,
+            "Status": "ACTIVE",
+            "SitePurposeSourcingOnlyFlag": false,
+            "SitePurposePurchasingFlag": false,
+            "SitePurposeProcurementCardFlag": false,
+            "SitePurposePayFlag": true,
+            "SitePurposePrimaryPayFlag": null,
+            "IncomeTaxReportingSiteFlag": false,
+            "AlternateSiteName": null,
+            "CustomerNumber": null,
+            "B2BCommunicationMethodCode": "NONE",
+            "B2BCommunicationMethod": "No",
+            "B2BSupplierSiteCode": null,
+            "CommunicationMethodCode": null,
+            "CommunicationMethod": null,
+            "Email": null,
+            "FaxCountryCode": null,
+            "FaxAreaCode": null,
+            "FaxNumber": null,
+            "HoldAllNewPurchasingDocumentsFlag": false,
+            "PurchasingHoldReason": null,
+            "AllNewPurchasingDocumentsHoldDate": null,
+            "AllNewPurchasingDocumentsHoldBy": null,
+            "RequiredAcknowledgmentCode": null,
+            "RequiredAcknowledgment": null,
+            "AcknowledgmentWithinDays": null,
+            "CarrierId": null,
+            "Carrier": null,
+            "ModeOfTransportCode": null,
+            "ModeOfTransport": null,
+            "ServiceLevelCode": null,
+            "ServiceLevel": null,
+            "FreightTermsCode": null,
+            "FreightTerms": null,
+            "PayOnReceiptFlag": null,
+            "FOBCode": null,
+            "FOB": null,
+            "CountryOfOriginCode": null,
+            "CountryOfOrigin": null,
+            "BuyerManagedTransportationCode": null,
+            "BuyerManagedTransportation": null,
+            "PayOnUseFlag": null,
+            "AgingOnsetPointCode": null,
+            "AgingOnsetPoint": null,
+            "AgingPeriodDays": null,
+            "ConsumptionAdviceFrequencyCode": null,
+            "ConsumptionAdviceFrequency": null,
+            "ConsumptionAdviceSummaryCode": null,
+            "ConsumptionAdviceSummary": null,
+            "AlternatePaySiteId": null,
+            "AlternatePaySite": null,
+            "InvoiceSummaryLevelCode": null,
+            "InvoiceSummaryLevel": null,
+            "GaplessInvoiceNumberingFlag": false,
+            "SellingCompanyIdentifier": null,
+            "CreateDebitMemoFromReturnFlag": false,
+            "ShipToExceptionCode": null,
+            "ShipToException": null,
+            "ReceiptRoutingId": null,
+            "ReceiptRouting": null,
+            "OverReceiptTolerance": null,
+            "OverReceiptActionCode": null,
+            "OverReceiptAction": null,
+            "EarlyReceiptToleranceInDays": null,
+            "LateReceiptToleranceInDays": null,
+            "AllowSubstituteReceiptsCode": null,
+            "AllowSubstituteReceipts": null,
+            "AllowUnorderedReceiptsFlag": null,
+            "ReceiptDateExceptionCode": null,
+            "ReceiptDateException": null,
+            "InvoiceCurrencyCode": null,
+            "InvoiceCurrency": null,
+            "InvoiceAmountLimit": null,
+            "InvoiceMatchOptionCode": null,
+            "InvoiceMatchOption": null,
+            "MatchApprovalLevelCode": null,
+            "MatchApprovalLevel": null,
+            "QuantityTolerancesId": null,
+            "QuantityTolerances": null,
+            "AmountTolerancesId": null,
+            "AmountTolerances": null,
+            "InvoiceChannelCode": null,
+            "InvoiceChannel": null,
+            "PaymentCurrencyCode": null,
+            "PaymentCurrency": null,
+            "PaymentPriority": null,
+            "PayGroupCode": null,
+            "PayGroup": null,
+            "HoldAllInvoicesFlag": false,
+            "HoldUnmatchedInvoicesCode": "D",
+            "HoldUnmatchedInvoices": "Default from Payables Options",
+            "HoldUnvalidatedInvoicesFlag": false,
+            "PaymentHoldDate": null,
+            "PaymentHoldReason": null,
+            "PaymentTermsId": null,
+            "PaymentTerms": null,
+            "PaymentTermsDateBasisCode": null,
+            "PaymentTermsDateBasis": null,
+            "PayDateBasisCode": null,
+            "PayDateBasis": null,
+            "BankChargeDeductionTypeCode": "D",
+            "BankChargeDeductionType": "Default from Payables Options",
+            "AlwaysTakeDiscountCode": "D",
+            "AlwaysTakeDiscount": "Default from Payables Options",
+            "ExcludeFreightFromDiscountCode": "D",
+            "ExcludeFreightFromDiscount": "Default from Payables Options",
+            "ExcludeTaxFromDiscountCode": "D",
+            "ExcludeTaxFromDiscount": "Default from Payables Options",
+            "CreateInterestInvoicesCode": "D",
+            "CreateInterestInvoices": "Default from Payables Options",
+            "CreationDate": "2025-01-23T16:49:07.846+00:00",
+            "CreatedBy": "RITE.DEVELOPER",
+            "LastUpdateDate": "2025-01-23T16:49:18.262+00:00",
+            "LastUpdatedBy": "RITE.DEVELOPER",
+            "OverrideB2BCommunicationforSpecialHandlingOrdersFlag": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890",
+                    "name": "sites",
+                    "kind": "item",
+                    "properties": {
+                        "changeIndicator": "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000278"
+                    }
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890",
+                    "name": "sites",
+                    "kind": "item"
+                },
+                {
+                    "rel": "parent",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293",
+                    "name": "suppliers",
+                    "kind": "item"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/InvoiceSummaryLevelLookup",
+                    "name": "InvoiceSummaryLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/MatchApprovalLevelLookup",
+                    "name": "MatchApprovalLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/CommunicationMethodLookup",
+                    "name": "CommunicationMethodLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/ConsumptionAdviceSummaryLookup",
+                    "name": "ConsumptionAdviceSummaryLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/ProcurementBULookup",
+                    "name": "ProcurementBULookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/ServiceLevelLookup",
+                    "name": "ServiceLevelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/ReceivingOptionLookup",
+                    "name": "ReceivingOptionLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/QuantityTolerancesLookup",
+                    "name": "QuantityTolerancesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/HoldUnmatchedInvoicesLookup",
+                    "name": "HoldUnmatchedInvoicesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/BuyerManagedTransportationLookup",
+                    "name": "BuyerManagedTransportationLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/InvoiceCurrencyLookup",
+                    "name": "InvoiceCurrencyLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/ModeOfTransportLookup",
+                    "name": "ModeOfTransportLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/PayDateBasisLookup",
+                    "name": "PayDateBasisLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/RequiredAcknowledgmentLookup",
+                    "name": "RequiredAcknowledgmentLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/B2BCommunicationMethodLookup",
+                    "name": "B2BCommunicationMethodLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/AlternatePaySiteLookup",
+                    "name": "AlternatePaySiteLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/CarrierLookup",
+                    "name": "CarrierLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/CountryOfOriginLookup",
+                    "name": "CountryOfOriginLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/FreightTermsLookup",
+                    "name": "FreightTermsLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/YesNoLookup",
+                    "name": "YesNoLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/InvoiceChannelLookup",
+                    "name": "InvoiceChannelLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/PayGroupLookup",
+                    "name": "PayGroupLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/SupplierAddressNameLookup",
+                    "name": "SupplierAddressNameLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/AmountTolerancesLookup",
+                    "name": "AmountTolerancesLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/PaymentTermsLookup",
+                    "name": "PaymentTermsLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/AgingOnsetPointLookup",
+                    "name": "AgingOnsetPointLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/PaymentTermsDateBasisLookup",
+                    "name": "PaymentTermsDateBasisLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/BankChargeDeductionTypeLookup",
+                    "name": "BankChargeDeductionTypeLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/ConsumptionAdviceFrequencyLookup",
+                    "name": "ConsumptionAdviceFrequencyLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/ReceiptRoutingLookup",
+                    "name": "ReceiptRoutingLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/InvoiceMatchOptionLookup",
+                    "name": "InvoiceMatchOptionLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/FOBLookup",
+                    "name": "FOBLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "lov",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/lov/FaxCountryCodeLookup",
+                    "name": "FaxCountryCodeLookup",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/child/DFF",
+                    "name": "DFF",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/child/assignments",
+                    "name": "assignments",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/child/attachments",
+                    "name": "attachments",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/child/globalDFF",
+                    "name": "globalDFF",
+                    "kind": "collection"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites/300001691941890/child/thirdPartyPaymentRelationships",
+                    "name": "thirdPartyPaymentRelationships",
+                    "kind": "collection"
+                }
+            ]
+        }
+    ],
+    "count": 3,
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliers/300001372225293/child/sites",
+            "name": "sites",
+            "kind": "collection"
+        }
+    ]
+}

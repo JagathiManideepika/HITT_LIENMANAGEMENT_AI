@@ -1,0 +1,44 @@
+<oj-sp-welcome-page id="oj-sp-wp1" page-title="Log Details"
+  illustration-background="[[ $variables.illustrationBackground ]]"
+  illustration-foreground="[[ $variables.illustrationForeground ]]" background-color="dark-pebble">
+
+  <oj-form-layout columns="6" label-edge="top">
+    <oj-select-single label-hint="Session ID" value="{{ $variables.headers.traceID }}"
+      data="[[$variables.getLMDebugSessionIDListSDP]]" item-text="session_id"
+></oj-select-single>
+    <oj-select-single label-hint="Username" value="{{ $variables.headers.username }}"
+      data="[[$variables.getLMDebugUserIDListSDP]]" item-text="user_id"
+ ></oj-select-single>
+    <oj-input-date label-hint="Start Date" value="{{ $variables.headers.startDate }}"></oj-input-date>
+    <oj-input-date label-hint="End Date" value="{{ $variables.headers.endDate }}"></oj-input-date>
+  </oj-form-layout>
+
+  <div class="oj-helper-text-align-end">
+    <oj-button label="Search" chroming="callToAction" class="oj-button-sm"
+      on-oj-action="[[$listeners.buttonAction2]]"
+      ></oj-button>
+    <oj-button label="Reset" chroming="callToAction" class="oj-button-sm"
+      on-oj-action="[[$listeners.buttonAction]]"
+      ></oj-button>
+    <oj-button label="Export" class="oj-button-sm" chroming="callToAction" on-oj-action="[[$listeners.buttonAction3]]">
+      <span class="oj-ux-ico-export" slot="startIcon"></span>
+    </oj-button>
+  </div>
+
+
+  <oj-table scroll-policy="loadMoreOnScroll" style="width:95vw;height:60vh" display="grid"
+    columns-default.resizable="enabled" data="[[ $variables.logData ]]"
+    columns='[{"headerText":"SequenceID","field":"sequence_id"},{"headerText":"SessionID","field":"session_id"},{"headerText":"API Name","field":"api_name"},{"headerText":"Debug Message","field":"debug_message"},{"headerText":"Error Code","field":"error_code"},{"headerText":"Error Details","field":"error_details"},{"headerText":"Page Name","field":"page_name"},{"headerText":"Procedure Name","field":"procedure_name"},{"headerText":"UserID","field":"user_id"}]'>
+  </oj-table>
+
+</oj-sp-welcome-page>
+
+<oj-dialog dialog-title="" id="loadingDialog" class="myloader" style="width: 350px">
+  <div slot="body">
+    <div class="oj-flex-item">
+      <span style="font-size:20px;color:#006AA2;font-weight:600;margin-top:-2vh">Loading .....</span>
+      <br />
+      <oj-progress-bar value="-1" class="oj-sm-margin-3x-top"></oj-progress-bar>
+    </div>
+  </div>
+</oj-dialog>

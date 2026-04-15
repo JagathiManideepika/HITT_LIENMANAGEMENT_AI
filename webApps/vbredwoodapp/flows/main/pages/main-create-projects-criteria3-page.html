@@ -1,0 +1,27 @@
+<div class="oj-flex">
+  <h1 class="oj-flex-item oj-sm-12 oj-md-12">Create Projects_Criteria</h1>
+</div>
+<div class="oj-flex">
+  <oj-validation-group id="validation-group" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-form-layout>
+      <oj-input-text value="{{ $variables.projectsCriteria.projectNumber }}" label-hint="Project Number"></oj-input-text>
+      <oj-input-text value="{{ $variables.projectsCriteria.criteriaName }}" label-hint="Criteria Name"></oj-input-text>
+      <oj-input-text value="{{ $variables.projectsCriteria.topTaskName }}" label-hint="Top Task Name"></oj-input-text>
+      <oj-input-number value="{{ $variables.projectsCriteria.taskName }}" label-hint="Task Name"></oj-input-number>
+      <oj-input-text value="{{ $variables.projectsCriteria.expenditureCategory }}" label-hint="Expenditure Category"></oj-input-text>
+      <oj-input-text value="{{ $variables.projectsCriteria.expenditureType }}" label-hint="Expenditure Type"></oj-input-text>
+      <oj-input-text value="{{ $variables.projectsCriteria.supplierName }}" label-hint="Supplier Name"></oj-input-text>
+      <oj-switch value="{{ $variables.projectsCriteria.enabledFlag }}" label-hint="Enabled Flag"></oj-switch>
+      <oj-input-date value="{{ $variables.projectsCriteria.startDate }}" label-hint="Start Date"></oj-input-date>
+      <oj-input-date value="{{ $variables.projectsCriteria.endDate }}" label-hint="End Date"></oj-input-date>
+      <oj-input-text value="{{ $variables.projectsCriteria.lagDays }}" label-hint="Lag Days"></oj-input-text>
+    </oj-form-layout>
+  </oj-validation-group>
+</div>
+<div class="oj-flex">
+  <oj-toolbar chroming="solid" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-button label="Cancel" on-oj-action="[[$listeners.backButtonClicked]]"></oj-button>
+    <oj-button label="Save" on-oj-action="[[$listeners.saveButtonClicked]]"
+      disabled="[[ $variables.createProjectsCriteriaChainInProgress ]]"></oj-button>
+  </oj-toolbar>
+</div>

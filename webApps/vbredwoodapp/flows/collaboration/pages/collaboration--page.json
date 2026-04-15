@@ -1,0 +1,175 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "bottomDisplayStatus": {
+      "type": "string"
+    },
+    "bottomOpenStatus": {
+      "type": "string"
+    },
+    "dirtyDataFlag": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "dirtyDialogOpen": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "discrepancyListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_Discrepancy",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallDiscrepancyResponse"
+      }
+    },
+    "discrepancyListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_Discrepancy",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallDiscrepancyResponse2"
+      }
+    },
+    "endDisplayStatus": {
+      "type": "string"
+    },
+    "endOpenStatus": {
+      "type": "string"
+    },
+    "innerBottomDrawerState": {
+      "type": "string",
+      "defaultValue": "auto",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "closeInnerBottomDrawerChain"
+          }
+        ]
+      }
+    },
+    "msgsBanner": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "keyAttributes": "id",
+        "data": []
+      }
+    },
+    "pageType": {
+      "type": "string",
+      "defaultValue": "edgeToEdge"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getallDiscrepancyResponse": {
+      "endpoint": "getall_Discrepancy",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallDiscrepancyResponse2": {
+      "endpoint": "getall_Discrepancy",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "action": {
+      "id": "string",
+      "label": "string",
+      "display": "string",
+      "icon": "string"
+    },
+    "functionalAction": {
+      "id": "string",
+      "label": "string",
+      "display": "string"
+    },
+    "getallDiscrepancyResponse": {
+      "items": [
+        {
+          "amount": "number",
+          "id": "number",
+          "pONumber": "string",
+          "projectNumber": "string",
+          "receiptDate": "string",
+          "receiptNumber": "number",
+          "supplierSite": "string"
+        }
+      ]
+    },
+    "getallDiscrepancyResponse2": {
+      "items": [
+        {
+          "amount": "number",
+          "id": "number",
+          "pONumber": "string",
+          "projectNumber": "string",
+          "receiptDate": "string",
+          "receiptNumber": "number",
+          "supplierSite": "string"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "ojDmp1SpCancel": {
+      "chains": [
+        {
+          "chain": "DataManagementPageTemplateSpCancelChain"
+        }
+      ]
+    },
+    "ojSpCancel": {
+      "chains": [
+        {
+          "chain": "spCancelChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}"
+          }
+        }
+      ]
+    },
+    "vbBeforeExit": {
+      "chains": [
+        {
+          "chain": "checkBeforeExit",
+          "parameters": {}
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "chain": "firePageLayoutEventChain"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-sp-collection-container": {
+        "path": "oj-sp/collection-container/loader"
+      },
+      "oj-sp-data-management-page": {
+        "path": "oj-sp/data-management-page/loader"
+      },
+      "oj-sp-smart-search-page": {
+        "path": "oj-sp/smart-search-page/loader"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+
+    }
+  },
+  "@dt": {
+    "iconClass": "vbdt-dynamic-icon-5-icoDataGridPageTemplateSvg"
+  }
+}

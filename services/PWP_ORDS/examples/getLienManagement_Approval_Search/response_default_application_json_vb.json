@@ -1,0 +1,74 @@
+{
+    "items": [
+        {
+            "ap_invoice": "105443245",
+            "ap_invoice_date": null,
+            "ap_invoice_amount": 1000,
+            "supplier_name": "OAK_SUPPLIER",
+            "customer_name": "OAK_SUPPLIER",
+            "hold_name": "Y",
+            "hold_date": "2025-07-23Z",
+            "project_number": "2046",
+            "ar_invoice": null,
+            "ar_invoice_amount": null,
+            "attribute1": null,
+            "attribute2": null,
+            "lag_days": null,
+            "po_number": "19",
+            "receipt_number": "8",
+            "attribute_3": null,
+            "attribute_4": null,
+            "attribute_5": null,
+            "currency_code": "USD",
+            "hold_id": 300001766126660,
+            "file_name": null,
+            "file_type": null,
+            "file_content": null,
+            "attchment_status": "Supplier Signed Unconditional LW uploaded",
+            "hold_released_date": null,
+            "inv_installment_number": "1",
+            "conditional_signed_doc": "data:application/pdf;base64,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DQo+Pg0KZW5kb2JqDQoyIDAgb2JqDQo8PA0KL1R5cGUgL0luZm8NCi9Qcm9kdWNlciAoT3JhY2xlIEFuYWx5dGljcyBQdWJsaXNoZXIpDQo+Pg0KZW5kb2JqDQozIDAgb2JqDQo8PA0KL1R5cGUgL1BhZ2VzDQovS2lkcyBbDQo1IDAgUg0KXQ0KL0NvdW50IDENCj4+DQplbmRvYmoNCjQgMCBvYmoNCjw8DQovUHJvY1NldCBbIC9QREYgL1RleHQgXQ0KL0ZvbnQgPDwgDQovRjEgNyAwIFINCi9GMiA4IDAgUg0KPj4NCj4+DQplbmRvYmoNCjcgMCBvYmoNCjw8DQovVHlwZSAvRm9udA0KL1N1YnR5cGUgL1R5cGUxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCjggMCBvYmoNCjw8DQovVHlwZSAvRm9udA0KL1N1YnR5cGUgL1R5cGUxDQovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkDQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZw0KPj4NCmVuZG9iag0KOSAwIG9iag0KWyA1IDAgUiAvWFlaIDY2LjYgMTkyLjI5MSBudWxsIF0NCmVuZG9iag0KMTAgMCBvYmoNClsgNSAwIFIgL1hZWiA2Ni42IDE5Mi4yOTEgbnVsbCBdDQplbmRvYmoNCnhyZWYNCjAgMTENCjAwMDAwMDAwMDAgNjU1MzUgZg0KMDAwMDAwMTc1OSAwMDAwMCBuDQowMDAwMDAxODE0IDAwMDAwIG4NCjAwMDAwMDE4OTIgMDAwMDAgbg0KMDAwMDAwMTk2MCAwMDAwMCBuDQowMDAwMDAwMDEwIDAwMDAwIG4NCjAwMDAwMDAxNjggMDAwMDAgbg0KMDAwMDAwMjA0NyAwMDAwMCBuDQowMDAwMDAyMTUyIDAwMDAwIG4NCjAwMDAwMDIyNjIgMDAwMDAgbg0KMDAwMDAwMjMxMyAwMDAwMCBuDQp0cmFpbGVyDQo8PA0KL1NpemUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAyIDAgUg0KL0lEIFs8MDc2MTkwNThiZDEzOGQ5N2FiNmUxNTY0MDE0YTYwNmJiYjRmMmNiNDNkNzUwMmE0NjU2NThkYjg1ODhlM2M0Mj48MDc2MTkwNThiZDEzOGQ5N2FiNmUxNTY0MDE0YTYwNmJiYjRmMmNiNDNkNzUwMmE0NjU2NThkYjg1ODhlM2M0Mj5dDQo+Pg0Kc3RhcnR4cmVmDQoyMzY1DQolJUVPRg0K",
+            "unconditional_signed_doc": "data:application/pdf;base64,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5t1e9X0MqnAQYq0kD/JJT89+h0c00FYLRck7s/Gj97dyLbtBdviwTtotHjqFuDQoPmqldGaX3MzhMeRTNsCf3K2bbuSy2TIGqeFV0+vxJsz0xwq/Fljq4N2GLFuvzIBwYbGsUy8dNBnvuqPva9T5S5rqrFf/AuKUzMENCmVuZHN0cmVhbQ0KZW5kb2JqDQoxIDAgb2JqDQo8PA0KL1R5cGUgL0NhdGFsb2cNCi9QYWdlcyAzIDAgUg0KPj4NCmVuZG9iag0KMiAwIG9iag0KPDwNCi9UeXBlIC9JbmZvDQovUHJvZHVjZXIgKE9yYWNsZSBBbmFseXRpY3MgUHVibGlzaGVyKQ0KPj4NCmVuZG9iag0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0tpZHMgWw0KNSAwIFINCl0NCi9Db3VudCAxDQo+Pg0KZW5kb2JqDQo0IDAgb2JqDQo8PA0KL1Byb2NTZXQgWyAvUERGIC9UZXh0IF0NCi9Gb250IDw8IA0KL0YxIDcgMCBSDQovRjIgOCAwIFINCj4+DQo+Pg0KZW5kb2JqDQo3IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZA0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCjggMCBvYmoNCjw8DQovVHlwZSAvRm9udA0KL1N1YnR5cGUgL1R5cGUxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCjkgMCBvYmoNClsgNSAwIFIgL1hZWiA2Ni42IDE4My4xNjIgbnVsbCBdDQplbmRvYmoNCjEwIDAgb2JqDQpbIDUgMCBSIC9YWVogNjYuNiAxODMuMTYyIG51bGwgXQ0KZW5kb2JqDQp4cmVmDQowIDExDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDE5NDMgMDAwMDAgbg0KMDAwMDAwMTk5OCAwMDAwMCBuDQowMDAwMDAyMDc2IDAwMDAwIG4NCjAwMDAwMDIxNDQgMDAwMDAgbg0KMDAwMDAwMDAxMCAwMDAwMCBuDQowMDAwMDAwMTY4IDAwMDAwIG4NCjAwMDAwMDIyMzEgMDAwMDAgbg0KMDAwMDAwMjM0MSAwMDAwMCBuDQowMDAwMDAyNDQ2IDAwMDAwIG4NCjAwMDAwMDI0OTcgMDAwMDAgbg0KdHJhaWxlcg0KPDwNCi9TaXplIDExDQovUm9vdCAxIDAgUg0KL0luZm8gMiAwIFINCi9JRCBbPDkwNWU4Nzg1NTRhOTNkNDA3YTdhNjIyNDFhZTU1MmU1MzAzMGMwZjI1OGExMjkwMTgxZGUxODY3YTJhMzgxODA+PDkwNWU4Nzg1NTRhOTNkNDA3YTdhNjIyNDFhZTU1MmU1MzAzMGMwZjI1OGExMjkwMTgxZGUxODY3YTJhMzgxODA+XQ0KPj4NCnN0YXJ0eHJlZg0KMjU0OQ0KJSVFT0YNCg==",
+            "supplier_email": null,
+            "supplier_number": "14641",
+            "next_status": "Generate Conditional LW",
+            "inv_line_number": null,
+            "workbench_pk": "300001766032645_1",
+            "cond_uncond_flag": "C",
+            "comments": null,
+            "con_file_name": "Signed_Sample_Document.pdf",
+            "con_file_type": "application/pdf",
+            "uncon_file_name": "file (32).pdf",
+            "uncon_file_type": "application/pdf",
+            "template_code": "UWP",
+            "payment_type": "Progress",
+            "installment_amount": "250",
+            "installment_remain_amount": "250",
+            "lien_number": null,
+            "show_cond_doc": "Y",
+            "show_uncond_doc": "Y"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LienManagement_Approval_Search"
+        },
+        {
+            "rel": "edit",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LienManagement_Approval_Search"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LienManagement_Approval_Search"
+        }
+    ]
+}

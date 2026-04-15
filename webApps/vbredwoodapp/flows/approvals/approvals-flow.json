@@ -1,0 +1,8 @@
+{
+  "id": "approvals",
+  "description": "Flow main",
+  "defaultPage": "approvals-start",
+  "services": {},
+  "types": {},
+  "variables": {}
+}

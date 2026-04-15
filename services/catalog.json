@@ -1,0 +1,259 @@
+{
+    "backends": {
+        "fscmRestApi": {
+            "serviceType": "adf-describe",
+            "serviceTypeProperties": {
+                "faCatalogAppId": "REST-fscmRestApp"
+            },
+            "description": "Enterprise Resource Planning and Supply Chain",
+            "headers": {
+                "REST-Framework-Version": "4"
+            },
+            "transforms": {
+                "path": "../Transform.js"
+            },
+            "servers": [
+                {
+                    "url": "https://ibnljb-dev1.fa.ocs.oraclecloud.com",
+                    "description": "Overridden Default Server",
+                    "x-vb": {
+                        "authentication": {
+                            "authenticated": {
+                                "type": "basic",
+                                "credentials": "vb_d6ecbf12-47a3-459d-9063-31a0e6593cde"
+                            },
+                            "anonymous": {
+                                "type": "basic",
+                                "credentials": "vb_ad753758-c2b8-43e5-8520-85ab9268473c"
+                            }
+                        },
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "getCriteriaall": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "postCriteria": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "getapholddetails": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "updateflagcriteria": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "getaraplinkdetails": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "gettaskfromords": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "getsuppliernamefromords": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "getsuppliersiteords": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "getexptypenameords": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "getexptypecatords": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "PWP_ORDS": {
+            "servers": [
+                {
+                    "url": "http://129.158.228.138:8080/ords/timerite/LienManagement",
+                    "description": "Ords Timerite"
+                }
+            ]
+        },
+        "PWP_DB": {
+            "servers": [
+                {
+                    "url": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement",
+                    "description": "Ords Timerite",
+                    "x-vb": {
+                        "anonymousAccess": true,
+                        "forceProxy": "cors"
+                    }
+                }
+            ]
+        },
+        "ics": {
+            "serviceType": "ics",
+            "description": "casey.brown",
+            "servers": [
+                {
+                    "url": "vb-catalog://backends.tenant/ics",
+                    "description": "Overridden Integration Server",
+                    "x-vb": {
+                        "authentication": {
+                            "authenticated": {
+                                "type": "cloud"
+                            }
+                        },
+                        "forceProxy": "always",
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "dev28": {
+            "servers": [
+                {
+                    "url": "vb-catalog://backends/fscmRestApi/11.13.18.05",
+                    "description": "FscmRestApi 11.13.18.05",
+                    "x-vb": {
+                        "authentication": {
+                            "authenticated": {
+                                "type": "basic",
+                                "credentials": "vb_b22b3ede-7f13-46fd-aa70-be3d09fed974"
+                            }
+                        },
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "ReceiptDownloadOICServices": {
+            "servers": [
+                {
+                    "url": "https://riteoicdev-idjm2yj32zav-ia.integration.us-ashburn-1.ocp.oraclecloud.com/ic/api/integration/v2/flows/rest/project",
+                    "description": "Ic Api",
+                    "x-vb": {
+                        "authentication": {
+                            "authenticated": {
+                                "type": "cloud"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "Lien_Management_OIC": {
+            "servers": [
+                {
+                    "url": "https://hitt-dev1-oic-idalkllrlwlk-ia.integration.us-ashburn-1.ocp.oraclecloud.com",
+                    "description": "Ic Api",
+                    "x-vb": {
+                        "authentication": {
+                            "authenticated": {
+                                "type": "basic",
+                                "credentials": "vb_063323b9-bb53-4660-bf2c-97f3da3ec36d"
+                            },
+                            "anonymous": {
+                                "type": "basic",
+                                "credentials": "vb_b3b2bfb9-b011-47f3-85e1-657e61482886"
+                            }
+                        },
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        },
+        "dev20": {
+            "servers": [
+                {
+                    "url": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com/fscmRestApi/resources/11.13.18.05",
+                    "description": "FscmRestApi 11.13.18.05",
+                    "x-vb": {
+                        "authentication": {
+                            "authenticated": {
+                                "type": "basic",
+                                "credentials": "vb_ef204cd5-8b71-4ca8-89b1-b4a1f21e5f12"
+                            },
+                            "anonymous": {
+                                "type": "basic",
+                                "credentials": "vb_8236ad7f-a1e9-4bc4-a1ca-f152d938e562"
+                            }
+                        },
+                        "anonymousAccess": true
+                    }
+                }
+            ]
+        }
+      }
+}

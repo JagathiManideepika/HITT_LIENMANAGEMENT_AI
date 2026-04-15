@@ -1,0 +1,41 @@
+{
+  "description": "",
+  "eventListeners": {
+    "application:toggleDrawer": {
+      "chains": [
+        {
+          "parameters": {},
+          "chain": "application:toggleDrawerListener"
+        }
+      ]
+    },
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain"
+        }
+      ]
+    },
+    "drawerToggle": {
+      "chains": [
+        {
+          "chain": "toggleDrawer"
+        }
+      ]
+    }
+
+  },
+  "events": {},
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-switch": {
+        "path": "ojs/ojswitch"
+      }
+    }
+  },
+  "types": {},
+  "variables": {}
+}

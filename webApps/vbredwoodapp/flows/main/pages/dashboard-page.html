@@ -1,0 +1,22 @@
+<oj-sp-welcome-page id="oj-sp-wp1" primary-action="[[ $page.variables.primaryAction]]"
+  select-context-value="{{ $variables.pWPCollaborationListSDP }}" page-title="Dashboard"
+  display-options.in-flow-back="true" illustration-background="[[ $variables.illustrationBackground ]]"
+  illustration-foreground="[[ $variables.illustrationForeground ]]" background-color="dark-pebble" >
+ <oj-button label="Done" chroming="callToAction" on-oj-action="[[$listeners.dashboardLandingPageTemplateSpPrimaryAction]]">
+</oj-button>
+
+  <oj-switcher id="kpi-switcher" value="[[ $page.variables.selectedKpi ]]">
+    <oj-defer slot="KPI_1_id" >
+      <oj-sp-dashboard-grid grid-layout="[[ $page.variables.gridLayout ]]">
+        <oj-chart class="oj-sm-flex-initial" y-axis.title="AP InvoiceAmount" x-axis.title="AP Invoice"
+          legend.title="customerName" combo-series-order="data" animation-on-display="auto"
+          data="[[ $variables.pWPCollaborationListSDP5 ]]" animation-on-data-change="auto" stack="on">
+          <template slot="itemTemplate">
+            <oj-chart-item value="[[ $current.data.APInvoiceAmount ]]" group-id="[[[ $current.data.APInvoice ]]]"
+              series-id="[[ $current.data.customerName ]]"></oj-chart-item>
+          </template>
+        </oj-chart>
+      </oj-sp-dashboard-grid>
+    </oj-defer>
+  </oj-switcher>
+</oj-sp-welcome-page>

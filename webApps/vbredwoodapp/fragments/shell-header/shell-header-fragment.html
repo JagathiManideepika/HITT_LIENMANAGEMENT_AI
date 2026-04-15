@@ -1,0 +1,31 @@
+<header role="banner" class="oj-sm-flex-initial vb-web-applayout-header oj-sm-only-hide">
+  <div class="oj-flex-bar oj-sm-align-items-center vb-web-applayout-header-content">
+    <!-- Navigator toggle button -->
+    <div class="oj-flex-bar-start">
+    </div>
+    <div class="oj-flex-bar">
+      <img :src="[[ $application.path + 'resources/images/01-Service Logos _LienRite.jpg' ]]" height="65">
+    </div>
+
+    <!-- Company logo and application title only displayed in desktop mode -->
+    <div class="oj-flex-item oj-sm-flex-initial oj-sm-align-self-center oj-lg-margin-2x-start">
+      <!-- <h6>Pay When Paid</h6> -->
+
+    </div>
+
+    <div class="oj-flex-bar-middle oj-sm-margin-4x-horizontal oj-sm-align-items-center">
+      <!-- Please Change the following for company specific logo   -->
+
+      <h1 class="oj-typography-body-md oj-typography-semi-bold" title="Application Name"></h1>
+    </div>
+
+    <!-- Global toolbar only displayed in desktop form-factor -->
+
+    <div class="oj-flex-bar-end">
+
+      <oj-button chroming="borderless" display="icons" on-oj-action="[[$listeners.drawerToggle]]" style="margin-left: -4vw;margin-top: 5px;">
+        <span slot="startIcon" class="oj-ux-ico-menu" ></span>
+      </oj-button>
+    </div>
+  </div>
+</header>

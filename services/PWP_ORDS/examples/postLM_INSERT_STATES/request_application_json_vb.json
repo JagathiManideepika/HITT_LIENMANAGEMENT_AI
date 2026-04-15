@@ -1,0 +1,12 @@
+
+{
+  "p_state_name": "Florida",
+  "p_conditional_partial": "No",
+  "p_unconditional_partial": "Yes",
+  "p_conditional_final": "No",
+  "p_unconditional_final": "Yes",
+  "p_docid_cond_partial": null,
+  "p_docid_uncond_partial": null,
+  "p_docid_cond_final": null,
+  "p_docid_uncond_final": null
+}

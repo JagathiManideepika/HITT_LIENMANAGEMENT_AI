@@ -1,0 +1,39 @@
+<oj-sp-general-overview-page id="oj_gop1" display-options.responsive-padding="on" page-title="Pay When Paid"
+  display-mode="mixed">
+  <oj-dyn-container layout="containerLayout1" layout-provider="[[$metadata.dynamicContainerMetadata.provider]]" slot="main">
+    <template id="template1">
+      <div class="oj-panel">
+        <div class="oj-flex">
+          <oj-select-single label-hint="Project Number" class="oj-flex-item oj-sm-12 oj-md-2" item-text="projectnumber"
+            value="{{ $variables.projectsCriteriaListSDP }}" on-value-item-changed="[[$listeners.selectValueItem]]"
+            data="[[$variables.projectNumbersListSDP2]]"></oj-select-single>
+          <div class="oj-flex-item oj-sm-12 oj-md-1"></div>
+          <div class="oj-flex-item oj-sm-12 oj-md-1">
+            <oj-button label="Search" display="icons" on-oj-action="[[$listeners.buttonAction]]"
+              chroming="callToAction"></oj-button>
+          </div>
+          <div class="oj-flex-item oj-sm-12 oj-md-1">
+            <oj-button label="Refresh" chroming="callToAction" on-oj-action="[[$listeners.buttonAction2]]"></oj-button>
+          </div>
+          <div class="oj-flex-item oj-sm-12 oj-md-1">
+            <oj-button label="Create" on-oj-action="[[$listeners.createProjectsCriteriaButtonClicked]]"
+              chroming="callToAction"></oj-button>
+          </div>
+          <oj-sample-export-data display="icons" class="oj-flex-item oj-sm-12 oj-md-1" chroming="callToAction"></oj-sample-export-data>
+        </div>
+      </div>
+      <oj-toolbar chroming="solid"></oj-toolbar>
+      <div class="oj-panel">
+        <div class="oj-flex">
+          <oj-table scroll-policy="loadMoreOnScroll" data="[[$variables.projectsCriteriaListSDP]]"
+            columns='[{"headerText":"Project Number","field":"projectNumber"},{"headerText":"Criteria Name","field":"criteriaName"},{"headerText":"Top Task Name","field":"topTaskName"},{"headerText":"Task Name","field":"taskName"},{"headerText":"Expenditure Category","field":"expenditureCategory"},{"headerText":"Expenditure Type","field":"expenditureType"},{"headerText":"Supplier Name","field":"supplierName"},{"headerText":"Enabled Flag","field":"enabledFlag"},{"headerText":"Start Date","field":"startDate"},{"headerText":"End Date","field":"endDate"},{"headerText":"Lag Days","field":"lagDays"}]'
+            display="grid" layout="fixed" id="oj-table--1326567521-1" class="oj-flex-item oj-sm-12 oj-md-12"></oj-table>
+        </div>
+      </div>
+    </template>
+  </oj-dyn-container>
+  <oj-button label="Button" slot="info" on-oj-action="[[$listeners.buttonAction3]]">
+  </oj-button>
+</oj-sp-general-overview-page>
+
+

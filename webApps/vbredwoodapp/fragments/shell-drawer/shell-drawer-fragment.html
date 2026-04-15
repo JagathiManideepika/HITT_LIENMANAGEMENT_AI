@@ -1,0 +1,39 @@
+<div class="oj-flex oj-sm-flex-direction-column">
+  <div class="oj-flex-item oj-flex oj-sm-flex-direction-row">
+    <oj-vb-fragment id="shell-header" bridge="[[vbBridge]]" name="shell-header-nav">
+    </oj-vb-fragment>
+    <div class="oj-flex-item oj-flex oj-sm-justify-content-flex-end">
+      <oj-button class=" vb-nav-drawer-close-button" display="icons" chroming="outlined"
+        on-oj-action="[[$listeners.buttonAction]]">
+        <span slot="startIcon" class="oj-ux-ico-close"></span>
+      </oj-button>
+    </div>
+  </div>
+  <div class="oj-contrast-marker vb-nav-drawer oj-bg-neutral-170 oj-color-invert oj-flex-item"
+    style="height:100vh;width:20vw">
+    <div
+      class="oj-md-hide oj-flex oj-sm-flex-direction-column oj-sm-flex-wrap-nowrap oj-sm-align-items-center oj-sm-margin-6x-vertical">
+      <oj-avatar id="drawer-avatar" role="img" icon-class="oj-ux-ico-contact" size="md" background="orange"
+        :aria-label="[[ $application.user.fullName ]]" :title="[[ $application.user.fullName ]]">
+      </oj-avatar>
+      <div class="oj-typography-body-lg">
+        <oj-bind-text value="[[ $application.user.fullName ]]"></oj-bind-text>
+      </div>
+    </div>
+    <oj-navigation-list edge="start"
+      on-click="[[$application.responsive.smOnly ? $fragment.functions.closeDrawer : undefined]]"
+      data="[[ $application.variables.navigationADP ]]" selection="{{ $variables.currentFlow }}"
+      on-selection-changed="[[$listeners.navigationListSelection2]]">
+      <template slot="itemTemplate">
+        <!-- Template for rendering navigation items -->
+        <li>
+          <a href="#">
+            <span :class="[['oj-navigationlist-item-icon oj-typography-body-md oj-sm-padding-3x-horizontal ' + $current.data.iconClass]]"></span>
+            <oj-bind-text value="[[$current.data.name]]"></oj-bind-text>
+          </a>
+        </li>
+      </template>
+    </oj-navigation-list>
+
+  </div>
+</div>

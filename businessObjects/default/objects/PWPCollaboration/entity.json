@@ -1,0 +1,123 @@
+{
+    "fields": [
+        {
+            "type": "number",
+            "name": "id",
+            "internal": false,
+            "key": true,
+            "oid": "8aa74bc9-8858-4018-8faf-b78c7e93f636",
+            "required": true,
+            "unique": true,
+            "displayLabel": "Id"
+        },
+        {
+            "type": "datetime",
+            "name": "creationDate",
+            "internal": false,
+            "oid": "7a6cde70-26a2-427a-b589-afc9f72e6249",
+            "displayLabel": "Created",
+            "historyType": "timeCreated"
+        },
+        {
+            "type": "datetime",
+            "name": "lastUpdateDate",
+            "internal": false,
+            "oid": "1072eba4-45c5-43d7-9e7d-173bafb6f547",
+            "displayLabel": "Last Updated",
+            "historyType": "timeUpdated"
+        },
+        {
+            "type": "string",
+            "name": "createdBy",
+            "internal": false,
+            "oid": "f4a013da-a022-40eb-8fbf-096b4bba1ab1",
+            "displayLabel": "Created By",
+            "historyType": "createdBy"
+        },
+        {
+            "type": "string",
+            "name": "lastUpdatedBy",
+            "internal": false,
+            "oid": "faf90d3d-1837-4ee6-aaf0-97ab07afec6f",
+            "displayLabel": "Last Updated By",
+            "historyType": "updatedBy"
+        },
+        {
+            "type": "number",
+            "name": "versionNumber",
+            "internal": false,
+            "oid": "ad87a84c-a8e5-4b5f-b19a-637fe367174a",
+            "displayLabel": "Version Number",
+            "historyType": "versionNumber"
+        },
+        {
+            "type": "string",
+            "name": "projectnumber",
+            "oid": "f1d75a7e-9898-4dae-8929-b407fcca6110",
+            "displayLabel": "projectnumber"
+        },
+        {
+            "type": "string",
+            "name": "suppliername",
+            "oid": "8fc9e556-c52e-462f-99da-7491452902fe",
+            "displayLabel": "suppliername"
+        },
+        {
+            "type": "string",
+            "name": "APInvoice",
+            "oid": "3ef4d60f-012d-48e3-bfef-fef2799b3a8c",
+            "displayLabel": "AP Invoice"
+        },
+        {
+            "type": "date",
+            "name": "APInvoiceDate",
+            "oid": "6157d15f-6263-46f9-9f0a-72f0f8931d62",
+            "displayLabel": "AP Invoice Date"
+        },
+        {
+            "type": "number",
+            "name": "APInvoiceAmount",
+            "oid": "5f2bae64-ba54-46c7-ac65-cfd0c163b850",
+            "displayLabel": "AP Invoice Amount"
+        },
+        {
+            "type": "date",
+            "name": "holdDate",
+            "oid": "32236613-9d7f-4d82-b7fb-fb05593d2845",
+            "displayLabel": "Hold Date"
+        },
+        {
+            "type": "string",
+            "name": "ARInvoice",
+            "oid": "bec22e25-b1b4-42e1-90c5-e5194b451ff1",
+            "displayLabel": "AR Invoice"
+        },
+        {
+            "type": "number",
+            "name": "ARInvoiceAmount",
+            "oid": "5c2b690f-27ac-40e6-a230-c4688a516074",
+            "displayLabel": "AR Invoice Amount"
+        },
+        {
+            "type": "string",
+            "name": "customerName",
+            "oid": "e187604d-50b1-4cc2-90fb-3287d98ea02c",
+            "displayLabel": "Customer Name"
+        },
+        {
+            "type": "number",
+            "name": "lagDays",
+            "oid": "67977117-df56-4e57-9a1c-614d43074a64",
+            "displayLabel": "Lag Days"
+        },
+        {
+            "type": "date",
+            "name": "holdReleaseDate",
+            "oid": "674cc24c-b52e-4952-a1da-9a3c86940b22",
+            "displayLabel": "Hold Release Date"
+        }
+    ],
+    "name": "PWPCollaboration",
+    "oid": "12648d1d-378f-486a-8532-145735c1854e",
+    "displayLabel": "Pwpcollaboration"
+}

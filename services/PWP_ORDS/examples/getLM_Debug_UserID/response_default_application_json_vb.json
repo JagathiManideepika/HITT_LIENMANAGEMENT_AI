@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "user_id": "rite.user"
+        },
+        {
+            "user_id": "VGanapabattula@hitt-gc.com"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 2,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_Debug_UserID"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_Debug_UserID"
+        }
+    ]
+}

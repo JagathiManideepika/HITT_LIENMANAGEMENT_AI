@@ -1,0 +1,291 @@
+<oj-sp-welcome-page id="oj-sp-wp1" page-title="Lien Waiver Templates"
+  illustration-background="[[ $application.variables.illustrationBackground ]]"
+  illustration-foreground="[[ $application.variables.illustrationForeground ]]" background-color="dark-pebble">
+
+
+
+  <div class="oj-panel">
+    <div class="oj-helper-text-align-end">
+      <oj-button label="Add" chroming="callToAction" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction]]" style="margin-top:10px">
+        <span class="oj-ux-ico-plus" slot="startIcon"></span>
+      </oj-button>
+      <oj-switch label-hint="Enable Trace" value="[[$application.variables.enableTrace]]"
+        on-value-changed="[[$listeners.switchValue]]" >
+      </oj-switch>
+      <b><oj-bind-text
+             value='[[ $application.variables.traceIdDisplay ? "Trace ID:" + $application.variables.traceIdDisplay : "Trace ID" ]]'></oj-bind-text></b>
+    </div>
+
+    <oj-table scroll-policy="loadMoreOnScroll" style="width:92vw;height:60vh" columns-default.resizable="enabled"
+      display="grid" data="[[ $variables.tableADP ]]"
+      columns='[{"headerText":"State Name","field":"state_name" },{"headerText":"Conditional Partial","field":"conditional_partial"},{"headerText":"Conditional Final","field":"conditional_final"},{"headerText":"Unconditional Final","field":"unconditional_final"},{"headerText":"Unconditional Partial","field":"unconditional_partial"},  {"headerText":"Action","field":"","sortable":"disabled","template":"Action"}]'
+      display="grid" on-oj-before-row-edit="[[$listeners.tableBeforeRowEdit2]]"
+      on-oj-before-row-edit-end="[[$listeners.tableBeforeRowEditEnd2]]">
+
+      <template slot="Action" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <oj-button chroming="borderless" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction8]]">
+            <span class="oj-ux-ico-download" slot="startIcon"></span>
+          </oj-button>
+
+          <oj-button chroming="borderless" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction10]]">
+            <span class="oj-ux-ico-edit" slot="startIcon"></span>
+          </oj-button>
+        </oj-bind-if>
+      </template>
+
+
+    </oj-table>
+  </div>
+
+  <!-- <oj-dialog id="insert_UpdateRecDialog" dialog-title="[[ $variables.dialogTitle ]]">
+    <oj-form-layout columns="3" label-edge="top">
+      <oj-select-single label-hint="State" data="[[$variables.getLMUSSTATESListSDP2]]" item-text="state_name"
+        value="{{ $variables.createDialogObj.stateVal }}" disabled='[[ $variables.dialogTitle === "Update Template" ]]'>
+      </oj-select-single>
+      <oj-select-single label-hint="Conditional Partial" data="[[$variables.getLMCOMMONLOOKUPListSDP2]]"
+        item-text="display_value" on-value-item-changed="[[$listeners.selectValueItem2]]"
+        value="{{ $variables.createDialogObj.condPar_Val }}"></oj-select-single>
+      <oj-select-single label-hint="Conditional Final" data="[[$variables.getLMCOMMONLOOKUPListSDP3]]"
+        item-text="display_value" value="{{ $variables.createDialogObj.condFinal_Val }}"
+        on-value-item-changed="[[$listeners.selectValueItem3]]"></oj-select-single>
+      <oj-select-single label-hint="Unconditional Final" data="[[$variables.getLMCOMMONLOOKUPListSDP4]]"
+        item-text="display_value" on-value-item-changed="[[$listeners.selectValueItem4]]"
+        value="{{ $variables.createDialogObj.uncond_Final }}"></oj-select-single>
+      <oj-select-single label-hint="Unconditional Partial" data="[[$variables.getLMCOMMONLOOKUPListSDP5]]"
+        item-text="display_value" value="{{ $variables.createDialogObj.uncond_Par }}"
+        on-value-item-changed="[[$listeners.selectValueItem5]]"></oj-select-single>
+    </oj-form-layout>
+    
+    <div class="oj-helper-text-align-end">
+      <oj-bind-if test='[[ $variables.dialogTitle === "Create Template" ]]'>
+        <oj-button chroming="callToAction" class="oj-button-sm" label="Save"
+          on-oj-action="[[$listeners.buttonAction16]]">
+        </oj-button>
+      </oj-bind-if>
+      <oj-bind-if test='[[ $variables.dialogTitle === "Update Template" ]]'>
+        <oj-button chroming="callToAction" class="oj-button-sm" label="Update"
+          on-oj-action="[[$listeners.buttonAction17]]">
+        </oj-button>
+      </oj-bind-if>
+
+      <oj-button chroming="callToAction" class="oj-button-sm" label="Close" on-oj-action="[[$listeners.buttonAction7]]">
+      </oj-button>
+    </div>
+
+  </oj-dialog> -->
+
+  <!-- <oj-dialog id="CondPar_DOC" dialog-title="Conditional Partial Document" style="">
+    <div class="oj-flex-item oj-sm-12 oj-md-12">
+      <div style="margin-top:20px">
+        <oj-file-picker required="true" accept='[".doc",".docx",".zip",".pdf",".xlsx"]' class='oj-filepicker-custom' select-on='click'
+          on-oj-select="[[$listeners.filePickerSelect]]">
+          <oj-button chroming="outlined" class="demo-button-blue" slot='trigger' style="margin-top:-8px">
+            <i class=oj-ux-ico-attachment"></i>
+            <span class="oj-ux-ico-attach-file" slot="startIcon"></span>
+            Attachment
+          </oj-button>
+        </oj-file-picker>
+        <oj-bind-text value="[[ $variables.createDialogObj.condPar_DopcName ]]"></oj-bind-text>
+      </div>
+    </div>
+    <oj-button label="Upload" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction12]]">
+    </oj-button>
+    <oj-button label="Close" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction3]]">
+    </oj-button>
+    </div>
+  </oj-dialog>
+
+  <oj-dialog id="CondFin_DOC" dialog-title="Conditional Final Document">
+    <div class="oj-flex-item oj-sm-12 oj-md-12">
+      <div style="margin-top:20px">
+        <oj-file-picker required="true" accept='[".doc",".docx",".zip",".pdf",".xlsx"]' class='oj-filepicker-custom' select-on='click'
+          on-oj-select="[[$listeners.filePickerSelect2]]">
+          <oj-button chroming="outlined" class="demo-button-blue" slot='trigger' style="margin-top:-8px">
+            <i class=oj-ux-ico-attachment"></i>
+            <span class="oj-ux-ico-attach-file" slot="startIcon"></span>
+            Attachment
+          </oj-button>
+        </oj-file-picker>
+        <oj-bind-text value="[[ $variables.createDialogObj.condFin_DocName ]]"></oj-bind-text>
+      </div>
+    </div>
+    <oj-button label="Upload" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction13]]">
+    </oj-button>
+    <oj-button label="Close" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction6]]">
+    </oj-button>
+    </div>
+  </oj-dialog>
+
+  <oj-dialog id="UnCondPar_DOC" dialog-title="UnConditional Partial Document" style="">
+    <div class="oj-flex-item oj-sm-12 oj-md-12">
+      <div style="margin-top:20px">
+        <oj-file-picker required="true" accept='[".doc",".docx",".zip",".pdf",".xlsx"]' class='oj-filepicker-custom' select-on='click'
+          on-oj-select="[[$listeners.filePickerSelect3]]">
+          <oj-button chroming="outlined" class="demo-button-blue" slot='trigger' style="margin-top:-8px">
+            <i class=oj-ux-ico-attachment"></i>
+            <span class="oj-ux-ico-attach-file" slot="startIcon"></span>
+            Attachment
+          </oj-button>
+        </oj-file-picker>
+        <oj-bind-text value="[[ $variables.createDialogObj.uncondpar_DocName ]]"></oj-bind-text>
+      </div>
+    </div>
+    <oj-button label="Upload" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction15]]">
+    </oj-button>
+    <oj-button label="Close" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction5]]">
+    </oj-button>
+    </div>
+  </oj-dialog>
+
+
+  <oj-dialog id="UnCondFin_DOC" dialog-title="UnConditional Final Document" style="">
+    <div class="oj-flex-item oj-sm-12 oj-md-12">
+      <div style="margin-top:20px">
+        <oj-file-picker required="true" accept='[".doc",".docx",".zip",".pdf",".xlsx"]' class='oj-filepicker-custom' select-on='click'
+          on-oj-select="[[$listeners.filePickerSelect4]]">
+          <oj-button chroming="outlined" class="demo-button-blue" slot='trigger' style="margin-top:-8px">
+            <i class=oj-ux-ico-attachment"></i>
+            <span class="oj-ux-ico-attach-file" slot="startIcon"></span>
+            Attachment
+          </oj-button>
+        </oj-file-picker>
+        <oj-bind-text value="[[ $variables.createDialogObj.uncondFin_DocName ]]"></oj-bind-text>
+      </div>
+    </div>
+    <oj-button label="Upload" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction14]]">
+    </oj-button>
+    <oj-button label="Close" chroming="callToAction" class="oj-button-lg" on-oj-action="[[$listeners.buttonAction4]]">
+    </oj-button>
+    </div>
+  </oj-dialog> -->
+
+  <!-- downaload dialog -->
+
+  <oj-dialog id="downloadDialog" dialog-title="Download Template">
+
+    <oj-form-layout columns="2" label-edge="top">
+      <oj-select-single label-hint="Templates" data="[[$variables.getLMDOWNLOADTEMPLATES2ListSDP3]]"
+        item-text="column_header" on-value-item-changed="[[$listeners.selectValueItem6]]"
+        value="{{ $variables.templateVal }}"></oj-select-single>
+    </oj-form-layout>
+    <div>
+      <oj-button label="Download" chroming="callToAction" class="oj-button-sm"
+        on-oj-action="[[$listeners.buttonAction11]]"></oj-button>
+      <oj-button label="Close" chroming="callToAction" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction9]]">
+      </oj-button>
+    </div>
+  </oj-dialog>
+
+</oj-sp-welcome-page>
+
+<oj-dialog dialog-title="" id="loadingDialog" class="myloader" style="width: 350px">
+  <div slot="body">
+    <div class="oj-flex-item">
+      <span style="font-size:20px;color:#006AA2;font-weight:600;margin-top:-2vh">Loading .....</span>
+      <br />
+      <oj-progress-bar value="-1" class="oj-sm-margin-3x-top"></oj-progress-bar>
+    </div>
+  </div>
+</oj-dialog>
+
+
+<oj-dialog id="IUDialog" dialog-title="[[ $variables.dialogTitle ]]">
+  <oj-validation-group id="IU">
+    <oj-form-layout columns="1" id="IU">
+      <div style="margin-left:50px">
+        <div style="margin-bottom:10px">
+          <oj-select-single label-hint="State" data="[[$variables.getLMUSSTATESListSDP2]]" item-text="state_name"
+            value="{{ $variables.createDialogObj.stateVal }}"
+            disabled='[[ $variables.dialogTitle === "Update Template" ]]' required="true">
+          </oj-select-single>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px">
+          <oj-select-single label-hint="Conditional Partial" data="[[$variables.getLMCOMMONLOOKUPListSDP2]]"
+            item-text="display_value" value="{{ $variables.createDialogObj.condPar_Val }}" required="true">
+          </oj-select-single>
+
+          <oj-bind-if test='[[ $variables.createDialogObj.condPar_Val === "Yes" ]]'>
+            <oj-file-picker accept='[".doc",".docx",".zip",".pdf",".xlsx"]'
+              on-oj-select="[[$listeners.filePickerSelect]]">
+              <oj-button chroming="outlined" slot="trigger">
+                Attachment
+              </oj-button>
+            </oj-file-picker>
+
+            <oj-bind-text value="[[ $variables.createDialogObj.condPar_DopcName ]]"></oj-bind-text>
+          </oj-bind-if>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px">
+          <oj-select-single label-hint="Conditional Final" data="[[$variables.getLMCOMMONLOOKUPListSDP3]]"
+            item-text="display_value" value="{{ $variables.createDialogObj.condFinal_Val }}" required="true">
+          </oj-select-single>
+
+          <oj-bind-if test='[[ $variables.createDialogObj.condFinal_Val === "Yes" ]]'>
+            <oj-file-picker accept='[".doc",".docx",".zip",".pdf",".xlsx"]'
+              on-oj-select="[[$listeners.filePickerSelect2]]">
+              <oj-button chroming="outlined" slot="trigger">
+                Attachment
+              </oj-button>
+            </oj-file-picker>
+
+            <oj-bind-text value="[[ $variables.createDialogObj.condFin_DocName ]]"></oj-bind-text>
+          </oj-bind-if>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px">
+          <oj-select-single label-hint="Unconditional Partial" data="[[$variables.getLMCOMMONLOOKUPListSDP5]]"
+            item-text="display_value" value="{{ $variables.createDialogObj.uncond_Par }}" required="true">
+          </oj-select-single>
+
+          <oj-bind-if test='[[ $variables.createDialogObj.uncond_Par === "Yes" ]]'>
+            <oj-file-picker accept='[".doc",".docx",".zip",".pdf",".xlsx"]'
+              on-oj-select="[[$listeners.filePickerSelect3]]">
+              <oj-button chroming="outlined" slot="trigger">
+                Attachment
+              </oj-button>
+            </oj-file-picker>
+
+            <oj-bind-text value="[[ $variables.createDialogObj.uncondpar_DocName ]]"></oj-bind-text>
+          </oj-bind-if>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px">
+          <oj-select-single label-hint="Unconditional Final" data="[[$variables.getLMCOMMONLOOKUPListSDP4]]"
+            item-text="display_value" value="{{ $variables.createDialogObj.uncond_Final }}" required="true">
+          </oj-select-single>
+
+          <oj-bind-if test='[[ $variables.createDialogObj.uncond_Final === "Yes" ]]'>
+            <oj-file-picker accept='[".doc",".docx",".zip",".pdf",".xlsx"]'
+              on-oj-select="[[$listeners.filePickerSelect4]]">
+              <oj-button chroming="outlined" slot="trigger">
+                Attachment
+              </oj-button>
+            </oj-file-picker>
+
+            <oj-bind-text value="[[ $variables.createDialogObj.uncondFin_DocName ]]"></oj-bind-text>
+          </oj-bind-if>
+
+        </div>
+        <div class="oj-helper-text-align-end">
+
+          <oj-bind-if test='[[ $variables.dialogTitle === "Create Template" ]]'>
+            <oj-button chroming="callToAction" label="Save" on-oj-action="[[$listeners.buttonAction16]]">
+            </oj-button>
+          </oj-bind-if>
+
+          <oj-bind-if test='[[ $variables.dialogTitle === "Update Template" ]]'>
+            <oj-button chroming="callToAction" label="Update" on-oj-action="[[$listeners.buttonAction17]]">
+            </oj-button>
+          </oj-bind-if>
+
+          <oj-button label="Close" on-oj-action="[[$listeners.buttonAction7]]">
+          </oj-button>
+
+        </div>
+      </div>
+    </oj-form-layout>
+  </oj-validation-group>
+</oj-dialog>

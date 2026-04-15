@@ -1,0 +1,123 @@
+{
+    "fields": [
+        {
+            "type": "number",
+            "name": "id",
+            "internal": false,
+            "key": true,
+            "oid": "b0382a23-e718-4a51-98d2-313e479c8b4b",
+            "required": true,
+            "unique": true,
+            "displayLabel": "Id"
+        },
+        {
+            "type": "datetime",
+            "name": "creationDate",
+            "internal": false,
+            "oid": "5f6a0e5a-fe3c-4c6e-ac7d-bac2de71af43",
+            "displayLabel": "Created",
+            "historyType": "timeCreated"
+        },
+        {
+            "type": "datetime",
+            "name": "lastUpdateDate",
+            "internal": false,
+            "oid": "215f9811-1701-41de-897e-91caa04340c4",
+            "displayLabel": "Last Updated",
+            "historyType": "timeUpdated"
+        },
+        {
+            "type": "string",
+            "name": "createdBy",
+            "internal": false,
+            "oid": "07bfe88a-cc08-4f28-b468-f4988406a2f2",
+            "displayLabel": "Created By",
+            "historyType": "createdBy"
+        },
+        {
+            "type": "string",
+            "name": "lastUpdatedBy",
+            "internal": false,
+            "oid": "5c526f44-ee79-4541-b6a8-ef3ed8205a13",
+            "displayLabel": "Last Updated By",
+            "historyType": "updatedBy"
+        },
+        {
+            "type": "number",
+            "name": "versionNumber",
+            "internal": false,
+            "oid": "ab899afb-949f-4322-9ef7-9e564ee39fd3",
+            "displayLabel": "Version Number",
+            "historyType": "versionNumber"
+        },
+        {
+            "type": "string",
+            "name": "projectNumber",
+            "oid": "0dec5c29-00c9-4cdb-9dee-399cddde0729",
+            "displayLabel": "Project Number"
+        },
+        {
+            "type": "string",
+            "name": "criteriaName",
+            "oid": "020c5869-2931-444b-831e-de2372b53fd1",
+            "displayLabel": "Criteria Name"
+        },
+        {
+            "type": "string",
+            "name": "topTaskName",
+            "oid": "db68af18-2120-4f24-bce6-6002000d64a6",
+            "displayLabel": "Top Task Name"
+        },
+        {
+            "type": "number",
+            "name": "taskName",
+            "oid": "8b388d43-b576-4eba-987b-467555a83de5",
+            "displayLabel": "Task Name"
+        },
+        {
+            "type": "string",
+            "name": "expenditureCategory",
+            "oid": "8e9fd2b1-00e6-4f61-a8a9-17f51a5eb0eb",
+            "displayLabel": "Expenditure Category"
+        },
+        {
+            "type": "string",
+            "name": "expenditureType",
+            "oid": "80b7db0b-a876-4f7d-b26b-64aff00cd5aa",
+            "displayLabel": "Expenditure Type"
+        },
+        {
+            "type": "string",
+            "name": "supplierName",
+            "oid": "0325e173-6740-4b69-85c7-65d915395e3a",
+            "displayLabel": "Supplier Name"
+        },
+        {
+            "type": "string",
+            "name": "enabledFlag",
+            "oid": "0cbdb5ab-7e5d-490e-865f-ec06719de4b1",
+            "displayLabel": "Enabled Flag"
+        },
+        {
+            "type": "date",
+            "name": "startDate",
+            "oid": "60763b4f-923b-419e-82d3-ad30ae5da279",
+            "displayLabel": "Start Date"
+        },
+        {
+            "type": "date",
+            "name": "endDate",
+            "oid": "4038b6ef-5c0b-447d-93db-b31b7e397bd9",
+            "displayLabel": "End Date"
+        },
+        {
+            "type": "string",
+            "name": "lagDays",
+            "oid": "03157c85-e8c0-454d-8db3-f44e4f4361a4",
+            "displayLabel": "Lag Days"
+        }
+    ],
+    "name": "Projects_Criteria",
+    "oid": "60fa2121-7924-4145-b3ba-a87d7cc8a406",
+    "displayLabel": "Projects_Criteria"
+}

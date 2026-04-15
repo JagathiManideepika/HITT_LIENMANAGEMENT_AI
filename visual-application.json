@@ -1,0 +1,15 @@
+{
+    "vbcs.dt.version": "20250610-26.01.0",
+    "dependencies": {
+        "upgrade": "none",
+        "paths": {
+            "jet": "https://static.oracle.com/cdn/jet/16.1.4",
+            "telemetry": "https://static.oracle.com/cdn/trace/8.2.2",
+            "visualRuntime": "https://static.oracle.com/cdn/vb/2410.1.0",
+            "oracleImageGallery": "https://static.oracle.com/cdn/fnd/gallery/2504.0.0"
+        }
+    },
+    "source.version": "2410",
+    "rootURL": "HITT_LienRite_Repo",
+    "version": "0.1"
+}

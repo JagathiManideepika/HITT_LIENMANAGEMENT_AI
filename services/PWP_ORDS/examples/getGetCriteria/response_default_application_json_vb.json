@@ -1,0 +1,65 @@
+{
+    "items": [
+        {
+            "criteria_id": 166,
+            "criteria_name": "Lien_Management_dec01",
+            "project_id": 300001756681008,
+            "project_name": "Lone Star State Natural Gas Pipeline",
+            "project_number": "2046",
+            "top_task_id": 300001771328087,
+            "top_task_number": "1.2",
+            "top_task_name": "Mis Expenses",
+            "task_id": null,
+            "task_number": null,
+            "task_name": null,
+            "expenditure_category": "Equipment Hire",
+            "expenditure_type": "Interest",
+            "include_allexp_typ_flag": "true",
+            "supplier_id": 300001372225293,
+            "supplier_number": "3032853",
+            "supplier_name": "100 ABC",
+            "supplier_site_id": 300001691975976,
+            "supplier_site": "Northbrook",
+            "start_dt": "2025-12-02T00:00:00Z",
+            "end_dt": "2025-12-29T00:00:00Z",
+            "lag_days": null,
+            "enabled_flag": "N",
+            "state": null,
+            "weiver_type": null,
+            "invoice_amount_limit": 11,
+            "new_column_13": null,
+            "include_subtask_flag": "true",
+            "creation_date": "2025-12-01T11:22:56Z",
+            "created_by": null,
+            "last_updated_date": "2025-12-01T11:22:56Z",
+            "last_updated_by": null,
+            "cond_lw_final_payment": "N",
+            "cond_lw_progress_payment": "N",
+            "uncond_lw_final_payment": "Y",
+            "uncond_lw_progress_payment": "N",
+            "starting_process": "U"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getCriteria?project_id=300001756681008"
+        },
+        {
+            "rel": "edit",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getCriteria?project_id=300001756681008"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getCriteria?project_id=300001756681008"
+        }
+    ]
+}

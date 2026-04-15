@@ -1,0 +1,226 @@
+{
+    "items": [
+        {
+            "supplier_site": "ABC US1",
+            "site_id": 300000075039586
+        },
+        {
+            "supplier_site": "AC Progress US",
+            "site_id": 300000076247014
+        },
+        {
+            "supplier_site": "AC US1",
+            "site_id": 300000047507572
+        },
+        {
+            "supplier_site": "AC Univ US",
+            "site_id": 300000095598332
+        },
+        {
+            "supplier_site": "Aesculup HC PRC",
+            "site_id": 300000116498591
+        },
+        {
+            "supplier_site": "BOULT AUDIO ADDRESS",
+            "site_id": 300001517478801
+        },
+        {
+            "supplier_site": "Baxter HC PRC",
+            "site_id": 300000116498350
+        },
+        {
+            "supplier_site": "Boston",
+            "site_id": 300000558568888
+        },
+        {
+            "supplier_site": "CDW Healthcare",
+            "site_id": 300000136589949
+        },
+        {
+            "supplier_site": "CLP US1",
+            "site_id": 300000066744423
+        },
+        {
+            "supplier_site": "CS UK",
+            "site_id": 300000047837270
+        },
+        {
+            "supplier_site": "Cardinal HC PRC",
+            "site_id": 300000116498498
+        },
+        {
+            "supplier_site": "Chennai",
+            "site_id": 300000186774112
+        },
+        {
+            "supplier_site": "Corporate",
+            "site_id": 300000133987947
+        },
+        {
+            "supplier_site": "Corporate",
+            "site_id": 300000133987988
+        },
+        {
+            "supplier_site": "DEMO-Telengana ",
+            "site_id": 300001001738520
+        },
+        {
+            "supplier_site": "DFLT",
+            "site_id": 300001690503440
+        },
+        {
+            "supplier_site": "Delhi",
+            "site_id": 300000186771908
+        },
+        {
+            "supplier_site": "Dell US1",
+            "site_id": 300000047414699
+        },
+        {
+            "supplier_site": "Dell Univ US",
+            "site_id": 300000095598227
+        },
+        {
+            "supplier_site": "FEC NY",
+            "site_id": 300001690761510
+        },
+        {
+            "supplier_site": "FS US1",
+            "site_id": 300000219375087
+        },
+        {
+            "supplier_site": "Fisher Scientif",
+            "site_id": 300000116498221
+        },
+        {
+            "supplier_site": "HQ - Bologna",
+            "site_id": 300000115699496
+        },
+        {
+            "supplier_site": "HQ - Madrid",
+            "site_id": 300000131904699
+        },
+        {
+            "supplier_site": "HYDERABAD",
+            "site_id": 300001690527043
+        },
+        {
+            "supplier_site": "Houstan",
+            "site_id": 300001695578710
+        },
+        {
+            "supplier_site": "IBM Supplier Ad",
+            "site_id": 300000311877342
+        },
+        {
+            "supplier_site": "INC Address",
+            "site_id": 300000324699687
+        },
+        {
+            "supplier_site": "IND",
+            "site_id": 300000251755207
+        },
+        {
+            "supplier_site": "JGA Healthcare",
+            "site_id": 300000117206166
+        },
+        {
+            "supplier_site": "JGA Progress US",
+            "site_id": 300000076246906
+        },
+        {
+            "supplier_site": "JGA Supremo US",
+            "site_id": 300000180147656
+        },
+        {
+            "supplier_site": "JGA US1",
+            "site_id": 300000047414655
+        },
+        {
+            "supplier_site": "KMM Address",
+            "site_id": 300000310698066
+        },
+        {
+            "supplier_site": "Lee Australia",
+            "site_id": 300000131060155
+        },
+        {
+            "supplier_site": "Lee Belgium",
+            "site_id": 300000132524411
+        },
+        {
+            "supplier_site": "Lee Germany",
+            "site_id": 300000167722352
+        },
+        {
+            "supplier_site": "Lee Healthcare",
+            "site_id": 300000116498671
+        },
+        {
+            "supplier_site": "Lee Japan",
+            "site_id": 300000101110129
+        },
+        {
+            "supplier_site": "Lee Netherlands",
+            "site_id": 300000132468404
+        },
+        {
+            "supplier_site": "Lee Poland",
+            "site_id": 300000173063732
+        },
+        {
+            "supplier_site": "Lee Progress US",
+            "site_id": 300000076246718
+        },
+        {
+            "supplier_site": "Lee Sup CH",
+            "site_id": 300000188372266
+        },
+        {
+            "supplier_site": "Lee Supremo US",
+            "site_id": 300000180147090
+        },
+        {
+            "supplier_site": "Lee Sweden",
+            "site_id": 300000138007874
+        },
+        {
+            "supplier_site": "Lee Switzerland",
+            "site_id": 300000176066130
+        },
+        {
+            "supplier_site": "Lee US1",
+            "site_id": 300000047414539
+        },
+        {
+            "supplier_site": "Lee Univ US",
+            "site_id": 300000095598114
+        },
+        {
+            "supplier_site": "MCS Netherlands",
+            "site_id": 300000132468863
+        }
+    ],
+    "hasMore": true,
+    "limit": 50,
+    "offset": 0,
+    "count": 50,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_SupplierSiteLOV_CriteriaCreate"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/pwp/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_SupplierSiteLOV_CriteriaCreate"
+        },
+        {
+            "rel": "next",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_SupplierSiteLOV_CriteriaCreate?offset=50"
+        }
+    ]
+}

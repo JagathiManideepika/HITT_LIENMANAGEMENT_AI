@@ -1,0 +1,20 @@
+{
+
+  "id": "main",
+  "description": "Flow main",
+  "defaultPage": "main-ovp",
+  "chains": {},
+  "services": {},
+  "types": {},
+  "variables": {},
+  "@dt": {
+    "chains": {
+      "validateFormChain": {
+        "autowire": {
+          "contextKey": "vb-quickstarts-js",
+          "name": "validateFormChain"
+        }
+      }
+    }
+  }
+}

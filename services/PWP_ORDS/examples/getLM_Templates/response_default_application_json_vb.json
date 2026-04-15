@@ -1,0 +1,50 @@
+{
+    "items": [
+        {
+            "template_id": 6,
+            "template_name": "Unconditional Lien Waiver and Release For Final Payment",
+            "template_type": "Final Payment",
+            "template_text": "UNCONDITIONAL WAIVER AND RELEASE ON FINAL PAYMENT\n\nProject ______________\n\nJob No. ______________\n\nThis signer of this document has been paid in full for all labor, services, equipment, or materials furnished to the property or to ____________ (person with whom signer contracted) on the property of ___________________ (owner) located at ________________ (location) to the following extent: ________________ (job description). The signer therefore waives and releases any mechanic’s lien right, any right arising from a payment bond that complies with a state or federal statute, any common law payment bond right, any claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment rights for persons in the signer’s position.\n\nThe signer warrants that the signer has already paid or will use the funds received from this final payment to promptly pay in full all of the signer’s laborers, subcontractors, materialmen, and suppliers for all work, materials, equipment, or services provided for or to the above referenced project up to the date of this waiver and release.\n\nDate ___________________\n\n________________________ (Company name)\n\nBy ______________________ (Signature)\n\n_________________________ (Title)",
+            "created_date": "2025-07-09T00:00:00Z"
+        },
+        {
+            "template_id": 2,
+            "template_name": "Conditional Lien Waiver and Release For Progress Payment",
+            "template_type": "Progress Payment",
+            "template_text": "CONDITIONAL WAIVER AND RELEASE ON PROGRESS PAYMENT\n\nProject                                 \n\nJob No.                                 \n\nOn receipt by the signer of this document of a check from _______________ (maker of check) in the sum of $_________ payable to _______________ (payee or payees of check) and when the check has been properly endorsed and has been paid by the bank on which it is drawn, this document becomes effective to release any mechanic’s lien right, any right arising from a payment bond that complies with a state or federal statute, any common law payment bond right, any claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment rights for persons in the signer’s position that the signer has on the property of _______________ (owner) located at __________ (location) to the following extent ____________ (job description).\n\nThis release covers a progress payment for all labor, services, equipment, or materials furnished to the property or to ___________ (person with whom signer contracted) as indicated in the attached statement(s) or progress payment request(s), except for unpaid retention, pending modifications and changes, or other items furnished.\n\nBefore any recipient of this document relies on this document, the recipient should verify evidence of payment to the signer.\n\nThe signer warrants that the signer has already paid or will use the funds received from this progress payment to promptly pay in full all of the signer’s laborers, subcontractors, materialmen, and suppliers for all work, materials, equipment, or services provided for or to the above referenced project in regard to the attached statement(s) or progress payment request(s).\n\nDate ___________________\n\n_______________________ (Company name)\n\nBy _____________________ (Signature)\n\nNOTICE: This document waives rights unconditionally and states that you have been paid for giving up those rights. It is prohibited for a person to require you to sign this document if you have not been paid the payment amount set forth below. If you have not been paid, use a conditional release form.",
+            "created_date": "2025-07-08T00:00:00Z"
+        },
+        {
+            "template_id": 3,
+            "template_name": "Unconditional Lien Waiver and Release For Progress Payment",
+            "template_type": "Progress Payment",
+            "template_text": "UNCONDITIONAL WAIVER AND RELEASE ON PROGRESS PAYMENT\n\nProject _______________\n\nJob No _______________\n\nThis signer of this document has paid and has received a progress payment in the sum of $__________ for all labor, services, equipment, or materials furnished to the property or to _________________ (person with whom signer contracted) on the property of ______________ (owner) located at _______________ (location) to the following extent: _____________ (job description). The signer therefore waives and releases any mechanic’s lien right, any right arising from a payment bond that complies with a state or federal statute, any common law payment bond right, any claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment rights for persons in the signer’s position that the signer has on the above referenced project to the following extent:\n\nThis release covers a progress payment for all labor, services, equipment, or materials furnished to the property or to ____________ (person with whom signer contracted) as indicated in the attached statement(s) or progress payment request(s), except for unpaid retention, pending modifications and changes, or other items furnished.\n\nThe signer warrants that the signer has already paid or will use the funds received from this progress payment to promptly pay in full all of the signer’s laborers, subcontractors, materialmen, and suppliers for all work, materials, equipment, or services provided for or to the above referenced project in regard to the attached statement(s) or progress payment request(s).\n\nDate __________________\n\n______________________ (Company name)\n\nBy ____________________ (Signature)\n\nNOTICE: This document waives rights unconditionally and states that you have been paid for giving up those rights. It is prohibited for a person to require you to sign this document if you have not been paid the payment amount set forth below. If you have not been paid, use a conditional release form.",
+            "created_date": "2025-07-08T00:00:00Z"
+        },
+        {
+            "template_id": 7,
+            "template_name": "Conditional Lien Waiver and Release For Final Payment",
+            "template_type": "Final Payment",
+            "template_text": "CONDITIONAL WAIVER AND RELEASE ON FINAL PAYMENT\n\nProject _____________\n\nJob No. ______________\n\nOn receipt by the signer of this document of a check from ______________ (maker of check) in the sum of $ _______________ payable to ______________________ (payee or payees of check) and when the check has been properly endorsed and has been paid by the bank on which it is drawn, this document becomes effective to release any mechanic’s lien right, any right arising from a payment bond that complies with a state or federal statute, any common law payment bond right, any claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment rights for persons in the signer’s position that the signer has on the property of _____________ (owner) located at _________________ (location) to the following extent: __________________ (job description).\n\nThis release covers the final payment to the signer for all labor, services, equipment, or materials furnished to the property or to ________________ (person with whom signer contracted).\n\nBefore any recipient of this document relies on this document, the recipient should verify evidence of payment to the signer.\n\nThis signer warrants that the signer has already paid or will use the funds received from this final payment to promptly pay in full all of the signer’s laborers, subcontractors, materialmen, and suppliers for all work, materials, equipment, or services provided for or to the above referenced project up to the date of this waiver and release.\n\nDate __________________\n\n_______________________ (Company name)\n\nBy ______________________ (Signature)\n\n_________________________ (Title)",
+            "created_date": "2025-07-09T00:00:00Z"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 4,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_Templates"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_Templates"
+        }
+    ]
+}

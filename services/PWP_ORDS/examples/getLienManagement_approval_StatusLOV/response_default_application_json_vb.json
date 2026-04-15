@@ -1,0 +1,31 @@
+{
+    "items": [
+        {
+            "attchment_status": "Completed"
+        },
+        {
+            "attchment_status": "Rejected"
+        },
+        {
+            "attchment_status": "Supplier Signed Unconditional LW uploaded"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 3,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LienManagement_approval_StatusLOV"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LienManagement_approval_StatusLOV"
+        }
+    ]
+}

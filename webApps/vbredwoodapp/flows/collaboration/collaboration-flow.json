@@ -1,0 +1,13 @@
+{
+  "id": "collaboration",
+  "description": "Flow main",
+  "defaultPage": "collaboration-2",
+  "services": {},
+  "types": {},
+  "variables": {},
+  "security": {
+    "access": {
+      "requiresAuthentication": false
+    }
+  }
+}

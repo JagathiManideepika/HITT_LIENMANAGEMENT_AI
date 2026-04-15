@@ -1,0 +1,858 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "base64Val_CF": {
+      "type": "any"
+    },
+    "base64Val_CP": {
+      "type": "any"
+    },
+    "base64Val_UCF": {
+      "type": "any"
+    },
+    "base64Val_UCP": {
+      "type": "any"
+    },
+    "createDialogObj": {
+      "type": {
+        "condFin_docID": "string",
+        "condFin_DocName": "any",
+        "condFinal_Val": "string",
+        "condPar_docID": "any",
+        "condPar_DopcName": "any",
+        "condPar_Val": "any",
+        "stateVal": "any",
+        "uncond_Final": "any",
+        "uncond_Par": "any",
+        "uncondFin_DocName": "any",
+        "uncondFinal_docID": "string",
+        "uncondPar_docID": "string",
+        "uncondpar_DocName": "any"
+      }
+    },
+    "dialogTitle": {
+      "type": "string",
+      "defaultValue": "Create Template"
+    },
+    "docIds": {
+      "type": {
+        "CondFinDOCID": "number",
+        "CondParDOCID": "number",
+        "DOCID": "number",
+        "UncondFinDOCID": "number",
+        "UncondParDOCID": "number"
+      }
+    },
+    "getLMCOMMONLOOKUPListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "display_value",
+        "itemsPath": "items",
+        "responseType": "getLMCOMMONLOOKUPResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "display_value"
+          ]
+        },
+        "fetchChain": "getLM_COMMON_LOOKUPFetch"
+      }
+    },
+    "getLMCOMMONLOOKUPListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_COMMON_LOOKUP",
+        "keyAttributes": "display_value",
+        "itemsPath": "items",
+        "responseType": "getLMCOMMONLOOKUPResponse2",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "display_value"
+          ]
+        }
+      }
+    },
+    "getLMCOMMONLOOKUPListSDP3": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_COMMON_LOOKUP",
+        "keyAttributes": "display_value",
+        "itemsPath": "items",
+        "responseType": "getLMCOMMONLOOKUPResponse3",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "display_value"
+          ]
+        }
+      }
+    },
+    "getLMCOMMONLOOKUPListSDP4": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_COMMON_LOOKUP",
+        "keyAttributes": "display_value",
+        "itemsPath": "items",
+        "responseType": "getLMCOMMONLOOKUPResponse4",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "display_value"
+          ]
+        }
+      }
+    },
+    "getLMCOMMONLOOKUPListSDP5": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_COMMON_LOOKUP",
+        "keyAttributes": "display_value",
+        "itemsPath": "items",
+        "responseType": "getLMCOMMONLOOKUPResponse5",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "display_value"
+          ]
+        }
+      }
+    },
+    "getLMDOWNLOADTEMPLATES2ListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_DOWNLOAD_TEMPLATES2",
+        "keyAttributes": "column_header",
+        "itemsPath": "items",
+        "responseType": "getLMDOWNLOADTEMPLATES2Response",
+        "uriParameters": {
+          "state_name": "{{ $variables.rowData.state_name }}"
+        },
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "column_header"
+          ]
+        }
+      }
+    },
+    "getLMDOWNLOADTEMPLATES2ListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "keyAttributes": "column_header",
+        "itemsPath": "items",
+        "responseType": "getLMDOWNLOADTEMPLATES2Response2",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "column_header"
+          ]
+        },
+        "fetchChain": "getLM_DOWNLOAD_TEMPLATES2Fetch"
+      }
+    },
+    "getLMDOWNLOADTEMPLATES2ListSDP3": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_DOWNLOAD_TEMPLATES2",
+        "keyAttributes": "column_header",
+        "itemsPath": "items",
+        "responseType": "getLMDOWNLOADTEMPLATES2Response3",
+        "uriParameters": {
+          "state_name": "{{ $variables.stateDownload }}"
+        },
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "column_header"
+          ]
+        }
+      }
+    },
+    "getLMUSSTATESListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_US_STATES",
+        "keyAttributes": "state_name",
+        "itemsPath": "items",
+        "responseType": "getLMUSSTATESResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "state_name"
+          ]
+        }
+      }
+    },
+    "getLMUSSTATESListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_US_STATES",
+        "keyAttributes": "state_name",
+        "itemsPath": "items",
+        "responseType": "getLMUSSTATESResponse2",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "state_name"
+          ]
+        }
+      }
+    },
+    "isDialogInitialized": {
+      "type": "boolean",
+      "defaultValue": true
+    },
+    "rowData": {
+      "type": "getLM_HITT_TEMPLATES"
+    },
+    "stateDownload": {
+      "type": "any"
+    },
+    "tableADP": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getLM_HITT_TEMPLATES",
+        "keyAttributes": "id"
+      }
+    },
+    "templates": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getLM_DOWNLOAD_TEMPLATES2",
+        "keyAttributes": "doc_id"
+      }
+    },
+    "templateVal": {
+      "type": "any"
+    },
+    "variable1": {
+      "type": "string"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getLM_DOWNLOAD_TEMPLATES2": {
+      "endpoint": "getLM_DOWNLOAD_TEMPLATES2",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getLM_HITT_TEMPLATES": {
+      "endpoint": "getLM_HITT_TEMPLATES",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getLMCOMMONLOOKUPResponse": {
+      "endpoint": "getLM_COMMON_LOOKUP",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMCOMMONLOOKUPResponse2": {
+      "endpoint": "getLM_COMMON_LOOKUP",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMCOMMONLOOKUPResponse3": {
+      "endpoint": "getLM_COMMON_LOOKUP",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMCOMMONLOOKUPResponse4": {
+      "endpoint": "getLM_COMMON_LOOKUP",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMCOMMONLOOKUPResponse5": {
+      "endpoint": "getLM_COMMON_LOOKUP",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMDOWNLOADTEMPLATES2Response": {
+      "endpoint": "getLM_DOWNLOAD_TEMPLATES2",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMDOWNLOADTEMPLATES2Response2": {
+      "endpoint": "getLM_DOWNLOAD_TEMPLATES2",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMDOWNLOADTEMPLATES2Response3": {
+      "endpoint": "getLM_DOWNLOAD_TEMPLATES2",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMUSSTATESResponse": {
+      "endpoint": "getLM_US_STATES",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMUSSTATESResponse2": {
+      "endpoint": "getLM_US_STATES",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "getLM_DOWNLOAD_TEMPLATES2": {
+      "column_header": "string",
+      "doc_id": "string"
+    },
+    "getLM_HITT_TEMPLATES": {
+      "conditional_final": "string",
+      "conditional_partial": "string",
+      "documentid_conditional_final": "string",
+      "documentid_conditional_partial": "string",
+      "documentid_unconditional_final": "string",
+      "documentid_unconditional_partial": "string",
+      "docVal": "any",
+      "id": "number",
+      "state_name": "string",
+      "unconditional_final": "string",
+      "unconditional_partial": "string"
+
+    },
+    "getLMCOMMONLOOKUPResponse": {
+      "items": [
+        {
+          "display_value": "string",
+          "return_value": "string"
+        }
+      ]
+    },
+    "getLMCOMMONLOOKUPResponse2": {
+      "items": [
+        {
+          "display_value": "string",
+          "return_value": "string"
+        }
+      ]
+    },
+    "getLMCOMMONLOOKUPResponse3": {
+      "items": [
+        {
+          "display_value": "string",
+          "return_value": "string"
+        }
+      ]
+    },
+    "getLMCOMMONLOOKUPResponse4": {
+      "items": [
+        {
+          "display_value": "string",
+          "return_value": "string"
+        }
+      ]
+    },
+    "getLMCOMMONLOOKUPResponse5": {
+      "items": [
+        {
+          "display_value": "string",
+          "return_value": "string"
+        }
+      ]
+    },
+    "getLMDOWNLOADTEMPLATES2Response": {
+      "items": [
+        {
+          "column_header": "string",
+          "doc_id": "string"
+        }
+      ]
+    },
+    "getLMDOWNLOADTEMPLATES2Response2": {
+      "items": [
+        {
+          "column_header": "string"
+        }
+      ]
+    },
+    "getLMDOWNLOADTEMPLATES2Response3": {
+      "items": [
+        {
+          "column_header": "string",
+          "doc_id": "string"
+        }
+      ]
+    },
+    "getLMUSSTATESResponse": {
+      "items": [
+        {
+          "state_abbreviation": "string",
+          "state_name": "string"
+        }
+      ]
+    },
+    "getLMUSSTATESResponse2": {
+      "items": [
+        {
+          "state_abbreviation": "string",
+          "state_name": "string"
+        }
+      ]
+    }
+
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "addlineButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction10": {
+      "chains": [
+        {
+          "chain": "updateButtonActionChain8",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}",
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "buttonAction11": {
+      "chains": [
+        {
+          "chain": "DownloadTemplateButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction12": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain10",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction13": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain11",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction14": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain12",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction15": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain13",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction16": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain14",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction17": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain15",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction2": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}",
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]"
+          }
+        }
+      ]
+    },
+    "buttonAction3": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction4": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain2",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction5": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain3",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction6": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain4",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction7": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain5",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction8": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain6",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}",
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "buttonAction9": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain7",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "filePickerSelect": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "filePickerSelect2": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "filePickerSelect3": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain2",
+          "parameters": {
+            "event": "{{$event}}",
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "filePickerSelect4": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain3",
+          "parameters": {
+            "event": "{{$event}}",
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{$event.detail.value}}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}",
+            "key": "{{ $current.key }}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}",
+            "valueItem": "{{ $event.detail.value }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "selectValueItem2": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{$event.detail.value}}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}",
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}",
+            "valueItem": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "selectValueItem3": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain2",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{$event.detail.value}}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}",
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}",
+            "valueItem": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "selectValueItem4": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain3",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{$event.detail.value}}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}",
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}",
+            "valueItem": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "selectValueItem5": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain4",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{$event.detail.value}}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}",
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}",
+            "valueItem": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "selectValueItem6": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain5",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{$event.detail.value}}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}",
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}",
+            "valueItem": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "switchValue": {
+      "chains": [
+        {
+          "chain": "SwitchValueChangeChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{ $event.detail.value }}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEdit": {
+      "chains": [
+        {
+          "chain": "TableBeforeRowEditChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "accept": "{{$event.detail.accept}}",
+            "rowContext": "{{$event.detail.rowContext}}",
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEdit2": {
+      "chains": [
+        {
+          "chain": "TableBeforeRowEditChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "accept": "{{$event.detail.accept}}",
+            "rowContext": "{{$event.detail.rowContext}}",
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEditEnd": {
+      "chains": [
+        {
+          "chain": "TableBeforeRowEditEndChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "accept": "{{$event.detail.accept}}",
+            "setUpdatedItem": "{{$event.detail.setUpdatedItem}}",
+            "rowContext": "{{$event.detail.rowContext}}",
+            "cancelEdit": "{{$event.detail.cancelEdit}}",
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEditEnd2": {
+      "chains": [
+        {
+          "chain": "TableBeforeRowEditEndChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "accept": "{{$event.detail.accept}}",
+            "setUpdatedItem": "{{$event.detail.setUpdatedItem}}",
+            "rowContext": "{{$event.detail.rowContext}}",
+            "cancelEdit": "{{$event.detail.cancelEdit}}",
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "chain": "PageVbEnterChain",
+          "parameters": {
+            "event": "{{$event}}"
+          }
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-dialog": {
+        "path": "ojs/ojdialog"
+      },
+      "oj-file-picker": {
+        "path": "ojs/ojfilepicker"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-progress-bar": {
+        "path": "ojs/ojprogress-bar"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-switch": {
+        "path": "ojs/ojswitch"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-validation-group": {
+        "path": "ojs/ojvalidationgroup"
+      }
+
+    }
+  }
+}

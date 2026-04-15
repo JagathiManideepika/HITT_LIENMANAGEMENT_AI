@@ -1,0 +1,4416 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Ords Timerite",
+        "version": "1.0.0",
+        "x-vb": {
+            "transforms": {
+                "path": "../Transform.js"
+            }
+        }
+    },
+    "servers": [
+        {
+            "url": "vb-catalog://backends/PWP_DB"
+        }
+    ],
+    "paths": {
+        "/PWP_SupplierDetails": {
+            "get": {
+                "operationId": "getPWP_SupplierDetails",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_SupplierDetails"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getPWP_SupplierDetails/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+{
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_INVOICE_ID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/PWP_ProjectNumbers": {
+            "get": {
+                "operationId": "getPWP_ProjectNumbers",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_ProjectNumbers"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getPWP_ProjectNumbers/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/PWP_APInvoiceNumbers": {
+            "get": {
+                "operationId": "getPWP_APInvoiceNumbers",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_APInvoiceNumbers"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getPWP_APInvoiceNumbers/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/getaraplinkdetails": {
+            "post": {
+                "operationId": "postGetaraplinkdetails",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PostGetaraplinkdetailsResponse"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/postGetaraplinkdetails/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "create"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "get": {
+                "operationId": "GetGetaraplinkdetails",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetGetaraplinkdetails"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getGetaraplinkdetails/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/PWP_ProjectLOV_CriteriaSearch": {
+            "get": {
+                "operationId": "PWP_ProjectLOV_CriteriaSearch",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_ProjectLOV_CriteriaSearch"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/PWP_ProjectLOV_CriteriaSearch/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/PWP_ProjectLOV_CriteriaCreate": {
+            "get": {
+                "operationId": "getPWP_ProjectLOV_CriteriaCreate",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_ProjectLOV_CriteriaCreate"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getPWP_ProjectLOV_CriteriaCreate/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "x-vb": {
+                            "defaultValue": "1000"
+                        }
+                    }
+                ]
+            }
+        },
+        "/PWP_TopTaskLOV_CriteriaCreate": {
+            "get": {
+                "operationId": "PWP_TopTaskLOV_CriteriaCreate",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "x-vb": {
+                            "defaultValue": "300000281187174"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_TopTaskLOV_CriteriaCreate"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/PWP_TopTaskLOV_CriteriaCreate/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/PWP_SupplierLOV_CriteriaCreate": {
+            "get": {
+                "operationId": "PWP_SupplierLOV_CriteriaCreate",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_SupplierLOV_CriteriaCreate"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/PWP_SupplierLOV_CriteriaCreate/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/PWP_SupplierSiteLOV_CriteriaCreate": {
+            "get": {
+                "operationId": "getPWP_SupplierSiteLOV_CriteriaCreate",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPWP_SupplierSiteLOV_CriteriaCreate"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getPWP_SupplierSiteLOV_CriteriaCreate/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/pwptest": {
+            "get": {
+                "operationId": "getPwptest",
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "x-vb": {
+                            "defaultValue": "1000"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetPwptest"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getPwptest/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LienManagement_Workbench_Search": {
+            "get": {
+                "operationId": "getGetaraplinkdetails",
+                "parameters": [
+                    {
+                        "name": "p_ap_invoice",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p_supplier_name",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p_project_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+{
+                        "name": "p_status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLienManagement_Workbench_Search"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getGetaraplinkdetails/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            },
+            "put": {
+                "operationId": "putLienManagement_Workbench_Search",
+                "parameters": [
+                    {
+                        "name": "attachement_status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "ap_invoice",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "update"
+                }
+            }
+        },
+        "/LienManagement_Approval_Search": {
+            "get": {
+                "operationId": "getLienManagement_Approval_Search",
+                "parameters": [
+                    {
+                        "name": "p_attchment_status",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "x-vb": {
+                            "defaultValue": "Approval Pending"
+                        }
+                    },
+                    {
+                        "name": "p_ap_invoice",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p_supplier_name",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+{
+                        "name": "p_project_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLienManagement_Approval_Search"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLienManagement_Approval_Search/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            },
+            "post": {
+                "operationId": "postLienManagement_Approval_Search",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostLienManagement_Approval_SearchRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/postLienManagement_Approval_Search/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PostLienManagement_Approval_SearchResponse"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/postLienManagement_Approval_Search/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME ",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/LienManagement_InvoiceLOV_Search": {
+            "get": {
+                "operationId": "getLienManagement_InvoiceLOV_Search",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLienManagement_InvoiceLOV_Search"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLienManagement_InvoiceLOV_Search/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/LienManagement_ProjectLOV_AppSearch": {
+            "get": {
+                "operationId": "getLienManagement_ProjectLOV_AppSearch",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLienManagement_ProjectLOV_AppSearch"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLienManagement_ProjectLOV_AppSearch/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/LienManagement_supplierLOV_AppSearch": {
+            "get": {
+                "operationId": "getLienManagement_supplierLOV_AppSearch",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLienManagement_supplierLOV_AppSearch"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLienManagement_supplierLOV_AppSearch/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+{
+                        "name": "USERNAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_INVOICE_ID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/LM_Wavier_Templates_HDR": {
+            "get": {
+                "operationId": "getLM_Wavier_Templates_HDR",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_Wavier_Templates_HDR"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_Wavier_Templates_HDR/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            },
+            "post": {
+                "operationId": "postLM_Wavier_Templates_HDR",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostLM_Wavier_Templates_HDRRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/postLM_Wavier_Templates_HDR/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "Default response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PostLM_Wavier_Templates_HDRResponse"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "externalValue": "./examples/postLM_Wavier_Templates_HDR/response_default_application_json_vb.json",
+                                        "summary": "Example stored by VB User"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "operationId": "patchLM_Wavier_Templates_HDR",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PutLM_Wavier_Templates_HDRResponse"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/patchLM_Wavier_Templates_HDR/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "update"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/LM_Wavier_Templates_Lines": {
+            "get": {
+                "operationId": "getLM_Wavier_Templates_Lines",
+                "parameters": [
+                    {
+                        "name": "p_template_name",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_Wavier_Templates_Lines"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_Wavier_Templates_Lines/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_Templates": {
+            "get": {
+                "operationId": "getLM_Templates",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_Templates"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_Templates/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_Templatename": {
+            "get": {
+                "operationId": "getLM_Templatename",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_Templatename"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_Templatename/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/getAttachementStatus": {
+            "get": {
+                "operationId": "AttachementStatus",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetGetAttachementStatus"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/AttachementStatus/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                ]
+            }
+        },
+        "/LienManagement_Criteria_ProjectsLOV": {
+            "get": {
+                "operationId": "getLienManagement_Criteria_ProjectsLOV",
+                "parameters": [],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLienManagement_Criteria_ProjectsLOV"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLienManagement_Criteria_ProjectsLOV/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LienManagement_approval_StatusLOV": {
+            "get": {
+                "operationId": "getLienManagement_approval_StatusLOV",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLienManagement_approval_StatusLOV"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLienManagement_approval_StatusLOV/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/getCriteria": {
+            "get": {
+                "operationId": "getGetCriteria",
+                "parameters": [
+                    {
+                        "name": "project_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetGetCriteria"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getGetCriteria/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            },
+            "put": {
+                "operationId": "putGetCriteria",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PutGetCriteriaRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/putGetCriteria/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "update"
+                },
+                "parameters": [
+{
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_USER_NAME ",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "post": {
+                "operationId": "postGetCriteria",
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "create"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME ",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/LM_Payment_Type": {
+            "put": {
+                "operationId": "putLM_Payment_Type",
+                "parameters": [
+                    {
+                        "name": "p_payment_type",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_WORKBENCH_PK",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "update"
+                }
+            }
+        },
+        "/LM_Page_Restriction": {
+            "get": {
+                "operationId": "getLM_Page_Restriction",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_Page_Restriction"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_Page_Restriction/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/getapholddtl": {
+            "get": {
+                "operationId": "getGetapholddtl",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetGetapholddtl"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getGetapholddtl/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            },
+            "post": {
+                "operationId": "postGetapholddtl",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostGetapholddtlRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/postGetapholddtl/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "create"
+                }
+            }
+        },
+        "/getexptypecategory": {
+            "get": {
+                "operationId": "getGetexptypecategory",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetGetexptypecategory"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getGetexptypecategory/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/getexptypename": {
+            "get": {
+                "operationId": "getGetexptypename",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetGetexptypename"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getGetexptypename/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/getsuppliername": {
+            "get": {
+                "operationId": "getGetsuppliername",
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/updateflag": {
+            "post": {
+                "operationId": "postUpdateflag",
+                "parameters": [
+                    {
+                        "name": "p_enabled_flag",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p_project_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_ORCL_REST_API": {
+            "get": {
+                "operationId": "getLM_ORCL_REST_API",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_ORCL_REST_API"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_ORCL_REST_API/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            },
+            "post": {
+                "operationId": "postLM_ORCL_REST_API",
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostLM_ORCL_REST_APIRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/postLM_ORCL_REST_API/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "create"
+                }
+            }
+        },
+        "/LMDebugLogs": {
+            "get": {
+                "operationId": "getLMDebugLogs",
+                "parameters": [
+                    {
+                        "name": "P_SESSION_ID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_USER_ID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_START_DATE",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_END_DATE",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLMDebugLogs"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLMDebugLogs/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_Debug_SessionID": {
+            "get": {
+                "operationId": "getLM_Debug_SessionID",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_Debug_SessionID"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_Debug_SessionID/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_Debug_UserID": {
+            "get": {
+                "operationId": "getLM_Debug_UserID",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_Debug_UserID"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_Debug_UserID/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LMSupSignDocExt": {
+            "get": {
+                "operationId": "getLMSupSignDocExt",
+                "parameters": [
+                    {
+                        "name": "P_PROJECT_NUMBER",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_SUPPLIER_NAME",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_AP_INVOICE",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_START_DATE",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "P_END_DATE",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLMSupSignDocExt"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLMSupSignDocExt/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+               },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_US_STATES": {
+            "get": {
+                "operationId": "getLM_US_STATES",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_US_STATES"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_US_STATES/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_HITT_TEMPLATES": {
+            "get": {
+                "operationId": "getLM_HITT_TEMPLATES",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_HITT_TEMPLATES"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_HITT_TEMPLATES/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_DOWNLOAD_TEMPLATES": {
+            "get": {
+                "operationId": "getLM_DOWNLOAD_TEMPLATES2",
+                "parameters": [
+                    {
+                        "name": "state_name",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_DOWNLOAD_TEMPLATES"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_DOWNLOAD_TEMPLATES2/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_COMMON_LOOKUP": {
+            "get": {
+                "operationId": "getLM_COMMON_LOOKUP",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetLM_COMMON_LOOKUP"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_COMMON_LOOKUP/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/LM_UPDATE_TEMPLATES": {
+            "get": {
+                "operationId": "getLM_UPDATE_TEMPLATES",
+                "parameters": [
+                    {
+                        "name": "p_state_name",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            },
+            "put": {
+                "operationId": "putLM_UPDATE_TEMPLATES",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PutLM_UPDATE_TEMPLATESRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/putLM_UPDATE_TEMPLATES/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "update"
+                }
+            }
+        },
+        "/LM_INSERT_STATES": {
+            "post": {
+                "operationId": "postLM_INSERT_STATES",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostLM_INSERT_STATESRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/postLM_INSERT_STATES/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "create"
+                },
+                "parameters": [
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME ",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "GetPWP_SupplierDetails": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "supplier_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPWP_ProjectNumbers": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_number": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPWP_APInvoiceNumbers": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ap_invoice": {
+                                    "type": "string"
+                                },
+                                "invoice_id": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetGetaraplinkdetails": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ap_invoice": {
+                                    "type": "string"
+                                },
+                                "ap_invoice_date": {
+                                    "type": "string"
+                                },
+                                "ap_invoice_amount": {
+                                    "type": "integer"
+                                },
+                                "supplier_name": {
+                                    "type": "string"
+                                },
+                                "customer_name": {
+                                    "type": "string"
+                                },
+                                "hold_name": {
+                                    "type": "string"
+                                },
+                                "hold_date": {
+                                    "type": "string"
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "ar_invoice": {
+                                    "nullable": true
+                                },
+                                "ar_invoice_amount": {
+                                    "nullable": true
+                                },
+                                "attribute1": {
+                                    "nullable": true
+                                },
+                                "attribute2": {
+                                    "type": "string"
+                                },
+                                "lag_days": {
+                                    "nullable": true
+                                },
+                                "po_number": {
+                                    "type": "string"
+                                },
+                                "receipt_number": {
+                                    "type": "string"
+                                },
+                                "attribute_3": {
+                                    "type": "string"
+                                },
+                                "attribute_4": {
+                                    "nullable": true
+                                },
+                                "attribute_5": {
+                                    "nullable": true
+                                },
+                                "currency_code": {
+                                    "type": "string"
+                                },
+                                "hold_id": {
+                                    "type": "integer"
+                                },
+                                "file_name": {
+                                    "nullable": true
+                                },
+                                "file_type": {
+                                    "nullable": true
+                                },
+                                "file_content": {
+                                    "nullable": true
+                                },
+                                "attchment_status": {
+                                    "type": "string"
+                                },
+                                "hold_released_date": {
+                                    "nullable": true
+                                },
+                                "inv_installment_number": {
+                                    "type": "string"
+                                },
+                                "conditional_signed_doc": {
+                                    "type": "string"
+                                },
+                                "unconditional_signed_doc": {
+                                    "type": "string"
+                                },
+                                "supplier_email": {
+                                    "nullable": true
+                                },
+                                "supplier_number": {
+                                    "type": "string"
+                                },
+                                "next_status": {
+                                    "type": "string"
+                                },
+                                "inv_line_number": {
+                                    "nullable": true
+                                },
+                                "workbench_pk": {
+                                    "type": "string"
+                                },
+                                "cond_uncond_flag": {
+                                    "type": "string"
+                                },
+                                "comments": {
+                                    "nullable": true
+                                },
+                                "con_file_name": {
+                                    "type": "string"
+                                },
+                                "con_file_type": {
+                                    "type": "string"
+                                },
+                                "uncon_file_name": {
+                                    "type": "string"
+                                },
+                                "uncon_file_type": {
+                                    "type": "string"
+                                },
+                                "template_code": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "payment_type": {
+                                    "type": "string"
+                                },
+                                "installment_amount": {
+                                    "type": "string"
+                                },
+                                "installment_remain_amount": {
+                                    "type": "string"
+                                },
+                                "lien_number": {
+                                    "nullable": true
+                                },
+                                "show_cond_doc": {
+                                    "type": "string"
+                                },
+                                "show_uncond_doc": {
+                                    "type": "string"
+                                },
+                                "creation_date": {
+                                    "nullable": true
+                                },
+                                "last_update_date": {
+                                    "nullable": true
+                                },
+                                "invoice_id": {
+                                    "type": "integer"
+                                },
+                                "ap_invoice_due_date": {
+                                    "nullable": true
+                                },
+                                "starting_process": {
+                                    "nullable": true
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPWP_ProjectLOV_CriteriaSearch": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_id": {
+                                    "type": "integer"
+                                },
+                                "project_name": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPWP_ProjectLOV_CriteriaCreate": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_id": {
+                                    "type": "integer"
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "project_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPWP_TopTaskLOV_CriteriaCreate": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_id": {
+                                    "type": "integer"
+                                },
+                                "task_id": {
+                                    "type": "integer"
+                                },
+                                "task_number": {
+                                    "type": "string"
+                                },
+                                "task_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPWP_SupplierLOV_CriteriaCreate": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "vendor_id": {
+                                    "type": "integer"
+                                },
+                                "segment1": {
+                                    "type": "string"
+                                },
+                                "party_id": {
+                                    "type": "integer"
+                                },
+                                "vendor_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPWP_SupplierSiteLOV_CriteriaCreate": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "supplier_site": {
+                                    "type": "string"
+                                },
+                                "site_id": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetPwptest": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_id": {
+                                    "type": "integer"
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "project_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLienManagement_Workbench_Search": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ap_invoice": {
+                                    "type": "string"
+                                },
+                                "ap_invoice_date": {
+                                    "nullable": true
+                                },
+                                "ap_invoice_amount": {
+                                    "type": "integer"
+                                },
+                                "supplier_name": {
+                                    "type": "string"
+                                },
+                                "customer_name": {
+                                    "type": "string"
+                                },
+                                "hold_name": {
+                                    "type": "string"
+                                },
+                                "hold_date": {
+                                    "type": "string"
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "ar_invoice": {
+                                    "nullable": true
+                                },
+                                "ar_invoice_amount": {
+                                    "nullable": true
+                                },
+                                "attribute1": {
+                                    "nullable": true
+                                },
+                                "attribute2": {
+                                    "nullable": true
+                                },
+                                "lag_days": {
+                                    "type": "integer"
+                                },
+                                "po_number": {
+                                    "type": "string"
+                                },
+                                "receipt_number": {
+                                    "type": "string"
+                                },
+                                "attribute_3": {
+                                    "nullable": true
+                                },
+                                "attribute_4": {
+                                    "nullable": true
+                                },
+                                "attribute_5": {
+                                    "nullable": true
+                                },
+                                "currency_code": {
+                                    "type": "string"
+                                },
+                                "hold_id": {
+                                    "type": "integer"
+                                },
+                                "file_name": {
+
+                                    "nullable": true
+                                },
+                                "file_type": {
+
+                                    "nullable": true
+                                },
+                                "file_content": {
+
+                                    "nullable": true
+                                },
+                                "attchment_status": {
+                                    "type": "string"
+
+                                },
+                                "hold_released_date": {
+                                    "nullable": true
+                                },
+                                "inv_installment_number": {
+                                    "type": "string"
+                                },
+                                "conditional_signed_doc": {
+                                    "type": "string",
+                                    "nullable": true
+
+                                },
+                                "unconditional_signed_doc": {
+                                    "type": "string",
+                                    "nullable": true
+
+                                },
+                                "supplier_email": {
+                                    "nullable": true
+                                },
+                                "supplier_number": {
+                                    "type": "string"
+                                },
+                                "next_status": {
+                                    "type": "string"
+                                },
+                                "inv_line_number": {
+                                    "nullable": true
+                                },
+                                "workbench_pk": {
+                                    "type": "string"
+                                },
+                                "cond_uncond_flag": {
+                                    "type": "string"
+                                },
+                                "comments": {
+                                    "type": "string"
+                                },
+                                "con_file_name": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "con_file_type": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "uncon_file_name": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "uncon_file_type": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "template_code": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "payment_type": {
+                                    "nullable": true
+                                },
+                                "installment_amount": {
+                                    "nullable": true
+                                },
+                                "installment_remain_amount": {
+                                    "nullable": true
+                                },
+                                "lien_number": {
+                                    "nullable": true
+                                },
+                                "show_cond_doc": {
+                                    "nullable": true
+                                },
+                                "show_uncond_doc": {
+                                    "nullable": true
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLienManagement_Approval_Search": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ap_invoice": {
+                                    "type": "string"
+                                },
+                                "ap_invoice_date": {
+                                    "nullable": true
+                                },
+                                "ap_invoice_amount": {
+                                    "type": "integer"
+                                },
+                                "supplier_name": {
+                                    "type": "string"
+                                },
+                                "customer_name": {
+                                    "type": "string"
+                                },
+                                "hold_name": {
+                                    "type": "string"
+                                },
+                                "hold_date": {
+                                    "type": "string"
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "ar_invoice": {
+                                    "nullable": true
+                                },
+                                "ar_invoice_amount": {
+                                    "nullable": true
+                                },
+                                "attribute1": {
+                                    "nullable": true
+                                },
+                                "attribute2": {
+                                    "nullable": true
+                                },
+                                "lag_days": {
+                                    "nullable": true
+                                },
+                                "po_number": {
+                                    "type": "string"
+                                },
+                                "receipt_number": {
+                                    "type": "string"
+                                },
+                                "attribute_3": {
+                                    "nullable": true
+                                },
+                                "attribute_4": {
+                                    "nullable": true
+                                },
+                                "attribute_5": {
+                                    "nullable": true
+                                },
+                                "currency_code": {
+                                    "type": "string"
+                                },
+                                "hold_id": {
+                                    "type": "integer"
+                                },
+                                "file_name": {
+                                    "nullable": true
+                                },
+                                "file_type": {
+                                    "nullable": true
+                                },
+                                "file_content": {
+                                    "nullable": true
+                                },
+                                "attchment_status": {
+                                    "type": "string"
+                                },
+                                "hold_released_date": {
+                                    "nullable": true
+                                },
+                                "inv_installment_number": {
+                                    "type": "string"
+                                },
+                                "conditional_signed_doc": {
+                                    "type": "string"
+                                },
+                                "unconditional_signed_doc": {
+                                    "type": "string"
+                                },
+                                "supplier_email": {
+                                    "nullable": true
+                                },
+                                "supplier_number": {
+                                    "type": "string"
+                                },
+                                "next_status": {
+                                    "type": "string"
+                                },
+                                "inv_line_number": {
+                                    "nullable": true
+                                },
+                                "workbench_pk": {
+                                    "type": "string"
+                                },
+                                "cond_uncond_flag": {
+                                    "type": "string"
+                                },
+                                "comments": {
+                                    "nullable": true
+                                },
+                                "con_file_name": {
+                                    "type": "string"
+                                },
+                                "con_file_type": {
+                                    "type": "string"
+                                },
+                                "uncon_file_name": {
+                                    "type": "string"
+                                },
+                                "uncon_file_type": {
+                                    "type": "string"
+                                },
+                                "template_code": {
+                                    "type": "string"
+                                },
+                                "payment_type": {
+                                    "type": "string"
+                                },
+                                "installment_amount": {
+                                    "type": "string"
+                                },
+                                "installment_remain_amount": {
+                                    "type": "string"
+                                },
+                                "lien_number": {
+                                    "nullable": true
+                                },
+                                "show_cond_doc": {
+                                    "type": "string"
+                                },
+                                "show_uncond_doc": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLienManagement_InvoiceLOV_Search": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ap_invoice": {
+                                    "type": "string"
+                                },
+                                "invoice_id": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLienManagement_ProjectLOV_AppSearch": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_number": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "PostLienManagement_Approval_SearchRequest": {
+                "type": "object",
+                "properties": {
+                    "p_ap_invoice": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GetLienManagement_supplierLOV_AppSearch": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "supplier_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_Wavier_Templates_HDR": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "template_header_id": {
+                                    "type": "integer"
+                                },
+                                "template_name": {
+                                    "type": "string"
+                                },
+                                "lien_waiver_type": {
+                                    "type": "string"
+                                },
+                                "start_date": {
+                                    "type": "string"
+                                },
+                                "end_date": {
+                                    "type": "string"
+                                },
+                                "enable_flag": {
+                                    "type": "string"
+                                },
+                                "file_name": {
+                                    "type": "string"
+                                },
+                                "file_type": {
+                                    "type": "string"
+                                },
+                                "file_content": {
+                                    "type": "string"
+                                },
+                                "file_attachment": {
+                                    "nullable": true
+                                },
+                                "creation_adte": {
+                                    "type": "string"
+                                },
+                                "created_by": {
+                                    "nullable": true
+                                },
+                                "last_update_date": {
+                                    "type": "string"
+                                },
+                                "last_updated_by": {
+                                    "nullable": true
+                                },
+                                "last_update_login": {
+                                    "nullable": true
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "PostLM_Wavier_Templates_HDRResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PostLM_Wavier_Templates_HDRRequest": {
+                "type": "object",
+                "properties": {
+                    "p_template_name": {
+                        "type": "string"
+                    },
+                    "p_lien_waiver_type": {
+                        "type": "string"
+                    },
+                    "p_start_date": {
+                        "type": "string"
+                    },
+                    "p_end_date": {
+                        "type": "string"
+                    },
+                    "p_enable_flag": {
+                        "type": "string"
+                    },
+                    "p_applicable_state": {
+                        "type": "string"
+                    },
+                    "p_file_name": {
+                        "type": "string"
+                    },
+                    "p_file_type": {
+                        "type": "string"
+                    },
+                    "p_file_content": {
+                        "type": "string"
+                    },
+                    "p_created_by": {
+                        "type": "string"
+                    },
+                    "p_last_updated_by": {
+                        "type": "string"
+                    },
+                    "p_last_update_login": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GetLM_Wavier_Templates_Lines": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "template_line_id": {
+                                    "type": "integer"
+                                },
+                                "template_header_id": {
+                                    "type": "integer"
+                                },
+                                "template_name": {
+                                    "type": "string"
+                                },
+                                "lien_waiver_type": {
+                                    "type": "string"
+                                },
+                                "start_date": {
+                                    "type": "string"
+                                },
+                                "end_date": {
+                                    "type": "string"
+                                },
+                                "enable_flag": {
+                                    "type": "string"
+                                },
+                                "applicable_states": {
+                                    "type": "string"
+                                },
+                                "file_name": {
+                                    "nullable": true
+                                },
+                                "file_type": {
+                                    "nullable": true
+                                },
+                                "file_content": {
+                                    "nullable": true
+                                },
+                                "file_attachment": {
+                                    "nullable": true
+                                },
+                                "creation_adte": {
+                                    "type": "string"
+                                },
+                                "created_by": {
+                                    "type": "string"
+                                },
+                                "last_update_date": {
+                                    "type": "string"
+                                },
+                                "last_updated_by": {
+                                    "type": "string"
+                                },
+                                "last_update_login": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_Templates": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "template_id": {
+                                    "type": "integer"
+                                },
+                                "template_name": {
+                                    "type": "string"
+                                },
+                                "template_type": {
+                                    "type": "string"
+                                },
+                                "template_text": {
+                                    "type": "string"
+                                },
+                                "created_date": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_Templatename": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "template_header_id": {
+                                    "type": "integer"
+                                },
+                                "template_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetGetAttachementStatus": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+
+                                "child_lookup_meaning": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLienManagement_Criteria_ProjectsLOV": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_id": {
+                                    "type": "integer"
+                                },
+                                "project_name": {
+                                    "type": "string"
+                                }
+
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLienManagement_approval_StatusLOV": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "attchment_status": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetGetCriteria": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "criteria_id": {
+                                    "type": "integer"
+                                },
+                                "criteria_name": {
+                                    "type": "string"
+                                },
+                                "project_id": {
+                                    "type": "integer"
+                                },
+                                "project_name": {
+                                    "type": "string"
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "top_task_id": {
+                                    "type": "integer"
+                                },
+                                "top_task_number": {
+                                    "type": "string"
+                                },
+                                "top_task_name": {
+                                    "type": "string"
+                                },
+                                "task_id": {
+                                    "nullable": true
+                                },
+                                "task_number": {
+                                    "nullable": true
+                                },
+                                "task_name": {
+                                    "nullable": true
+                                },
+                                "expenditure_category": {
+                                    "type": "string"
+                                },
+                                "expenditure_type": {
+                                    "type": "string"
+                                },
+                                "include_allexp_typ_flag": {
+                                    "type": "string"
+                                },
+                                "supplier_id": {
+                                    "type": "integer"
+                                },
+                                "supplier_number": {
+                                    "type": "string"
+                                },
+                                "supplier_name": {
+                                    "type": "string"
+                                },
+                                "supplier_site_id": {
+                                    "type": "integer"
+                                },
+                                "supplier_site": {
+                                    "type": "string"
+                                },
+                                "start_dt": {
+                                    "type": "string"
+                                },
+                                "end_dt": {
+                                    "type": "string"
+                                },
+                                "lag_days": {
+                                    "nullable": true
+                                },
+                                "enabled_flag": {
+                                    "type": "string"
+                                },
+                                "state": {
+                                    "nullable": true
+                                },
+                                "weiver_type": {
+                                    "nullable": true
+                                },
+                                "invoice_amount_limit": {
+                                    "type": "integer"
+                                },
+                                "new_column_13": {
+                                    "nullable": true
+                                },
+                                "include_subtask_flag": {
+                                    "type": "string"
+                                },
+                                "creation_date": {
+                                    "type": "string"
+                                },
+                                "created_by": {
+                                    "nullable": true
+                                },
+                                "last_updated_date": {
+                                    "type": "string"
+                                },
+                                "last_updated_by": {
+                                    "nullable": true
+                                },
+                                "cond_lw_final_payment": {
+                                    "type": "string"
+                                },
+                                "cond_lw_progress_payment": {
+                                    "type": "string"
+                                },
+                                "uncond_lw_final_payment": {
+                                    "type": "string"
+                                },
+                                "uncond_lw_progress_payment": {
+                                    "type": "string"
+                                },
+                                "starting_process": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "PutGetCriteriaRequest": {
+                "type": "object",
+                "properties": {
+                    "P_PROJECT_ID": {
+                        "type": "string"
+                    },
+                    "P_PROJECT_NAME": {
+                        "type": "string"
+                    },
+                    "P_PROJECT_NUMBER": {
+                        "type": "string"
+                    },
+                    "P_TOP_TASK_ID": {
+                        "type": "integer"
+                    },
+                    "P_TOP_TASK_NUMBER": {
+                        "type": "string"
+                    },
+                    "P_TOP_TASK_NAME": {
+                        "type": "string"
+                    },
+                    "P_TASK_ID": {
+                        "type": "integer"
+                    },
+                    "P_TASK_NUMBER": {
+                        "type": "string"
+                    },
+                    "P_TASK_NAME": {
+                        "type": "string"
+                    },
+                    "P_EXPENDITURE_CATEGORY": {
+                        "type": "string"
+                    },
+                    "P_EXPENDITURE_TYPE": {
+                        "type": "string"
+                    },
+                    "P_INCLUDE_ALLEXP_TYP_FLAG": {
+                        "type": "string"
+                    },
+                    "P_SUPPLIER_ID": {
+                        "type": "integer"
+                    },
+                    "P_SUPPLIER_NUMBER": {
+                        "type": "string"
+                    },
+                    "P_SUPPLIER_NAME": {
+                        "type": "string"
+                    },
+                    "P_SUPPLIER_SITE_ID": {
+                        "type": "string"
+                    },
+                    "P_SUPPLIER_SITE": {
+                        "type": "string"
+                    },
+                    "P_START_DT": {
+                        "type": "string"
+                    },
+                    "P_END_DT": {
+                        "type": "string"
+                    },
+                    "P_LAG_DAYS": {
+                        "type": "integer"
+                    },
+                    "P_ENABLED_FLAG": {
+                        "type": "string"
+                    },
+                    "P_STATE": {
+                        "type": "string"
+                    },
+                    "P_WEIVER_TYPE": {
+                        "type": "string"
+                    },
+                    "P_INVOICE_AMOUNT_LIMIT": {
+                        "type": "integer"
+                    },
+                    "P_NEW_COLUMN_13": {
+                        "type": "string"
+                    },
+                    "P_INCLUDE_SUBTASK_FLAG": {
+                        "type": "string"
+                    },
+                    "P_CRITERIA_ID": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "GetLM_Page_Restriction": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "username": {
+                                    "type": "string"
+                                },
+                                "access_flag": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetGetapholddtl": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ap_invoice": {
+                                    "type": "string"
+                                },
+                                "ap_invoice_date": {
+                                    "type": "string"
+                                },
+                                "ap_invoice_amount": {
+                                    "type": "integer"
+                                },
+                                "hold_name": {
+                                    "nullable": true
+                                },
+                                "hold_date": {
+                                    "nullable": true
+                                },
+                                "project_id": {
+                                    "type": "integer"
+                                },
+                                "top_task_id": {
+                                    "type": "integer"
+                                },
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "supplier_name": {
+                                    "type": "string"
+                                },
+                                "expenditure_category": {
+                                    "type": "string"
+                                },
+                                "expenditure_type": {
+                                    "type": "string"
+                                },
+                                "supplier_id": {
+                                    "type": "integer"
+                                },
+                                "hold_apply_flag": {
+                                    "type": "string"
+                                },
+                                "lag_days": {
+                                    "nullable": true
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "PostGetapholddtlRequest": {
+                "type": "object",
+                "properties": {
+                    "p_ap_invoice": {
+                        "type": "string"
+                    },
+                    "p_ap_invoice_date": {
+                        "type": "string"
+                    },
+                    "p_ap_invoice_amount": {
+                        "type": "number"
+                    },
+                    "p_hold_name": {
+                        "type": "string"
+                    },
+                    "p_hold_date": {
+                        "type": "string"
+                    },
+                    "p_project_id": {
+                        "type": "integer"
+                    },
+                    "p_top_task_id": {
+                        "type": "integer"
+                    },
+                    "p_project_number": {
+                        "type": "string"
+                    },
+                    "p_supplier_name": {
+                        "type": "string"
+                    },
+                    "p_expenditure_category": {
+                        "type": "string"
+                    },
+                    "p_expenditure_type": {
+                        "type": "string"
+                    },
+                    "p_supplier_id": {
+                        "type": "integer"
+                    },
+                    "p_hold_apply_flag": {
+                        "type": "string"
+                    },
+                    "p_lag_days": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "GetGetexptypecategory": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "expenditure_category_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetGetexptypename": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "expenditure_type_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_ORCL_REST_API": {
+                "type": "object",
+                "properties": {
+                    "trace_id": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "PostLM_ORCL_REST_APIRequest": {
+                "type": "object",
+                "properties": {
+                    "p_api_name": {
+                        "type": "string"
+                    },
+                    "p_debug_message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PutLM_Wavier_Templates_HDRResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PostLienManagement_Approval_SearchResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PostGetaraplinkdetailsResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GetLMDebugLogs": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "sequence_id": {
+                                    "type": "integer"
+                                },
+                                "session_id": {
+                                    "type": "string"
+                                },
+                                "user_id": {
+                                    "type": "string"
+                                },
+                                "page_name": {
+                                    "type": "string"
+                                },
+                                "api_name": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "procedure_name": {
+                                    "type": "string"
+                                },
+                                "level_id": {
+                                    "nullable": true
+                                },
+                                "debug_message": {
+                                    "type": "string"
+                                },
+                                "creationdatewithtimestamp": {
+                                    "type": "string"
+                                },
+                                "error_code": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "error_details": {
+                                    "type": "string"
+                                },
+                                "severity_level": {
+                                    "type": "string"
+                                },
+                                "application_name": {
+                                    "type": "string",
+                                    "nullable": true
+                                },
+                                "record_source": {
+                                    "type": "string"
+                                },
+                                "environment": {
+                                    "nullable": true
+                                },
+                                "host_name": {
+                                    "nullable": true
+                                },
+                                "request_id": {
+                                    "nullable": true
+                                },
+                                "created_by": {
+                                    "type": "string"
+                                },
+                                "creation_date": {
+                                    "type": "string"
+                                },
+                                "last_updated_by": {
+                                    "type": "string"
+                                },
+                                "last_update_date": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_Debug_UserID": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "user_id": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_Debug_SessionID": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "session_id": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLMSupSignDocExt": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "project_number": {
+                                    "type": "string"
+                                },
+                                "supplier_name": {
+                                    "type": "string"
+                                },
+                                "ap_invoice": {
+                                    "type": "string"
+                                },
+                                "inv_installment_number": {
+                                    "type": "string"
+                                },
+                                "con_file_name": {
+                                    "type": "string"
+                                },
+                                "uncon_file_name": {
+                                    "type": "string"
+                                },
+                                "unconditional_signed_doc": {
+                                    "type": "string"
+                                },
+                                "conditional_signed_doc": {
+                                    "type": "string"
+                                },
+                                "ap_invoice_date": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_US_STATES": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "state_name": {
+                                    "type": "string"
+                                },
+                                "state_abbreviation": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_HITT_TEMPLATES": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "state_name": {
+                                    "type": "string"
+                                },
+                                "conditional_partial": {
+                                    "type": "string"
+                                },
+                                "unconditional_partial": {
+                                    "type": "string"
+                                },
+                                "conditional_final": {
+                                    "type": "string"
+                                },
+                                "unconditional_final": {
+                                    "type": "string"
+                                },
+                                "documentid_conditional_partial": {
+                                    "type": "string"
+                                },
+                                "documentid_unconditional_partial": {
+                                    "type": "string"
+                                },
+                                "documentid_conditional_final": {
+                                    "type": "string"
+                                },
+                                "documentid_unconditional_final": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_DOWNLOAD_TEMPLATES": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "column_header": {
+                                    "type": "string"
+                                },
+                                "doc_id": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetLM_COMMON_LOOKUP": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "display_value": {
+                                    "type": "string"
+                                },
+                                "return_value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "hasMore": {
+                        "type": "boolean"
+                    },
+                    "limit": {
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "type": "integer"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rel": {
+                                    "type": "string"
+                                },
+                                "href": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "PostLM_INSERT_STATESRequest": {
+                "type": "object",
+                "properties": {
+                    "p_state_name": {
+                        "type": "string"
+                    },
+                    "p_conditional_partial": {
+                        "type": "string"
+                    },
+                    "p_unconditional_partial": {
+                        "type": "string"
+                    },
+                    "p_conditional_final": {
+                        "type": "string"
+                    },
+                    "p_unconditional_final": {
+                        "type": "string"
+                    },
+                    "p_docid_cond_partial": {
+                        "nullable": true
+                    },
+                    "p_docid_uncond_partial": {
+                        "nullable": true
+                    },
+                    "p_docid_cond_final": {
+                        "nullable": true
+                    },
+                    "p_docid_uncond_final": {
+                        "nullable": true
+                    }
+                }
+            },
+            "PutLM_UPDATE_TEMPLATESRequest": {
+                "type": "object",
+                "properties": {
+                    "p_state_name": {
+                        "type": "string"
+                    },
+                    "p_conditional_partial": {
+                        "type": "string"
+                    },
+                    "p_unconditional_partial": {
+                        "type": "string"
+                    },
+                    "p_conditional_final": {
+                        "type": "string"
+                    },
+                    "p_unconditional_final": {
+                        "type": "string"
+                    },
+                    "p_docid_cond_partial": {
+                        "nullable": true
+                    },
+                    "p_docid_uncond_partial": {
+                        "nullable": true
+                    },
+                    "p_docid_cond_final": {
+                        "nullable": true
+                    },
+                    "p_docid_uncond_final": {
+                        "nullable": true
+                    }
+                }
+            }
+
+        }
+    }
+}

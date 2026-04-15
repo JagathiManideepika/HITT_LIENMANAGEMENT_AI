@@ -1,0 +1,73 @@
+<div id="pageContent" class="oj-web-applayout-page vb-web-applayout-page">
+
+
+
+
+  <header role="banner" class="oj-web-applayout-header vb-web-applayout-header" style="width:100%">
+    <div class="oj-flex">
+<div class="oj-flex-item">
+  <img :src="[[ $application.path + 'resources/images/01-Service Logos _LienRite.jpg' ]]" height="62">
+</div>
+      <div class="oj-flex-item oj-flex oj-sm-justify-content-flex-end">
+        <oj-button class="transparent" display="icons" chroming="borderless" style="margin-top:2vh"
+          on-oj-action="[[$listeners.buttonAction]]">
+          <!-- <span slot="startIcon" class="oj-web-applayout-offcanvas-icon"></span> -->
+          <span class="oj-ux-ico-menu" slot="startIcon"></span>
+
+        </oj-button>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+
+  <oj-sp-messages-banner data="[[ $variables.messagesBannerADP ]]" on-sp-close="[[$listeners.messagesBannerSpClose]]"
+    display-options.banner-type="page"></oj-sp-messages-banner>
+
+
+  <!-- <oj-messages id="vbDefaultNotifier" display-options.category="none" position="{}" display="general"
+    messages="{{$page.variables.messagesBannerADP}}" on-oj-close="[[$listeners.messagesBannerSpClose]]"></oj-messages> -->
+
+  <oj-sp-messages-toast primary-text="[[ $variables.messageToast ]]" id="messageToast"></oj-sp-messages-toast>
+
+  <oj-drawer-popup edge="end" opened="{{ $application.variables.navDrawer }}" class="oj-bg-neutral-170 oj-color-invert">
+
+    <div class="oj-flex oj-flex-item oj-sm-flex-initials oj-sm-justify-content-flex-end">
+      <oj-button display="icons" chroming="borderless" on-oj-action="[[$listeners.buttonAction]]">
+        <span slot="startIcon" class="oj-ux-ico-close-square-s"></span>
+      </oj-button>
+    </div>
+    <div class="oj-flex-item">
+      <oj-conveyor-belt id="navConveyorBelt">
+        <oj-navigation-list edge="start" data="[[ $application.variables.navigationADP ]]"
+          selection="{{ $variables.currentFlow }}" on-selection-changed="[[$listeners.navigationListSelection]]">
+          <template slot="itemTemplate">
+            <li>
+              <a href="#">
+                <span :class="[['oj-navigationlist-item-icon oj-typography-body-md oj-sm-padding-3x-horizontal ' + $current.data.iconClass]]"></span>
+                <oj-bind-text value="[[$current.data.name]]"></oj-bind-text>
+              </a>
+            </li>
+          </template>
+        </oj-navigation-list>
+      </oj-conveyor-belt>
+    </div>
+  </oj-drawer-popup>
+
+
+
+  <div class="oj-flex oj-panel">
+    <oj-vb-content id="vbRouterContent" class="oj-flex-item" config="[[vbRouterFlow]]">
+
+    </oj-vb-content>
+  </div>
+
+
+</div>
+<div class="progress pg">
+  <div class="loader"></div>
+</div>

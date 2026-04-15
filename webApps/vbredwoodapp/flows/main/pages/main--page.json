@@ -1,0 +1,51 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "pWPCollaborationListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse"
+      }
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getallPWPCollaborationResponse": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "getallPWPCollaborationResponse": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "ARInvoiceAmount": "number",
+          "customerName": "string",
+          "id": "number"
+        }
+      ]
+    }
+  },
+  "eventListeners": {},
+  "imports": {
+    "components": {
+      "oj-chart": {
+        "path": "ojs/ojchart"
+      },
+      "oj-chart-item": {
+        "path": "ojs/ojchart"
+      },
+      "oj-sp-collection-container": {
+        "path": "oj-sp/collection-container/loader"
+      },
+      "oj-sp-smart-search-page": {
+        "path": "oj-sp/smart-search-page/loader"
+      }
+    }
+  }
+}

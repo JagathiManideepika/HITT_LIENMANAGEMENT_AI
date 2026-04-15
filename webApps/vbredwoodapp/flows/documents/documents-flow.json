@@ -1,0 +1,8 @@
+{
+  "id": "documents",
+  "description": "Flow main",
+  "defaultPage": "documents-start",
+  "services": {},
+  "types": {},
+  "variables": {}
+}

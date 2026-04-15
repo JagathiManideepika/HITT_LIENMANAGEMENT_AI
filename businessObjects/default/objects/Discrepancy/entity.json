@@ -1,0 +1,93 @@
+{
+    "fields": [
+        {
+            "type": "number",
+            "name": "id",
+            "internal": false,
+            "key": true,
+            "oid": "535e29a0-a4a0-46a9-beaf-3e2e97da9751",
+            "required": true,
+            "unique": true,
+            "displayLabel": "Id"
+        },
+        {
+            "type": "datetime",
+            "name": "creationDate",
+            "internal": false,
+            "oid": "d18bde22-10a6-4f3c-9ce3-e52367892172",
+            "displayLabel": "Created",
+            "historyType": "timeCreated"
+        },
+        {
+            "type": "datetime",
+            "name": "lastUpdateDate",
+            "internal": false,
+            "oid": "5df1e17f-087f-4058-9364-d5863514ccbb",
+            "displayLabel": "Last Updated",
+            "historyType": "timeUpdated"
+        },
+        {
+            "type": "string",
+            "name": "createdBy",
+            "internal": false,
+            "oid": "68a2fe7c-96a2-489c-ba58-f4d76ffa5190",
+            "displayLabel": "Created By",
+            "historyType": "createdBy"
+        },
+        {
+            "type": "string",
+            "name": "lastUpdatedBy",
+            "internal": false,
+            "oid": "12ec74dd-6e5c-4767-a868-c280a80878e7",
+            "displayLabel": "Last Updated By",
+            "historyType": "updatedBy"
+        },
+        {
+            "type": "number",
+            "name": "versionNumber",
+            "internal": false,
+            "oid": "437c5783-554b-4a3d-936b-0f99074f24f7",
+            "displayLabel": "Version Number",
+            "historyType": "versionNumber"
+        },
+        {
+            "type": "string",
+            "name": "projectNumber",
+            "oid": "2c9dd30b-ee5f-4eeb-966a-0f252efcb830",
+            "displayLabel": "Project Number"
+        },
+        {
+            "type": "string",
+            "name": "pONumber",
+            "oid": "02fc9918-5c33-4155-9779-663b2a2ad436",
+            "displayLabel": "PO Number"
+        },
+        {
+            "type": "number",
+            "name": "receiptNumber",
+            "oid": "d4a7de15-f7f5-4390-a08c-686f7a0f2cd8",
+            "displayLabel": "Receipt Number"
+        },
+        {
+            "type": "number",
+            "name": "amount",
+            "oid": "276f4302-0688-4d62-b3b6-4ff204904572",
+            "displayLabel": "Amount"
+        },
+        {
+            "type": "date",
+            "name": "receiptDate",
+            "oid": "6c146219-2b74-4c0a-b01d-6ac8272ea0b9",
+            "displayLabel": "Receipt Date"
+        },
+        {
+            "type": "string",
+            "name": "supplierSite",
+            "oid": "1ad9e07c-a057-47d3-9808-40e072f2503c",
+            "displayLabel": "Supplier Site"
+        }
+    ],
+    "name": "Discrepancy",
+    "oid": "d295b22f-8c8b-4790-ac4b-f4563625109c",
+    "displayLabel": "Discrepancy"
+}

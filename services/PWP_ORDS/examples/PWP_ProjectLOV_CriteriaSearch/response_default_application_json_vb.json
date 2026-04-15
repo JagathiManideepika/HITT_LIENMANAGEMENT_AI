@@ -1,0 +1,92 @@
+{
+    "items": [
+        {
+            "project_id": 300000058800946,
+            "project_name": "Business World Data Warehouse ",
+            "project_number": null
+        },
+        {
+            "project_id": 300000085573140,
+            "project_name": "Fire Station Construction",
+            "project_number": null
+        },
+        {
+            "project_id": 300000058779704,
+            "project_name": "Fox Stores BI Implementation",
+            "project_number": null
+        },
+        {
+            "project_id": 300000058778835,
+            "project_name": "Hilman HCM Implementation",
+            "project_number": "PCS10001"
+        },
+        {
+            "project_id": 300000058779617,
+            "project_name": "LAF Procurement Implementation",
+            "project_number": null
+        },
+        {
+            "project_id": 300000058779506,
+            "project_name": "McNally Business Process Reengineering",
+            "project_number": null
+        },
+        {
+            "project_id": 13801,
+            "project_name": "Project ABC",
+            "project_number": null
+        },
+        {
+            "project_id": 101,
+            "project_name": "Project ABC",
+            "project_number": null
+        },
+        {
+            "project_id": 1380123,
+            "project_name": "Project ABC",
+            "project_number": "PCS0010"
+        },
+        {
+            "project_id": 1021,
+            "project_name": "Project ABC",
+            "project_number": "PCS0010"
+        },
+        {
+            "project_id": 102231,
+            "project_name": "Project ABC",
+            "project_number": "PCS00310"
+        },
+        {
+            "project_id": 300000058801204,
+            "project_name": "Stark Technology Upgrade ",
+            "project_number": null
+        },
+        {
+            "project_id": 300000102430605,
+            "project_name": "Telephone System Expansion",
+            "project_number": "PI20026"
+        },
+        {
+            "project_id": 300000058801059,
+            "project_name": null,
+            "project_number": null
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 14,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_ProjectLOV_CriteriaSearch"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/pwp/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_ProjectLOV_CriteriaSearch"
+        }
+    ]
+}

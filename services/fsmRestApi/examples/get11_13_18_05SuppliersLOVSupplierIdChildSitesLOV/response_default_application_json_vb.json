@@ -1,0 +1,15 @@
+{
+    "items": [],
+    "count": 0,
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/suppliersLOV/300000325350099/child/sitesLOV",
+            "name": "sitesLOV",
+            "kind": "collection"
+        }
+    ]
+}

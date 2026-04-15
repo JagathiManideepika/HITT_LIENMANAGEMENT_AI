@@ -1,0 +1,58 @@
+{
+  "description": "",
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "ToggleBtnAction"
+        }
+      ]
+    },
+    "navigationListSelection": {
+      "chains": [
+        {
+          "chain": "navigationHandler",
+          "parameters": {
+            "selection": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "navigationListSelection2": {
+      "chains": [
+        {
+          "chain": "navigationHandler",
+          "parameters": {
+            "selection": "{{ $event.detail.value }}",
+            "updatedFrom": "{{ $event.detail.updatedFrom }}"
+          }
+        }
+      ]
+    }
+  },
+  "events": {},
+  "imports": {
+    "components": {
+      "oj-avatar": {
+        "path": "ojs/ojavatar"
+      },
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-navigation-list": {
+        "path": "ojs/ojnavigationlist"
+      },
+      "oj-option": {
+        "path": "ojs/ojoption"
+      }
+
+    }
+  },
+  "types": {},
+  "variables": {
+    "currentFlow": {
+      "type": "string",
+      "defaultValue": "[[ $application.variables.navigationADP.data[0].id ]]"
+    }
+  }
+}

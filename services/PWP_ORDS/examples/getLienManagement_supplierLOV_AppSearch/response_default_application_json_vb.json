@@ -1,0 +1,25 @@
+{
+    "items": [
+        {
+            "supplier_name": "US Gas and Electric"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LienManagement_supplierLOV_AppSearch?USERNAME=rite.user&P_INVOICE_ID=300001796962779"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LienManagement_supplierLOV_AppSearch?USERNAME=rite.user&P_INVOICE_ID=300001796962779"
+        }
+    ]
+}

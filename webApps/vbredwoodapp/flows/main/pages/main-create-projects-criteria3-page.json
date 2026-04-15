@@ -1,0 +1,78 @@
+{
+  "title": "Create Projects_Criteria",
+  "description": "Creates new Projects_Criteria",
+  "variables": {
+    "createProjectsCriteriaChainInProgress": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "projectsCriteria": {
+      "type": "createProjectsCriteriaRequest"
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.createProjectsCriteriaRequest": {
+      "endpoint": "create_Projects_Criteria",
+      "service": "businessObjects",
+      "path": "request"
+    },
+    "createProjectsCriteriaRequest": {
+      "criteriaName": "string",
+      "enabledFlag": "boolean",
+      "endDate": "string",
+      "expenditureCategory": "string",
+      "expenditureType": "string",
+      "lagDays": "string",
+      "projectNumber": "string",
+      "startDate": "string",
+      "supplierName": "string",
+      "taskName": "number",
+      "topTaskName": "string"
+    }
+  },
+  "eventListeners": {
+    "backButtonClicked": {
+      "chains": [
+        {
+          "chain": "goBackChain"
+        }
+      ]
+    },
+    "saveButtonClicked": {
+      "chains": [
+        {
+          "chain": "createProjectsCriteriaChain"
+        }
+      ]
+    }
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-date": {
+        "path": "ojs/ojdatetimepicker"
+      },
+      "oj-input-number": {
+        "path": "ojs/ojinputnumber"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-switch": {
+        "path": "ojs/ojswitch"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      },
+      "oj-validation-group": {
+        "path": "ojs/ojvalidationgroup"
+      }
+    }
+  }
+}

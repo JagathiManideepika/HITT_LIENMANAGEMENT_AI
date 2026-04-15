@@ -1,0 +1,38 @@
+{
+    "items": [
+        {
+            "column_header": "Conditional Partial",
+            "doc_id": "5908130"
+        },
+        {
+            "column_header": "Unconditional Partial",
+            "doc_id": "5908135"
+        },
+        {
+            "column_header": "Conditional Final",
+            "doc_id": "5908152"
+        },
+        {
+            "column_header": "Unconditional Final",
+            "doc_id": "5908161"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 4,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_DOWNLOAD_TEMPLATES?state_name=Arizona"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_DOWNLOAD_TEMPLATES?state_name=Arizona"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "lien_wavier_templates",
+  "description": "Flow main",
+  "defaultPage": "lien_wavier_templates-start",
+  "services": {},
+  "types": {},
+  "variables": {}
+}

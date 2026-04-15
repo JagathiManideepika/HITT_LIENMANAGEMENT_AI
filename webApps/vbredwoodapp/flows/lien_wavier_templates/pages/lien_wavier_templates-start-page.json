@@ -1,0 +1,588 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "applicablestateListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "itemsPath": "items",
+        "responseType": "getLM_US_STATES",
+        "fetchChain": "getall_ApplicablestateFetch"
+      }
+    },
+
+    "applicablestates": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getLM_US_STATES",
+        "keyAttributes": "state_name",
+        "textFilterAttributes": [
+          "state_name"
+        ]
+      }
+    },
+    "checkboxDataADP": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+
+        "itemType": "getLM_Templates",
+        "keyAttributes": "template_name",
+        "textFilterAttributes": [
+          "template_name"
+        ]
+      }
+    },
+    "checkboxdataListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "selectApplicableLienWaiverType",
+        "itemsPath": "items",
+        "responseType": "getallCheckboxdataResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "selectApplicableLienWaiverType"
+          ]
+        },
+        "fetchChain": "getall_CheckboxdataFetch"
+      }
+    },
+    "getLMTemplatenameListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "template_name",
+        "itemsPath": "items",
+        "responseType": "getLMTemplatenameResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "template_name"
+          ]
+        },
+        "fetchChain": "getLM_TemplatenameFetch"
+      }
+    },
+    "getLMUSSTATESListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_US_STATES",
+        "keyAttributes": "state_name",
+        "itemsPath": "items",
+        "responseType": "getLMUSSTATESResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "state_name"
+          ]
+        }
+      }
+    },
+    "getLMWavierTemplatesHDRListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_Wavier_Templates_HDR",
+        "keyAttributes": "template_name",
+        "itemsPath": "items",
+        "responseType": "getLMWavierTemplatesHDRResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "template_name"
+          ]
+        }
+      }
+    },
+    "headerObj": {
+      "type": {
+        "enableFlag": "boolean",
+        "enddate": "string",
+        "jobnum": "string",
+        "lienwaviertype": "string",
+        "projectname": "string",
+        "result": "string",
+        "startdate": "string",
+        "state": "string",
+        "templatename": "string"
+
+      },
+      "defaultValue": {
+        "enableFlag": true
+      }
+    },
+    "illustrationBackground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-bg-01.png"
+    },
+    "illustrationForeground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-fg-01.png"
+    },
+    "rowData": {
+      "type": "object"
+    },
+    "RowToEdit": {
+      "type": {
+        "rowKey": "number"
+      }
+    },
+    "srchTemplate": {
+      "type": "string"
+    },
+    "statesArray": {
+      "type": "object[]"
+    },
+    "validation": {
+      "type": "string"
+    },
+    "waveTemplateADP": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getLM_Wavier_Templates_Lines",
+        "keyAttributes": "template_line_id"
+      }
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getall_Applicablestate": {
+      "endpoint": "getall_Applicablestate",
+      "service": "businessObjects",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getall_Checkboxdata_details": {
+      "endpoint": "getall_Checkboxdata",
+      "service": "businessObjects",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getallApplicablestateResponse": {
+      "endpoint": "getall_Applicablestate",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallApplicablestateResponse2": {
+      "endpoint": "getall_Applicablestate",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallApplicablestateResponse3": {
+      "endpoint": "getall_Applicablestate",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallCheckboxdataResponse": {
+      "endpoint": "getall_Checkboxdata",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallTabledataResponse2": {
+      "endpoint": "getall_Tabledata",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getLM_Templates": {
+      "endpoint": "getLM_Templates",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getLM_US_STATES": {
+      "endpoint": "getLM_US_STATES",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getLM_Wavier_Templates_Lines": {
+      "endpoint": "getLM_Wavier_Templates_Lines",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getLMTemplatenameResponse": {
+      "endpoint": "getLM_Templatename",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMUSSTATESResponse": {
+      "endpoint": "getLM_US_STATES",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMWavierTemplatesHDRResponse": {
+      "endpoint": "getLM_Wavier_Templates_HDR",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "getall_Applicablestate": {
+      "applicablestate": "string"
+    },
+    "getall_Checkboxdata_details": {
+      "selectApplicableLienWaiverType": "string"
+    },
+    "getallApplicablestateResponse": {
+      "items": [
+        {
+          "applicablestate": "string"
+        }
+      ]
+    },
+    "getallApplicablestateResponse2": {
+      "items": [
+        {
+          "applicablestate": "string"
+        }
+      ]
+    },
+    "getallApplicablestateResponse3": {
+      "items": [
+        {
+          "applicablestate": "string",
+          "createdBy": "string",
+          "creationDate": "string",
+          "id": "number",
+          "lastUpdateDate": "string",
+          "lastUpdatedBy": "string"
+        }
+      ]
+    },
+    "getallCheckboxdataResponse": {
+      "items": [
+        {
+          "selectApplicableLienWaiverType": "string"
+        }
+      ]
+    },
+    "getallTabledataResponse2": {
+      "items": [
+        {
+          "applicableStates": "string",
+          "endDate": "string",
+          "id": "number",
+          "lienWaiverType": "string",
+          "startDate": "string",
+          "templateName": "string"
+        }
+      ]
+    },
+    "getLM_Templates": {
+      "template_id": "number",
+      "template_name": "string",
+      "template_text": "string"
+    },
+    "getLM_US_STATES": {
+      "state_abbreviation": "string",
+      "state_name": "string"
+    },
+    "getLM_Wavier_Templates_Lines": {
+      "applicable_states": "string",
+      "enable_flag": "string",
+      "enable_flag_copy": "boolean",
+      "end_date": "string",
+      "file_content": "any",
+      "lien_waiver_type": "string",
+      "start_date": "string",
+      "template_header_id": "number",
+      "template_line_id": "number",
+      "template_name": "string"
+
+    },
+    "getLMTemplatenameResponse": {
+      "items": [
+        {
+          "template_header_id": "number",
+          "template_name": "string"
+        }
+      ]
+    },
+    "getLMUSSTATESResponse": {
+      "items": [
+        {
+          "state_abbreviation": "string",
+          "state_name": "string"
+        }
+      ]
+    },
+    "getLMWavierTemplatesHDRResponse": {
+      "items": [
+        {
+          "template_header_id": "number",
+          "template_name": "string"
+        }
+      ]
+    }
+
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "OpenButtonActionChain"
+        }
+      ]
+    },
+    "buttonAction2": {
+      "chains": [
+        {
+          "chain": "CloseButtonActionChain"
+        }
+      ]
+    },
+    "buttonAction3": {
+      "chains": [
+        {
+          "chain": "CreateWaiverTemplateActionChain"
+        }
+      ]
+    },
+    "buttonAction4": {
+      "chains": [
+        {
+          "chain": "SearchButtonActionChain"
+        }
+      ]
+    },
+    "buttonAction5": {
+      "chains": [
+        {
+          "chain": "CloseViewButtonActionChain"
+        }
+      ]
+    },
+    "buttonAction6": {
+      "chains": [
+        {
+          "chain": "DownloadTemplateAction"
+        }
+      ]
+    },
+    "buttonAction7": {
+      "chains": [
+        {
+          "chain": "refreshButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "filePickerSelect": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain",
+          "parameters": {
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]"
+          }
+        }
+      ]
+    },
+    "iconClick": {
+      "chains": [
+        {
+          "chain": "EditiconClickAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick2": {
+      "chains": [
+        {
+          "chain": "updateRecordAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "selectValue": {
+      "chains": [
+        {
+          "chain": "SelectValueChangeChain1",
+          "parameters": {
+            "value": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "selectValue2": {
+      "chains": [
+        {
+          "chain": "statesLovActionChain",
+          "parameters": {
+            "value": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "selectValue3": {
+      "chains": [
+        {
+          "chain": "statesLovActionChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{ $event.detail.value }}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem": {
+      "chains": [
+        {
+          "chain": "TemplateTypeValueChangeAction",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem2": {
+      "chains": [
+        {
+          "chain": "TemplateSelectValueItemChangeChain",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "spanClick": {
+      "chains": [
+        {
+          "chain": "ViewClickChain",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "switchValue": {
+      "chains": [
+        {
+          "chain": "SwitchValueChangeChain",
+          "parameters": {
+            "value": "{{ $event.detail.value }}",
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "switchValue2": {
+      "chains": [
+        {
+          "chain": "SwitchValueChangeChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{ $event.detail.value }}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEdit": {
+      "chains": [
+        {
+          "chain": "TemplateRowBeforeEdit",
+          "parameters": {
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEditEnd": {
+      "chains": [
+        {
+          "chain": "TemplateTblBeforeRowEditEnd",
+          "parameters": {
+            "cancelEdit": "{{$event.detail.cancelEdit}}",
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "parameters": {},
+          "chain": "SearchButtonActionChain"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-bind-dom": {
+        "path": "ojs/ojbinddom"
+      },
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-c-select-multiple": {
+        "path": "oj-c/select-multiple"
+      },
+      "oj-c-text-area": {
+        "path": "oj-c/text-area"
+      },
+      "oj-dialog": {
+        "path": "ojs/ojdialog"
+      },
+      "oj-file-picker": {
+        "path": "ojs/ojfilepicker"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-date": {
+        "path": "ojs/ojdatetimepicker"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-label": {
+        "path": "ojs/ojlabel"
+      },
+      "oj-progress-bar": {
+        "path": "ojs/ojprogress-bar"
+      },
+      "oj-select-many": {
+        "path": "ojs/ojselectcombobox"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-switch": {
+        "path": "ojs/ojswitch"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      },
+      "oj-validation-group": {
+        "path": "ojs/ojvalidationgroup"
+      }
+
+    }
+  }
+}

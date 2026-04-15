@@ -1,0 +1,60 @@
+{
+    "items": [
+        {
+            "template_line_id": 243,
+            "template_header_id": 142,
+            "template_name": "TestTemplate",
+            "lien_waiver_type": "Programs Payments Conditional Lien Waiver",
+            "start_date": "2025-07-07T00:00:00Z",
+            "end_date": "2025-07-10T00:00:00Z",
+            "enable_flag": "Y",
+            "applicable_states": "Arizona",
+            "file_name": null,
+            "file_type": null,
+            "file_content": null,
+            "file_attachment": null,
+            "creation_adte": "2025-07-07T14:35:17Z",
+            "created_by": "h",
+            "last_update_date": "2025-07-07T14:35:17Z",
+            "last_updated_by": "i",
+            "last_update_login": "j"
+        },
+        {
+            "template_line_id": 244,
+            "template_header_id": 142,
+            "template_name": "TestTemplate",
+            "lien_waiver_type": "Programs Payments Conditional Lien Waiver",
+            "start_date": "2025-07-07T00:00:00Z",
+            "end_date": "2025-07-10T00:00:00Z",
+            "enable_flag": "Y",
+            "applicable_states": "Arizona",
+            "file_name": null,
+            "file_type": null,
+            "file_content": null,
+            "file_attachment": null,
+            "creation_adte": "2025-07-07T14:35:17Z",
+            "created_by": "h",
+            "last_update_date": "2025-07-07T14:35:17Z",
+            "last_updated_by": "i",
+            "last_update_login": "j"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 2,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LM_Wavier_Templates_Lines?p_template_name=TestTemplate"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LM_Wavier_Templates_Lines?p_template_name=TestTemplate"
+        }
+    ]
+}

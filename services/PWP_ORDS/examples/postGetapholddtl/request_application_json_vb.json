@@ -1,0 +1,16 @@
+{
+  "p_ap_invoice": "INV123",
+  "p_ap_invoice_date": "2024-11-17",
+  "p_ap_invoice_amount": 1500.75,
+  "p_hold_name": "Y",
+  "p_hold_date": "2024-11-18",
+  "p_project_id": 123,
+  "p_top_task_id": 456,
+  "p_project_number": "PROJ-001",
+  "p_supplier_name": "Supplier ABC",
+  "p_expenditure_category": "Office Supplies",
+  "p_expenditure_type": "Stationery",
+  "p_supplier_id": 789,
+  "p_hold_apply_flag": "N",
+  "p_lag_days": 5
+}

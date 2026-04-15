@@ -1,0 +1,192 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "docData": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getLMSupSignDocExt"
+      }
+    },
+    "getPWPAPInvoiceNumbersListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getPWP_APInvoiceNumbers",
+        "keyAttributes": "ap_invoice",
+        "itemsPath": "items",
+        "responseType": "getPWPAPInvoiceNumbersResponse",
+        "uriParameters": {
+          "USERNAME": "{{ $application.variables.user }}"
+        },
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "ap_invoice"
+          ]
+        }
+      }
+    },
+    "getPWPProjectNumbersListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getPWP_ProjectNumbers",
+        "keyAttributes": "project_number",
+        "itemsPath": "items",
+        "responseType": "getPWPProjectNumbersResponse",
+        "uriParameters": {
+          "USERNAME": "{{ $application.variables.user }}"
+        },
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "project_number"
+          ]
+        }
+      }
+    },
+    "getPWPSupplierDetailsListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getPWP_SupplierDetails",
+        "keyAttributes": "supplier_name",
+        "itemsPath": "items",
+        "responseType": "getPWPSupplierDetailsResponse",
+        "uriParameters": {
+          "USERNAME": "{{ $application.variables.user }}"
+        },
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "supplier_name"
+          ]
+        }
+      }
+    },
+    "headerObj": {
+      "type": {
+        "endDate": "any",
+        "invoiceNumber": "any",
+        "projectNumber": "any",
+        "startDate": "any",
+        "supplierName": "any"
+      }
+    },
+    "illustrationBackground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-bg-01.png"
+    },
+    "illustrationForeground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-fg-01.png"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getLMSupSignDocExt": {
+      "endpoint": "getLMSupSignDocExt",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getPWPAPInvoiceNumbersResponse": {
+      "endpoint": "getPWP_APInvoiceNumbers",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getPWPProjectNumbersResponse": {
+      "endpoint": "getPWP_ProjectNumbers",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getPWPSupplierDetailsResponse": {
+      "endpoint": "getPWP_SupplierDetails",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "getLMSupSignDocExt": {
+      "ap_invoice": "string",
+      "ap_invoice_date": "string",
+      "con_file_name": "string",
+      "conditional_signed_doc": "string",
+      "inv_installment_number": "string",
+      "project_number": "string",
+      "supplier_name": "string",
+      "uncon_file_name": "string",
+      "unconditional_signed_doc": "string"
+    },
+    "getPWPAPInvoiceNumbersResponse": {
+      "items": [
+        {
+          "ap_invoice": "string",
+          "invoice_id": "number"
+        }
+      ]
+    },
+    "getPWPProjectNumbersResponse": {
+      "items": [
+        {
+          "project_number": "string"
+        }
+      ]
+    },
+    "getPWPSupplierDetailsResponse": {
+      "items": [
+        {
+          "supplier_name": "string"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "Search_DOCButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction2": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    }
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-dialog": {
+        "path": "ojs/ojdialog"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-date": {
+        "path": "ojs/ojdatetimepicker"
+      },
+      "oj-progress-bar": {
+        "path": "ojs/ojprogress-bar"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+    }
+  }
+}

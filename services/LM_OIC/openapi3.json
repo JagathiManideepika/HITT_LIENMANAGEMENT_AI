@@ -1,0 +1,969 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Ic Api",
+        "version": "1.0.0",
+        "x-vb": {
+            "transforms": {
+                "path": "../Transform.js"
+            }
+        }
+    },
+    "servers": [
+        {
+            "url": "vb-catalog://backends/Lien_Management_OIC"
+        }
+    ],
+    "paths": {
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_GENERATE_LIEN_REPORT/1.0/getLeinReport": {
+            "post": {
+                "operationId": "postLM_GENERATE_LIEN_REPORT1_0GetLeinReport",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostLM_GENERATE_LIEN_REPORT1_0GetLeinReportRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/postLM_GENERATE_LIEN_REPORT1_0GetLeinReport/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PostLM_GENERATE_LIEN_REPORT1_0GetLeinReportResponse"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/postLM_GENERATE_LIEN_REPORT1_0GetLeinReport/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_SEND_LW_TO_SUPPL_EMAIL/1.0/getLeinReport": {
+            "post": {
+                "operationId": "postLM_SEND_LW_TO_SUPPL_EMAIL1_0GetLeinReport",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostLM_SEND_LW_TO_SUPPL_EMAIL1_0GetLeinReportRequest"
+                            },
+                            "examples": {
+                                "vb": {
+                                    "externalValue": "./examples/postLM_SEND_LW_TO_SUPPL_EMAIL1_0GetLeinReport/request_application_json_vb.json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_PROJECTS_LOV_SYNC/1.0/Projects": {
+            "get": {
+                "operationId": "getLM_PROJECTS_LOV_SYNC1_0Projects",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PROJECTS_LOV_SYNC1_0Projects"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getLM_PROJECTS_LOV_SYNC1_0Projects/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany",
+                    "queryParameters": {
+                    }
+                },
+                "parameters": [
+{
+                        "name": "p_username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_SUPPLIERS_LOV_SYNC/1.0/Suppliers": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIERS_LOV_SYNC1_0Suppliers2",
+                "parameters": [
+{
+                        "name": "p_username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIERS_LOV_SYNC1_0Suppliers"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIERS_LOV_SYNC1_0Suppliers2/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_SUPPLIER_SITES_LOV_SYNC/1.0/SupplierSites": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIER_SITES_LOV_SYNC1_0SupplierSites2",
+                "parameters": [
+                    {
+                        "name": "p_username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+{
+                        "name": "p_vendor_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIER_SITES_LOV_SYNC1_0SupplierSites"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIER_SITES_LOV_SYNC1_0SupplierSites2/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_PROJECT_TASKS_LOV_SYNC/1.0/ProjectTasks": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PROJECT_TASKS_LOV_SYNC1_0ProjectTasks2",
+                "parameters": [
+                    {
+                        "name": "p_project_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+{
+                        "name": "p_username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PROJECT_TASKS_LOV_SYNC1_0ProjectTasks"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PROJECT_TASKS_LOV_SYNC1_0ProjectTasks2/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_CONTRACTS_LOV_SYNC/1.0/Contracts": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_CONTRACTS_LOV_SYNC1_0Contracts2",
+                "parameters": [
+                    {
+                        "name": "p_username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_CONTRACTS_LOV_SYNC1_0Contracts"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_CONTRACTS_LOV_SYNC1_0Contracts2/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_PJC_TASKS_SYNC/1.0/ProjectTasks": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PJC_TASKS_SYNC1_0ProjectTasks",
+                "parameters": [
+                    {
+                        "name": "TOP_TASK_ID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+{
+                        "name": "p_username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PJC_TASKS_SYNC1_0ProjectTasks"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PJC_TASKS_SYNC1_0ProjectTasks/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_EXP_CATEGO_LOV_SYNC/1.0/ExpCategories": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_CATEGO_LOV_SYNC1_0ExpCategories",
+                "parameters": [
+                    {
+                        "name": "p_username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_EXP_TYPES_LOV_SYNC/1.0/ExpTypes": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_TYPES_LOV_SYNC1_0ExpTypes",
+                "parameters": [
+                    {
+                        "name": "P_EXPENDITURE_CATEGORY_ID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {},
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_EXP_CATEGORY_SYNC/1.0/EXP_Category": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_CATEGORY_SYNC1_0EXP_Category",
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_CATEGORY_SYNC1_0EXP_Category"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_CATEGORY_SYNC1_0EXP_Category/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                },
+                "parameters": [
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_EXP_TYPE_SYNC/1.0/EXP_TYPE": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_TYPE_SYNC1_0EXP_TYPE2",
+                "parameters": [
+{
+                        "name": "P_EXPENDITURE_CATEGORY_ID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "R_TRACE_ID",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_USER_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }                    ,
+                    {
+                        "name": "R_PAGE_NAME",
+                        "in": "header",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_TYPE_SYNC1_0EXP_TYPE"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_TYPE_SYNC1_0EXP_TYPE2/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        },
+        "/ic/api/integration/v2/flows/rest/project/LIEN_MANAGEMENT/LM_UCM_FILES_SYNC_V1/1.0/getFiles": {
+            "get": {
+                "operationId": "getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_UCM_FILES_SYNC_V1_1_0GetFiles",
+                "parameters": [
+                    {
+                        "name": "dDocID",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Response for default",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_UCM_FILES_SYNC_V1_1_0GetFiles"
+                                },
+                                "examples": {
+                                    "vb": {
+                                        "summary": "Example stored by VB User",
+                                        "externalValue": "./examples/getIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_UCM_FILES_SYNC_V1_1_0GetFiles/response_default_application_json_vb.json"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-vb": {
+                    "actionHint": "getMany"
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "PostLM_GENERATE_LIEN_REPORT1_0GetLeinReportRequest": {
+                "type": "object",
+                "properties": {
+                    "TemplateCode": {
+                        "type": "string"
+                    },
+                    "InstallmentNumber": {
+                        "type": "integer"
+                    },
+                    "ProjectNumber": {
+                        "type": "string"
+                    },
+                    "InvoiceNumber": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PostLM_GENERATE_LIEN_REPORT1_0GetLeinReportResponse": {
+                "type": "object",
+                "properties": {
+                    "fileName": {
+                        "type": "string"
+                    },
+                    "fileBase64Content": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PostLM_SEND_LW_TO_SUPPL_EMAIL1_0GetLeinReportRequest": {
+                "type": "object",
+                "properties": {
+                    "TemplateCode": {
+                        "type": "string"
+                    },
+                    "SupplierEmail": {
+                        "type": "string"
+                    },
+                    "InstallmentNumber": {
+                        "type": "integer"
+                    },
+                    "ProjectNumber": {
+                        "type": "string"
+                    },
+                    "InvoiceNumber": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GetLM_PROJECTS_LOV_SYNC1_0Projects": {
+                "type": "object",
+                "properties": {
+                    "projects": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "PROJECT_NUMBER": {
+                                    "type": "string"
+                                },
+                                "PROJECT_ID": {
+                                    "type": "string"
+                                },
+                                "PROJECT_NAME": {
+                                    "type": "string"
+                                },
+                                "PROJECT_STATUS_CODE": {
+                                    "type": "string"
+                                },
+                                "LIEN_NUMBER": {
+                                    "type": "string"
+                                },
+                                "PROJECT_SITE_LOCATION": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PROJECTS_LOV_SYNC1_0Projects": {
+                "type": "object",
+                "properties": {
+                    "DATA_DS": {
+                        "type": "object",
+                        "properties": {
+                            "G_1": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "PROJECT_NUMBER": {
+                                            "type": "string"
+                                        },
+                                        "PROJECT_ID": {
+                                            "type": "string"
+                                        },
+                                        "NAME": {
+                                            "type": "string"
+                                        },
+                                        "PROJECT_STATUS_CODE": {
+                                            "type": "string"
+                                        },
+                                        "BU_NAME": {
+                                            "type": "string"
+                                        },
+                                        "BU_ID": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIERS_LOV_SYNC1_0Suppliers": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "VENDOR_ID": {
+                                    "type": "integer"
+                                },
+                                "NAME": {
+                                    "type": "string"
+                                },
+                                "SUPPLIER_NUMBER": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_SUPPLIER_SITES_LOV_SYNC1_0SupplierSites": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "VENDOR_SITE_ID": {
+                                    "type": "integer"
+                                },
+                                "VENDOR_ID": {
+                                    "type": "integer"
+                                },
+                                "PRC_BU_ID": {
+                                    "type": "integer"
+                                },
+                                "NAME": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PROJECT_TASKS_LOV_SYNC1_0ProjectTasks": {
+                "type": "object",
+                "properties": {
+                    "DATA_DS": {
+                        "type": "object",
+                        "properties": {
+                            "G_1": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "TOP_TASK_ID": {
+                                            "type": "string"
+                                        },
+                                        "NAME": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_CONTRACTS_LOV_SYNC1_0Contracts": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "CONTRACT_NUMBER": {
+                                    "type": "string"
+                                },
+                                "CONTRACT_ID": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_PJC_TASKS_SYNC1_0ProjectTasks": {
+                "type": "object",
+                "properties": {
+                    "DATA_DS": {
+                        "type": "object",
+                        "properties": {
+                            "G_1": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "PROJECT_ID": {
+                                            "type": "string"
+                                        },
+                                        "TASK_ID": {
+                                            "type": "string"
+                                        },
+                                        "TASK_NUMBER": {
+                                            "type": "string"
+                                        },
+                                        "NAME": {
+                                            "type": "string"
+                                        },
+                                        "TOP_TASK_ID": {
+                                            "type": "string"
+                                        },
+                                        "TOP_TASK_NAME": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_CATEGORY_SYNC1_0EXP_Category": {
+                "type": "object",
+                "properties": {
+                    "DATA_DS": {
+                        "type": "object",
+                        "properties": {
+                            "G_1": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "EXPENDITURE_CATEGORY_ID": {
+                                            "type": "string"
+                                        },
+                                        "NAME": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_EXP_TYPE_SYNC1_0EXP_TYPE": {
+                "type": "object",
+                "properties": {
+                    "DATA_DS": {
+                        "type": "object",
+                        "properties": {
+                            "G_1": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "NAME": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "GetIcApiIntegrationV2FlowsRestProjectLIEN_MANAGEMENTLM_UCM_FILES_SYNC_V1_1_0GetFiles": {
+                "type": "object",
+                "properties": {
+                    "UCM_FILE": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PostFscmRestApiResources11_13_18_05ErpintegrationsRequest": {
+                "type": "object",
+                "properties": {
+                    "OperationName": {
+                        "type": "string"
+                    },
+                    "DocumentContent": {
+                        "type": "string"
+                    },
+                    "DocumentAccount": {
+                        "type": "string"
+                    },
+                    "ContentType": {
+                        "type": "string"
+                    },
+                    "FileName": {
+                        "type": "string"
+                    },
+                    "DocumentId": {
+                        "nullable": true
+                    }
+                }
+            }
+        }
+    }
+}

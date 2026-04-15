@@ -1,0 +1,458 @@
+{
+    "DATA_DS": {
+        "G_1": [
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994440",
+                "NAME": "01000 - General Requirements"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994441",
+                "NAME": "02000 - Site Construction"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994442",
+                "NAME": "03000 - Concrete"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994443",
+                "NAME": "04000 - Masonry"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994444",
+                "NAME": "05000 - Metal Fabrication"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994445",
+                "NAME": "06000 - Wood and Plastics"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994446",
+                "NAME": "07000 - Thermal and Moisture Protection"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994447",
+                "NAME": "08000 - Doors and Windows"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994448",
+                "NAME": "09000 - Finishes"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994449",
+                "NAME": "10000 - Specialties"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994450",
+                "NAME": "11000 - Equipment"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994451",
+                "NAME": "12000 - Furnishings"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994452",
+                "NAME": "13000 - Special Construction"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994453",
+                "NAME": "14000 - Conveying Systems"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994454",
+                "NAME": "15000 - Mechanical Systems"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994455",
+                "NAME": "16000 - Electrical"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994456",
+                "NAME": "17000 - Unit Billing Items"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994457",
+                "NAME": "20000 Miscellaneous"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001514994458",
+                "NAME": "21000 - Payroll Burdens"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001696386114",
+                "NAME": "AA_STL_EXPENSE_CAT"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001695573169",
+                "NAME": "AA_STL_LABOR"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000297457885",
+                "NAME": "ASL Equipment Cat"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000297457882",
+                "NAME": "ASL Labor Exp Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000297457883",
+                "NAME": "ASL Misc Exp Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000297457881",
+                "NAME": "ASL Travel Exp Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780929",
+                "NAME": "Asset Computer Software"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780930",
+                "NAME": "Asset Computer-Hardware Laptop/ Desktop"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780931",
+                "NAME": "Asset Furniture-Kitchen Equipments"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780932",
+                "NAME": "Asset Furniture-Office Equipments"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429441",
+                "NAME": "Audit Fee"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001697251331",
+                "NAME": "BOULT AUDIO EXPENDITURE CATEGORIES"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000101276148",
+                "NAME": "Bad Debt Provision - Write-Offs"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001701064561",
+                "NAME": "Cello Labor"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429442",
+                "NAME": "Communications"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429443",
+                "NAME": "Corporate Social Responsibility"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000271944035",
+                "NAME": "DPW EXP Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000101276147",
+                "NAME": "Depreciation"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578959",
+                "NAME": "Design.Electrical"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578950",
+                "NAME": "Design.Hull"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578952",
+                "NAME": "Design.Piping"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000158273935",
+                "NAME": "Donations"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001731849930",
+                "NAME": "Employee Time"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429444",
+                "NAME": "Entertainment"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429445",
+                "NAME": "Equipment"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429446",
+                "NAME": "Equipment Hire"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429447",
+                "NAME": "FOREIGN VAT"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578957",
+                "NAME": "Fabrication.Electrical"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578948",
+                "NAME": "Fabrication.Hull"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578954",
+                "NAME": "Fabrication.Piping"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000251791394",
+                "NAME": "Facilities Maintenance"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000251791393",
+                "NAME": "Facility Rent"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000251791392",
+                "NAME": "Fuel"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000287507645",
+                "NAME": "INTELLI_EXPENDITURE_CATEGORIES"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429448",
+                "NAME": "IT Expenses"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578956",
+                "NAME": "Installation.Electrical"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578949",
+                "NAME": "Installation.Hull"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578955",
+                "NAME": "Installation.Piping"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000101276151",
+                "NAME": "Insurance"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000101276149",
+                "NAME": "Inter Company Charges - General & Admin"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001787253140",
+                "NAME": "Labor Cost"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000047429449",
+                "NAME": "Labour"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001690548287",
+                "NAME": "MBH Labor"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001699958311",
+                "NAME": "MMX Equipment"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001690455286",
+                "NAME": "MMX-Finance Charges"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001690455287",
+                "NAME": "MMX-General Expenses"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780933",
+                "NAME": "Machine and Equipment Maintenance"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001786475515",
+                "NAME": "Madeena 01"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000101276150",
+                "NAME": "Marketing Expenses"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780902",
+                "NAME": "Materials"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780903",
+                "NAME": "Medical"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780904",
+                "NAME": "Memberships & Subscriptions"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780917",
+                "NAME": "Miscellaneous Income - Expense"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780934",
+                "NAME": "Miscellaneous Operating Costs"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000302543623",
+                "NAME": "OAK_LABOUR"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000302543622",
+                "NAME": "OAK_MISC"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000302543619",
+                "NAME": "OAK_TRAVEL"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780918",
+                "NAME": "Office Services And Supplies"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780935",
+                "NAME": "Open Data Migration"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000689989168",
+                "NAME": "Operation and Maintenance - Equipments"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001779370881",
+                "NAME": "Other"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776600978",
+                "NAME": "Outfitting.Mechanical "
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776601051",
+                "NAME": "Overhead"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000299198893",
+                "NAME": "PAVAN CO LABOUR CATEGORY"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000299198892",
+                "NAME": "PAVAN CO MISCELLANEOUS CATEGORY"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000299198891",
+                "NAME": "PAVAN CO TRAVEL CATEGORY"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000304129967",
+                "NAME": "PPPM Labor Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000304129966",
+                "NAME": "PPPM Misc Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000304129965",
+                "NAME": "PPPM Travel Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780919",
+                "NAME": "Payroll"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001778515200",
+                "NAME": "Petrol"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578958",
+                "NAME": "Procurement.Electrical"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578951",
+                "NAME": "Procurement.Hull"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776578953",
+                "NAME": "Procurement.Piping"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780920",
+                "NAME": "Professional and Legal Expenses"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001700925234",
+                "NAME": "RITE_IN_CLOUD_EC"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776601038",
+                "NAME": "Rental"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780921",
+                "NAME": "Research and Development"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000356932400",
+                "NAME": "Rite Labour Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000356932402",
+                "NAME": "Rite Misc Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000356932401",
+                "NAME": "Rite Travel Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780922",
+                "NAME": "Safety & Environment"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780923",
+                "NAME": "Shipment & Freight"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780924",
+                "NAME": "Site Expenses"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001776631724",
+                "NAME": "Subcontract"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300001748957133",
+                "NAME": "Supplier Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780925",
+                "NAME": "Tax"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780926",
+                "NAME": "Training & Development"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780927",
+                "NAME": "Travel - Accommodation and Entertainment"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000266780928",
+                "NAME": "Travel Airfare"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000391217146",
+                "NAME": "VOLKS Labour Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000391217145",
+                "NAME": "VOLKS Mis Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000391217147",
+                "NAME": "VOLKS Travel Category"
+            },
+            {
+                "EXPENDITURE_CATEGORY_ID": "300000396144583",
+                "NAME": "Volks Non Labour Category"
+            }
+        ]
+    }
+}

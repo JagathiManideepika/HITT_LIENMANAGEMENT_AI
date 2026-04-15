@@ -1,0 +1,87 @@
+{
+    "fields": [
+        {
+            "type": "number",
+            "name": "id",
+            "internal": false,
+            "key": true,
+            "oid": "f71e23b2-3a47-4003-8428-a7d3cd6a90b7",
+            "required": true,
+            "unique": true,
+            "displayLabel": "Id"
+        },
+        {
+            "type": "datetime",
+            "name": "creationDate",
+            "internal": false,
+            "oid": "eaf60711-dc00-44c8-9ef4-85b6c149a29f",
+            "displayLabel": "Created",
+            "historyType": "timeCreated"
+        },
+        {
+            "type": "datetime",
+            "name": "lastUpdateDate",
+            "internal": false,
+            "oid": "39a62c34-4aaf-4d0e-a87f-57cefb1265bd",
+            "displayLabel": "Last Updated",
+            "historyType": "timeUpdated"
+        },
+        {
+            "type": "string",
+            "name": "createdBy",
+            "internal": false,
+            "oid": "0f96c374-e07c-4cb9-8596-80cea803e2a3",
+            "displayLabel": "Created By",
+            "historyType": "createdBy"
+        },
+        {
+            "type": "string",
+            "name": "lastUpdatedBy",
+            "internal": false,
+            "oid": "12c61cd2-8b6b-4a48-83d8-2ab8a6a27aa3",
+            "displayLabel": "Last Updated By",
+            "historyType": "updatedBy"
+        },
+        {
+            "type": "number",
+            "name": "versionNumber",
+            "internal": false,
+            "oid": "2eaa6e0c-1fbe-46bf-92c1-001ae2e78354",
+            "displayLabel": "Version Number",
+            "historyType": "versionNumber"
+        },
+        {
+            "type": "string",
+            "name": "templateName",
+            "oid": "9643e6ac-5d57-4a46-ac33-de3c898186bf",
+            "displayLabel": "Template Name"
+        },
+        {
+            "type": "string",
+            "name": "lienWaiverType",
+            "oid": "e3b8b700-24ca-445e-94b1-c6d490390c42",
+            "displayLabel": "Lien Waiver Type"
+        },
+        {
+            "type": "string",
+            "name": "applicableStates",
+            "oid": "78f14771-ed8a-45ae-8025-b27f15982fda",
+            "displayLabel": "Applicable States"
+        },
+        {
+            "type": "string",
+            "name": "startDate",
+            "oid": "eb71f1e6-9c94-45ba-b75c-5067560f1e76",
+            "displayLabel": "Start Date"
+        },
+        {
+            "type": "string",
+            "name": "endDate",
+            "oid": "e0f76c0d-66a3-4ec4-9ed3-1b26faa0a79f",
+            "displayLabel": "End Date"
+        }
+    ],
+    "name": "Tabledata",
+    "oid": "a60f73ed-d6f5-4f59-ab98-61e22e536a2c",
+    "displayLabel": "Tabledata"
+}

@@ -1,0 +1,542 @@
+<oj-sp-welcome-page id="oj-sp-wp1" page-title="Lien Waiver Templates"
+  illustration-background="[[ $variables.illustrationBackground ]]"
+  illustration-foreground="[[ $variables.illustrationForeground ]]" background-color="dark-pebble">
+  <oj-dialog dialog-title="" id="loadingDialog" class="myloader" style="width: 350px">
+    <div slot="body">
+      <span style="font-size:20px;color:#006AA2;font-weight:600;margin-top:-2vh">Loading .....</span>
+      <br />
+      <oj-progress-bar value="-1" class="oj-sm-margin-3x-top"></oj-progress-bar>
+    </div>
+  </oj-dialog>
+  <div class="oj-panel">
+    <oj-form-layout label-edge="top" max-columns="1">
+      <oj-select-single label-hint="Templates Name" item-text="template_name" value="{{ $variables.srchTemplate }}"
+        data="[[$variables.getLMTemplatenameListSDP]]"></oj-select-single>
+
+    </oj-form-layout>
+
+    <div class="oj-helper-text-align-end">
+      <oj-button label="Search" chroming="callToAction" class="oj-button-sm"
+        on-oj-action="[[$listeners.buttonAction4]]"></oj-button>
+      <oj-button label="Reset" chroming="danger" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction7]]">
+      </oj-button>
+      <oj-button label="Define" chroming="callToAction" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction]]">
+      </oj-button>
+      <oj-switch label-hint="Enable Trace" value="[[$application.variables.enableTrace]]" style="margin-top:-13px"
+        on-value-changed="[[$listeners.switchValue2]]"></oj-switch>
+      <b><oj-bind-text
+             value='[[ $application.variables.traceIdDisplay ? "Trace ID:" + $application.variables.traceIdDisplay : "Trace ID" ]]'></oj-bind-text></b>
+    </div>
+
+
+    <oj-table scroll-policy="loadMoreOnScroll" style="width:92vw;height:60vh" columns-default.resizable="enabled"
+      display="grid" data="[[$variables.waveTemplateADP]]" columns='[
+{"headerText":"","field":"","sortable":"disabled","template":"editicon"},
+      {"headerText":"Template Name","field":"template_name"},
+      {"headerText":"Lien Waiver Type","field":"lien_waiver_type"},
+      {"headerText":"Applicable States","field":"applicable_states","template":"states"},
+      {"headerText":"Start Date","field":"start_date","template":"sdate"},
+      {"headerText":"End Date","field":"end_date","template":"edate"},
+      {"headerText":"Enable Flag","field":"enable_flag","template":"enabletemp"},
+       {"headerText":"Action","field":"","template":"actions","sortable":"disabled"}]'
+      on-oj-before-row-edit="[[$listeners.tableBeforeRowEdit]]"
+      on-oj-before-row-edit-end="[[$listeners.tableBeforeRowEditEnd]]" edit-mode="rowEdit"
+      edit-row="{{ $variables.RowToEdit }}">
+
+      <template slot="editicon">
+        <span class="oj-ux-ico-edit" style="font-weight:bold;font-size:22px;cursor:pointer"
+          on-click="[[$listeners.iconClick]]"
+           ></span>
+      </template>
+
+      <template slot="actions" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <oj-toolbar>
+            <span on-click="[[$listeners.spanClick]]" class="oj-ux-ico-view oj-sm-margin-2x-end"  style="font-size:20px;cursor:pointer"></span>
+            <span class="oj-ux-ico-save-as" style="font-size:20px;cursor:pointer" on-click="[[$listeners.iconClick2]]"></span>
+          </oj-toolbar>
+        </oj-bind-if>
+      </template>
+
+      <template slot="save" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <span class="oj-ux-ico-save-as" style="font-size:20px;cursor:pointer"></span>
+        </oj-bind-if>
+      </template>
+
+      <template slot="sdate" data-oj-as="cell">
+        <oj-bind-text value="[[$functions.formatDate($current.data)]]"></oj-bind-text>
+      </template>
+
+      <template slot="states" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <oj-bind-text value="[[$current.data]]"></oj-bind-text>
+        </oj-bind-if>
+
+        <oj-bind-if test='[[cell.mode==="edit"]]'>
+          <oj-select-single aria-label="Select (Single)" value="{{ $variables.rowData.applicable_states }}"
+            data="[[$variables.getLMUSSTATESListSDP]]" item-text="state_name"></oj-select-single>
+        </oj-bind-if>
+      </template>
+
+
+      <template slot="edate" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <oj-bind-text value="[[$functions.formatDate($current.data)]]"></oj-bind-text>
+        </oj-bind-if>
+        <oj-bind-if test='[[cell.mode==="edit"]]'>
+          <oj-input-date aria-label="Date" value="{{ $variables.rowData.end_date }}"></oj-input-date>
+        </oj-bind-if>
+      </template>
+
+      <template slot="enabletemp" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <oj-switch value="[[cell.data === 'Y' ? true : false]]"></oj-switch>
+        </oj-bind-if>
+        <oj-bind-if test='[[cell.mode==="edit"]]'>
+          <oj-switch value="{{ $variables.rowData.enable_flag_copy}}" on-value-changed="[[$listeners.switchValue]]">
+          </oj-switch>
+        </oj-bind-if>
+      </template>
+
+    </oj-table>
+  </div>
+</oj-sp-welcome-page>
+
+<oj-dialog dialog-title="Define Template" id="oj-dialog-1533972753-1" style="width: 900px;">
+  <div slot="body">
+    <oj-validation-group valid="{{ $variables.validation }}" id="validation">
+      <oj-form-layout columns="3" max-columns="3" label-edge="top">
+        <oj-input-text label-hint="Template Name" required="true" value="{{ $variables.headerObj.templatename }}">
+        </oj-input-text>
+        <!-- <oj-input-text label-hint="Project Name" required="true" value="{{ $variables.headerObj.projectname }}">
+      </oj-input-text> -->
+        <oj-select-single label-hint="Lien Waiver Type" required="true" data="[[$variables.checkboxDataADP]]"
+          item-text="template_name" on-value-item-changed="[[$listeners.selectValueItem]]"
+          value="{{ $variables.headerObj.lienwaviertype }}"></oj-select-single>
+
+        <!-- <oj-c-select-multiple label-hint="Applicable States" data="[[$variables.applicablestateListSDP]]"
+          item-text="applicablestate" value="{{ $variables.headerObj.state }}" required="true"
+          on-value-changed="[[$listeners.selectValue2]]"></oj-c-select-multiple> -->
+
+        <!-- used for new API for states -->
+        <oj-c-select-multiple label-hint="Applicable States" value="{{ $variables.headerObj.state }}" required="true"
+          data="[[ $variables.applicablestates ]]" item-text="state_name"
+          on-value-changed="[[$listeners.selectValue3]]"></oj-c-select-multiple>
+
+        <oj-input-date label-hint="Start Date" required="true" value="{{ $variables.headerObj.startdate }}">
+        </oj-input-date>
+        <oj-input-date label-hint="End Date" required="true" value="{{ $variables.headerObj.enddate }}"></oj-input-date>
+        <oj-toolbar>
+          <oj-switch class="oj-switch" label-edge="inside" label-hint="Enabled Flag"
+            value="{{ $variables.headerObj.enableFlag }}"></oj-switch>
+          <oj-button label="Download Template" on-oj-action="[[$listeners.buttonAction6]]" chroming="callToAction"
+            class="oj-button-sm"></oj-button>
+        </oj-toolbar>
+      </oj-form-layout>
+    </oj-validation-group>
+
+    <!-- <div class="oj-panel" id="waiverContainer"> -->
+    <div class="oj-panel" id="waiContainer">
+      <oj-bind-if
+        test="[[$variables.headerObj.lienwaviertype === 'Conditional Lien Waiver and Release For Progress Payment']]">
+        <div style="border: 2px solid black; padding: 20px; max-width: 800px; margin: auto;">
+          <div style="text-align: center; font-weight: bold; text-decoration: underline; margin-bottom: 20px;">
+            <oj-bind-text value="[[ $variables.headerObj.lienwaviertype ]]"></oj-bind-text>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Project</label>
+            <span
+  style="display: inline-block; font-size:16px !important; font-weight:600;"
+ >
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Job No.</label>
+            <span
+  style="display: inline-block; font-size:16px !important; font-weight:600;"
+  >
+       <oj-bind-text value="[[ $variables.headerObj.jobnum ? $variables.headerObj.jobnum : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <p>
+            On receipt by the signer of this document of a check from
+            <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (maker of check) in the sum of $
+            <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            payable to
+            <span style="display: inline-block;  font-size:16px !important;font-weight:600">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (payee or payees of check) and when the check has been properly endorsed and has been paid by the bank on
+            which it is drawn, this document becomes effective to release any mechanic's lien right, any right arising
+            from a payment bond that complies with a state or federal statute, any common law payment bond right, any
+            claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment
+            rights for persons in the signer's position that the signer has on the property of
+            <span style="display: inline-block;  font-size:15px !important;font-weight:600;">
+        <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (owner) located at
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (location) to the following extent: <span style="display: inline-block; width: 100%;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>   (job description).
+    </span>
+          </p>
+          <p>
+            This release covers a progress payment for all labor, services, equipment, or materials furnished to the
+            property or to
+            <span style="display: inline-block; font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (person with whom signer contracted) as indicated in the attached statement(s) or progress payment
+            request(s), except for unpaid retention, pending modifications and changes, or other items furnished.
+          </p>
+
+          <p>
+            Before any recipient of this document relies on this document, the recipient should verify evidence of
+            payment to the signer.
+          </p>
+
+          <p>
+            The signer warrants that the signer has already paid or will use funds received from this progress payment
+            to promptly pay in full all of the signer's laborers, subcontractors, materialmen and suppliers for all work
+            materials equipment or services provided for to do above referenced project in regard to attached
+            statement(s) or progress payment request(s).
+          </p>
+
+          <div style="margin-top: 20px;">
+            <label style="font-weight: bold;">Date</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Company name)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <label style="font-weight: bold;">By</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Signature)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+<b>NOTICE:</b> This document waives rights unconditionally and states that you have been paid for giving up those rights. 
+      It is prohibited for a person to require you to sign this document if you have not been paid the payment amount set forth below. 
+      If you have not been paid, use a conditional release form.
+
+  </span>
+          </div>
+        </div>
+
+
+
+      </oj-bind-if>
+
+      <oj-bind-if
+        test="[[$variables.headerObj.lienwaviertype === 'Unconditional Lien Waiver and Release For Progress Payment']]">
+        <div style="border: 2px solid black; padding: 20px; max-width: 800px; margin: auto;">
+          <div style="text-align: center; font-weight: bold; text-decoration: underline; margin-bottom: 20px;">
+            <oj-bind-text value="[[ $variables.headerObj.lienwaviertype ]]"></oj-bind-text>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Project</label>
+            <span style="display: inline-block;  font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Job No.</label>
+            <span style="display: inline-block; font-size:16px !important;font-weight:600;">
+       <oj-bind-text value="[[ $variables.headerObj.jobnum ? $variables.headerObj.jobnum : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <p>
+            On receipt by the signer of this document of a check from <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (maker of check) in the sum of $ <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> payable to <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (payee or payees of check) and when the check has been properly endorsed and has been paid by the bank on
+            which it is drawn, this document becomes effective to release any mechanic's lien right, any right arising
+            from a payment bond that complies with a state or federal statute, any common law payment bond right, any
+            claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment
+            rights for persons in the signer's position that the signer has on the property of<span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (owner) located at <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (location) to the following extent:<span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (job description).
+          </p>
+
+
+
+          <p>
+            This release covers a progress payment for all labor, services, equipment, or materials furnished to the
+            property or to <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (person with whom signer contracted) as indicated in the attached statement(s) or progress payment
+            request(s), except for unpaid retention, pending modifications and changes, or other items furnished.
+          </p>
+
+          <p>
+            Before any recipient of this document relies on this document, the recipient should verify evidence of
+            payment to the signer.
+          </p>
+
+          <p>
+            The signer warrants that the signer has already paid or will use funds received from this progress payment
+            to promptly pay in full all of the signer's laborers, subcontractors, materialmen, and suppliers for all
+            work, materials, equipment, or services provided for or to the above referenced project in regard to the
+            attached statement(s) or progress payment request(s).
+          </p>
+
+          <div style="margin-top: 20px;">
+            <label style="font-weight: bold;">Date</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Company name)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <label style="font-weight: bold;">By</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Signature)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+<b>NOTICE:</b> This document waives rights unconditionally and states that you have been paid for giving up those rights. 
+      It is prohibited for a person to require you to sign this document if you have not been paid the payment amount set forth below. 
+      If you have not been paid, use a conditional release form.
+
+  </span>
+          </div>
+
+
+
+
+        </div>
+
+      </oj-bind-if>
+
+
+      <oj-bind-if
+        test="[[$variables.headerObj.lienwaviertype === 'Unconditional Lien Waiver and Release For Final Payment']]">
+        <div style="border: 2px solid black; padding: 20px; max-width: 800px; margin: auto;">
+          <div style="text-align: center; font-weight: bold; text-decoration: underline; margin-bottom: 20px;">
+            <oj-bind-text value="[[ $variables.headerObj.lienwaviertype ]]"></oj-bind-text>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Project</label>
+            <span style="display: inline-block;  font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Job No.</label>
+            <span style="display: inline-block; font-size:16px !important;font-weight:600;">
+       <oj-bind-text value="[[ $variables.headerObj.jobnum ? $variables.headerObj.jobnum : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <p>
+            This release covers a progress payment for all labor, services, equipment, or materials furnished to the
+            property or to <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (person with whom signer contracted) as indicated in the attached statement(s) or progress payment
+            request(s), except for unpaid retention, pending modifications and changes, or other items furnished.
+          </p>
+
+
+          <p> The signer of this document has been paid in full for all labor, services, equipment, or materials
+            furnished to the property or to <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (person with whom signer contracted) on the property of <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (owner) located at <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (location) to the following extent:<span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (job description). The signer therefore waives and releases any mechanic's lien right, any right arising
+            from a payment bond that complies with a state or federal statute, any common law payment bond right, any
+            claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment
+            rights for persons in the signer's position.</p>
+          <p> The signer warrants that the signer has already paid or will use the funds received from this final
+            payment to promptly pay in full all of the signer's laborers, subcontractors, materialmen, and suppliers for
+            all work materials equipment or services provided for or to be above referenced project up to date of this
+            waiver and release.
+          </p>
+          <div style="margin-top: 20px;">
+            <label style="font-weight: bold;">Date</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Company name)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <label style="font-weight: bold;">By</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Signature)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Title)
+          </div>
+
+
+        </div>
+      </oj-bind-if>
+
+
+      <oj-bind-if
+        test="[[$variables.headerObj.lienwaviertype === 'Conditional Lien Waiver and Release For Final Payment']]">
+        <div style="border: 2px solid black; padding: 20px; max-width: 800px; margin: auto;">
+          <div style="text-align: center; font-weight: bold; text-decoration: underline; margin-bottom: 20px;">
+            <oj-bind-text value="[[ $variables.headerObj.lienwaviertype ]]"></oj-bind-text>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Project</label>
+            <span style="display: inline-block;  font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <label style="font-weight: bold;">Job No.</label>
+            <span style="display: inline-block; font-size:16px !important;font-weight:600;">
+       <oj-bind-text value="[[ $variables.headerObj.jobnum ? $variables.headerObj.jobnum : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+
+          <p>On receipt by the signer of this document of a check from <span style="display: inline-block; font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (maker of check) in the sum of $ <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> payable to <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (payee or payees of check) and when the check has been properly endorsed and has been paid by the bank on
+            which it is drawn, this document becomes effective to release any mechanic's lien right, any right arising
+            from a payment bond that complies with a state or federal statute, any common law payment bond right, any
+            claim for payment, and any rights under any similar ordinance, rule, or statute related to claim or payment
+            rights for persons in the signer's position that the signer has on the property of <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (owner) located at <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (location) to <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (job description).</p>
+
+
+          <p>This release covers the final payment to the signer for all labor, services, equipment, or materials
+            furnished to the property or to <span style="display: inline-block;   font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span> (person with whom signer contracted).</p>
+
+
+          <p>Before any recipient of this document relies on this document, the recipient should verify evidence of
+            payment to the signer.</p>
+
+          <p>The signer warrants that the signer has already paid or will use the funds received from this final payment
+            to promptly pay in full all of the signer's laborers, subcontractors, materialmen, and suppliers for all
+            work, materials, equipment, or services provided for or to be provided upon the above referenced project up
+            to the date of this waiver and release.</p>
+
+          <div style="margin-top: 20px;">
+            <label style="font-weight: bold;">Date</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Company name)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <label style="font-weight: bold;">By</label>
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Signature)
+          </div>
+
+          <div style="margin-top: 10px;">
+            <span style="display: inline-block;font-size:16px !important;font-weight:600;">
+      <oj-bind-text value="[[ $variables.headerObj.projectname ? $variables.headerObj.projectname : '_________________' ]]"></oj-bind-text>
+    </span>
+            (Title)
+          </div>
+
+        </div>
+      </oj-bind-if>
+
+
+    </div>
+
+  </div>
+  <div slot="footer">
+    <oj-button label="Create" chroming="callToAction" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction3]]">
+    </oj-button>
+    <oj-button chroming="callToAction" on-oj-action="[[$listeners.buttonAction2]]" class="oj-button-sm">Close
+    </oj-button>
+  </div>
+</oj-dialog>
+<oj-dialog dialog-title="Wavier Document" id="dailogViewDocuments" style="width: 900px;">
+  <div slot="body">
+    <div class="oj-flex" id="waveDocument">
+    </div>
+  </div>
+  <div slot="footer">
+    <oj-button on-oj-action="[[$listeners.buttonAction5]]">Close</oj-button>
+  </div>
+</oj-dialog>

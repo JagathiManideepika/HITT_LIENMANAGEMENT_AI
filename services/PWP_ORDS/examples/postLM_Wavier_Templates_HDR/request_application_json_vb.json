@@ -1,0 +1,28 @@
+{
+ 
+  "p_template_name": "A",
+ 
+  "p_lien_waiver_type": "B",
+ 
+  "p_start_date": "12-Jan-2025",
+ 
+  "p_end_date":"12-Mar-2025",
+ 
+  "p_enable_flag": "c",
+ 
+  "p_applicable_state": "d",
+ 
+  "p_file_name": "e",
+ 
+  "p_file_type": "f",
+ 
+  "p_file_content": "g",
+ 
+  "p_created_by": "h",
+ 
+  "p_last_updated_by": "i",
+ 
+  "p_last_update_login": "j"
+ 
+}
+ 

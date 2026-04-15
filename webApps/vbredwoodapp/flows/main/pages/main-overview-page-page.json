@@ -1,0 +1,274 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "project_id": {
+      "type": "string"
+    },
+    "projectNumbersListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_ProjectNumbers",
+        "keyAttributes": "projectnumber",
+        "itemsPath": "items",
+        "responseType": "getallProjectNumbersResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "projectnumber"
+          ]
+        }
+      }
+    },
+    "projectNumbersListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_ProjectNumbers",
+        "keyAttributes": "projectnumber",
+        "itemsPath": "items",
+        "responseType": "getallProjectNumbersResponse2",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "projectnumber"
+          ]
+        }
+      }
+    },
+    "projectsCriteriaListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_Projects_Criteria",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallProjectsCriteriaResponse"
+      }
+    },
+    "variable1": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/get_Projects_Criteria",
+        "responseType": "get_Projects_Criteria",
+        "itemsPath": "links"
+      }
+    },
+    "variable2": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "criteria"
+      }
+    }
+  },
+  "metadata": {
+    "dynamicContainerMetadata": {
+      "type": "vb/ContainerMetadataProviderDescriptor"
+    }
+  },
+  "types": {
+    "@decorators.get_Projects_Criteria": {
+      "endpoint": "get_Projects_Criteria",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallProjectNumbersResponse": {
+      "endpoint": "getall_ProjectNumbers",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallProjectNumbersResponse2": {
+      "endpoint": "getall_ProjectNumbers",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallProjectsCriteriaResponse": {
+      "endpoint": "getall_Projects_Criteria",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "action": {
+      "id": "string",
+      "label": "string",
+      "display": "string",
+      "icon": "string"
+    },
+    "criteria": [
+      {
+        "field1": "string"
+      }
+    ],
+    "get_Projects_Criteria": {
+      "createdBy": "string",
+      "creationDate": "string",
+      "criteriaName": "string",
+      "enabledFlag": "boolean",
+      "endDate": "string",
+      "expenditureCategory": "string",
+      "expenditureType": "string",
+      "id": "number",
+      "lagDays": "string",
+      "lastUpdateDate": "string",
+      "lastUpdatedBy": "string",
+      "links": [
+        {
+          "href": "string",
+          "kind": "string",
+          "name": "string",
+          "properties": {
+            "changeIndicator": "string"
+          },
+          "rel": "string"
+        }
+      ],
+      "projectNumber": "string",
+      "startDate": "string",
+      "supplierName": "string",
+      "taskName": "number",
+      "topTaskName": "string"
+    },
+    "getallProjectNumbersResponse": {
+      "items": [
+        {
+          "projectnumber": "string"
+        }
+      ]
+    },
+    "getallProjectNumbersResponse2": {
+      "items": [
+        {
+          "id": "number",
+          "projectnumber": "string"
+        }
+      ]
+    },
+    "getallProjectsCriteriaResponse": {
+      "items": [
+        {
+          "criteriaName": "string",
+          "enabledFlag": "boolean",
+          "endDate": "string",
+          "expenditureCategory": "string",
+          "expenditureType": "string",
+          "id": "number",
+          "lagDays": "string",
+          "projectNumber": "string",
+          "startDate": "string",
+          "supplierName": "string",
+          "taskName": "number",
+          "topTaskName": "string"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain"
+        }
+      ]
+    },
+    "buttonAction2": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain1"
+        }
+      ]
+    },
+    "buttonAction3": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain2"
+        }
+      ]
+    },
+    "createProjectsCriteriaButtonClicked": {
+      "chains": [
+        {
+          "chain": "navigateToCreateProjectsCriteriaChain"
+        }
+      ]
+    },
+    "selectValueItem": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-dyn-container": {
+        "path": "oj-dyn/container/loader"
+      },
+      "oj-sample-export-data": {
+        "path": "oj-sample/export-data/loader"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-general-overview-page": {
+        "path": "oj-sp/general-overview-page/loader"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+    }
+  },
+  "@dt": {
+    "iconClass": "vbdt-dynamic-icon-85-icoOverviewPageTemplateSvg"
+  },
+  "layouts": {
+    "containerLayout1": {
+      "label": "Container Rule Set 1",
+      "layoutType": "container",
+      "layouts": {
+        "case1": {
+          "label": "Case 1",
+          "layoutType": "container",
+          "layout": {
+            "sectionTemplateMap": {
+              "template1": "template1"
+            },
+            "displayProperties": [
+              "template1"
+            ]
+          }
+        }
+      },
+      "rules": [
+        "containerLayout1-rule1"
+      ]
+    },
+    "containerLayout1-rule1": {
+      "expression": "case1"
+    }
+  },
+  "templates": {
+    "template1": {
+      "title": "Default Section",
+      "extensible": "byReference",
+      "@dt": {
+        "type": "section",
+        "layout": "containerLayout1"
+      },
+      "dependencies": [
+        "oj-sample/export-data/loader",
+        "ojs/ojbutton",
+        "ojs/ojselectsingle",
+        "ojs/ojtable",
+        "ojs/ojtoolbar"
+      ]
+    }
+  }
+}

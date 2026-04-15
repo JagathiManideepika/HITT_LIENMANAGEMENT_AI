@@ -1,0 +1,86 @@
+<oj-sp-welcome-page id="oj-sp-wp1" page-title="Lien Management Approvals"
+  illustration-background="[[ $variables.illustrationBackground ]]"
+  illustration-foreground="[[ $variables.illustrationForeground ]]" background-color="dark-pebble">
+  <div class="oj-panel">
+    <oj-form-layout columns="4" max-columns="4" label-edge="top">
+      <oj-select-single label-hint="AP Invoice" item-text="ap_invoice"
+        on-value-item-changed="[[$listeners.selectValueItem]]" value="{{ $variables.headers.apInvoice }}"
+        data="[[$variables.getLienManagementInvoiceLOVSearchListSDP]]" on-keyup="[[$listeners.selectKeyup]]">
+      </oj-select-single>
+      <oj-select-single label-hint="Supplier" item-text="supplier_name"
+        on-value-item-changed="[[$listeners.selectValueItem2]]" value="{{ $variables.headers.supplier }}"
+        data="[[$variables.getLienManagementSupplierLOVAppSearchListSDP]]"></oj-select-single>
+      <oj-select-single label-hint="Project" item-text="project_number"
+        on-value-item-changed="[[$listeners.selectValueItem3]]" value="{{ $variables.headers.project }}"
+        data="[[$variables.getLienManagementProjectLOVAppSearchListSDP2]]"></oj-select-single>
+      <oj-select-single label-hint="Status" item-text="attchment_status" value="{{ $variables.headers.status }}"
+        data="[[$variables.getLienManagementApprovalStatusLOVListSDP]]"></oj-select-single>
+    </oj-form-layout>
+
+    <div class="oj-helper-text-align-end">
+
+      <oj-button label="Search" chroming="callToAction" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction]]">
+      </oj-button>
+      <oj-button label="Reset" chroming="danger" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction8]]">
+      </oj-button>
+      <oj-button label="Approve" chroming="callToAction" class="oj-button-sm"
+        on-oj-action="[[$listeners.buttonAction6]]" disabled="[[ !$variables.iscomplete ]]">
+      </oj-button>
+      <oj-button label="Reject" chroming="callToAction" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction7]]"
+        disabled="[[ !$variables.isreject ]]">
+      </oj-button>
+      <oj-switch label-hint="Enable Trace" style="margin-top:-12px" value="[[$application.variables.enableTrace]]"
+        on-value-changed="[[$listeners.switchValue]]"></oj-switch>
+      <b><oj-bind-text
+             value='[[ $application.variables.traceIdDisplay ? "Trace ID:" + $application.variables.traceIdDisplay : "Trace ID" ]]'></oj-bind-text></b>
+    </div>
+
+    <div class="oj-flex">
+      <oj-table scroll-policy="loadMoreOnScroll" selection-mode.row="multiple" style="width:95vw;height:60vh"
+        display="grid" columns-default.resizable="enabled" on-selected-changed="[[$listeners.tableSelected]]"
+        data="[[ $variables.approvalADP ]]"
+        columns='[{"headerText":"Status","field":"attchment_status"},{"headerText":"AP Invoice Date","field":"ap_invoice_date"},{"headerText":"AP Invoice","field":"ap_invoice","width":200},{"headerText":"AP Invoice Amount","field":"ap_invoice_amount"},{"headerText":"Installment Number","field":"inv_installment_number"},{"headerText":"Installment Amount","field":"installment_amount"},{"headerText":"Currency Code","field":"currency_code"},{"headerText":"Hold Status","field":"hold_name"},{"headerText":"PO Number","field":"po_number"},{"headerText":"Project Number","field":"project_number"},{"headerText":"Supplier Name","field":"supplier_name"},{"headerText":"Payment  Type","field":"payment_type"},{"headerText":"Download File","":"","template":"download"}]'
+        on-first-selected-row-changed="[[$listeners.tableFirstSelectedRow]]">
+        <template slot="download">
+          <span class="oj-ux-ico-cloud-download" style="font-size:20px;cursor:pointer;margin-left:10px;"
+            on-click="[[$listeners.iconClick]]"
+               ></span>
+        </template>
+
+        <template slot="unconditional">
+          <oj-bind-if test="[[ $current.row.payment_type === 'Progress' ]]">
+            <span style="color:#FFC300" class="oj-ux-ico-file-document txtCenter"></span>
+          </oj-bind-if>
+          <oj-bind-if test="[[ $current.row.payment_type === 'Final' ]]">
+            <span class="oj-ux-ico-file-document txtCenter" style="color:green"></span>
+          </oj-bind-if>
+        </template>
+
+
+
+      </oj-table>
+    </div>
+
+    <oj-dialog id="viewdlg" style="width:70vw;height:90vh" cancel-behavior="icon">
+      <div slot="body">
+        <iframe :src="[[$variables.RowFileContent]]" width="100%" height="600px"></iframe>
+      </div>
+      <div slot="footer">
+        <oj-button label="Close" chroming="callToAction" on-oj-action="[[$listeners.buttonAction5]]"></oj-button>
+      </div>
+
+    </oj-dialog>
+
+  </div>
+
+
+</oj-sp-welcome-page>
+<oj-dialog dialog-title="" id="loadingDialog" class="myloader" style="width: 350px">
+  <div slot="body">
+    <div class="oj-flex-item">
+      <span style="font-size:20px;color:#006AA2;font-weight:600;margin-top:-2vh">Loading .....</span>
+      <br />
+      <oj-progress-bar value="-1" class="oj-sm-margin-3x-top"></oj-progress-bar>
+    </div>
+  </div>
+</oj-dialog>

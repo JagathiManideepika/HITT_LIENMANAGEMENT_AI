@@ -1,0 +1,293 @@
+{
+    "items": [
+        {
+            "expenditure_category_name": "01000 - General Requirements"
+        },
+        {
+            "expenditure_category_name": "02000 - Site Construction"
+        },
+        {
+            "expenditure_category_name": "03000 - Concrete"
+        },
+        {
+            "expenditure_category_name": "04000 - Masonry"
+        },
+        {
+            "expenditure_category_name": "05000 - Metal Fabrication"
+        },
+        {
+            "expenditure_category_name": "06000 - Wood and Plastics"
+        },
+        {
+            "expenditure_category_name": "07000 - Thermal and Moisture Protection"
+        },
+        {
+            "expenditure_category_name": "08000 - Doors and Windows"
+        },
+        {
+            "expenditure_category_name": "09000 - Finishes"
+        },
+        {
+            "expenditure_category_name": "10000 - Specialties"
+        },
+        {
+            "expenditure_category_name": "11000 - Equipment"
+        },
+        {
+            "expenditure_category_name": "12000 - Furnishings"
+        },
+        {
+            "expenditure_category_name": "13000 - Special Construction"
+        },
+        {
+            "expenditure_category_name": "14000 - Conveying Systems"
+        },
+        {
+            "expenditure_category_name": "15000 - Mechanical Systems"
+        },
+        {
+            "expenditure_category_name": "16000 - Electrical"
+        },
+        {
+            "expenditure_category_name": "17000 - Unit Billing Items"
+        },
+        {
+            "expenditure_category_name": "20000 Miscellaneous"
+        },
+        {
+            "expenditure_category_name": "21000 - Payroll Burdens"
+        },
+        {
+            "expenditure_category_name": "AA_STL_EXPENSE_CAT"
+        },
+        {
+            "expenditure_category_name": "AA_STL_LABOR"
+        },
+        {
+            "expenditure_category_name": "ASL Equipment Cat"
+        },
+        {
+            "expenditure_category_name": "ASL Labor Exp Category"
+        },
+        {
+            "expenditure_category_name": "ASL Misc Exp Category"
+        },
+        {
+            "expenditure_category_name": "ASL Travel Exp Category"
+        },
+        {
+            "expenditure_category_name": "Asset Computer Software"
+        },
+        {
+            "expenditure_category_name": "Asset Computer-Hardware Laptop/ Desktop"
+        },
+        {
+            "expenditure_category_name": "Asset Furniture-Kitchen Equipments"
+        },
+        {
+            "expenditure_category_name": "Asset Furniture-Office Equipments"
+        },
+        {
+            "expenditure_category_name": "Audit Fee"
+        },
+        {
+            "expenditure_category_name": "BOULT AUDIO EXPENDITURE CATEGORIES"
+        },
+        {
+            "expenditure_category_name": "Bad Debt Provision - Write-Offs"
+        },
+        {
+            "expenditure_category_name": "Communications"
+        },
+        {
+            "expenditure_category_name": "Corporate Social Responsibility"
+        },
+        {
+            "expenditure_category_name": "DPW EXP Category"
+        },
+        {
+            "expenditure_category_name": "Depreciation"
+        },
+        {
+            "expenditure_category_name": "Donations"
+        },
+        {
+            "expenditure_category_name": "Entertainment"
+        },
+        {
+            "expenditure_category_name": "Equipment"
+        },
+        {
+            "expenditure_category_name": "Equipment Hire"
+        },
+        {
+            "expenditure_category_name": "FOREIGN VAT"
+        },
+        {
+            "expenditure_category_name": "Facilities Maintenance"
+        },
+        {
+            "expenditure_category_name": "Facility Rent"
+        },
+        {
+            "expenditure_category_name": "Fuel"
+        },
+        {
+            "expenditure_category_name": "INTELLI_EXPENDITURE_CATEGORIES"
+        },
+        {
+            "expenditure_category_name": "IT Expenses"
+        },
+        {
+            "expenditure_category_name": "Insurance"
+        },
+        {
+            "expenditure_category_name": "Inter Company Charges - General & Admin"
+        },
+        {
+            "expenditure_category_name": "Labour"
+        },
+        {
+            "expenditure_category_name": "MBH Labor"
+        },
+        {
+            "expenditure_category_name": "MMX Equipment"
+        },
+        {
+            "expenditure_category_name": "MMX-Finance Charges"
+        },
+        {
+            "expenditure_category_name": "MMX-General Expenses"
+        },
+        {
+            "expenditure_category_name": "Machine and Equipment Maintenance"
+        },
+        {
+            "expenditure_category_name": "Marketing Expenses"
+        },
+        {
+            "expenditure_category_name": "Materials"
+        },
+        {
+            "expenditure_category_name": "Medical"
+        },
+        {
+            "expenditure_category_name": "Memberships & Subscriptions"
+        },
+        {
+            "expenditure_category_name": "Miscellaneous Income - Expense"
+        },
+        {
+            "expenditure_category_name": "Miscellaneous Operating Costs"
+        },
+        {
+            "expenditure_category_name": "OAK_LABOUR"
+        },
+        {
+            "expenditure_category_name": "OAK_MISC"
+        },
+        {
+            "expenditure_category_name": "OAK_TRAVEL"
+        },
+        {
+            "expenditure_category_name": "Office Services And Supplies"
+        },
+        {
+            "expenditure_category_name": "Open Data Migration"
+        },
+        {
+            "expenditure_category_name": "Operation and Maintenance - Equipments"
+        },
+        {
+            "expenditure_category_name": "PAVAN CO LABOUR CATEGORY"
+        },
+        {
+            "expenditure_category_name": "PAVAN CO MISCELLANEOUS CATEGORY"
+        },
+        {
+            "expenditure_category_name": "PAVAN CO TRAVEL CATEGORY"
+        },
+        {
+            "expenditure_category_name": "PPPM Labor Category"
+        },
+        {
+            "expenditure_category_name": "PPPM Misc Category"
+        },
+        {
+            "expenditure_category_name": "PPPM Travel Category"
+        },
+        {
+            "expenditure_category_name": "Payroll"
+        },
+        {
+            "expenditure_category_name": "Professional and Legal Expenses"
+        },
+        {
+            "expenditure_category_name": "Research and Development"
+        },
+        {
+            "expenditure_category_name": "Rite Labour Category"
+        },
+        {
+            "expenditure_category_name": "Rite Misc Category"
+        },
+        {
+            "expenditure_category_name": "Rite Travel Category"
+        },
+        {
+            "expenditure_category_name": "Safety & Environment"
+        },
+        {
+            "expenditure_category_name": "Shipment & Freight"
+        },
+        {
+            "expenditure_category_name": "Site Expenses"
+        },
+        {
+            "expenditure_category_name": "Tax"
+        },
+        {
+            "expenditure_category_name": "Training & Development"
+        },
+        {
+            "expenditure_category_name": "Travel - Accommodation and Entertainment"
+        },
+        {
+            "expenditure_category_name": "Travel Airfare"
+        },
+        {
+            "expenditure_category_name": "VOLKS Labour Category"
+        },
+        {
+            "expenditure_category_name": "VOLKS Mis Category"
+        },
+        {
+            "expenditure_category_name": "VOLKS Travel Category"
+        },
+        {
+            "expenditure_category_name": "Volks Non Labour Category"
+        }
+    ],
+    "hasMore": false,
+    "limit": 100,
+    "offset": 0,
+    "count": 89,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getexptypecategory"
+        },
+        {
+            "rel": "edit",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getexptypecategory"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getexptypecategory"
+        }
+    ]
+}

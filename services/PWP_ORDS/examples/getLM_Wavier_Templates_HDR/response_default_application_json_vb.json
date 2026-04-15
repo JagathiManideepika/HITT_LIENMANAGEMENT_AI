@@ -1,0 +1,43 @@
+{
+    "items": [
+        {
+            "template_header_id": 2,
+            "template_name": "Test Template",
+            "lien_waiver_type": "Full Waiver",
+            "start_date": "2024-11-01T00:00:00Z",
+            "end_date": "2025-12-03T00:00:00Z",
+            "enable_flag": "Y",
+            "file_name": "Test",
+            "file_type": "image/jpeg",
+            "file_content": "data:image/jpeg;base64,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",
+            "file_attachment": null,
+            "creation_adte": "2025-06-17T10:16:15Z",
+            "created_by": null,
+            "last_update_date": "2025-06-17T10:16:15Z",
+            "last_updated_by": null,
+            "last_update_login": null
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LM_Wavier_Templates_HDR"
+        },
+        {
+            "rel": "edit",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LM_Wavier_Templates_HDR"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/LM_Wavier_Templates_HDR"
+        }
+    ]
+}

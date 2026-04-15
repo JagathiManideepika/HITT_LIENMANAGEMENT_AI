@@ -1,0 +1,267 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "bottomDisplayStatus": {
+      "type": "string"
+    },
+    "bottomOpenStatus": {
+      "type": "string"
+    },
+    "dirtyDataFlag": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "dirtyDialogOpen": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "discrepancyListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_Discrepancy",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallDiscrepancyResponse"
+      }
+    },
+    "enableMessageBanner": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "endDisplayStatus": {
+      "type": "string"
+    },
+    "endDrawerSize": {
+      "type": "string",
+      "defaultValue": "sm"
+    },
+    "endOpenStatus": {
+      "type": "string"
+    },
+    "functionalPrimaryActions": {
+      "type": "functionalAction[]",
+      "defaultValue": [
+        {
+          "id": "EndModalDrawer",
+          "label": "End Modal Drawer",
+          "display": "on"
+        }
+      ]
+    },
+    "illustrationBackground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-bg-01.png"
+    },
+    "illustrationForeground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-fg-01.png"
+    },
+    "innerBottomDrawerState": {
+      "type": "string",
+      "defaultValue": "auto",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "closeInnerBottomDrawerChain"
+          }
+        ]
+      }
+    },
+    "innerBottomDrawerTitle": {
+      "type": "string",
+      "defaultValue": "Bottom Inline Drawer"
+    },
+    "msgsBanner": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "keyAttributes": "id",
+        "data": []
+      }
+    },
+    "outerEndDrawerTitle": {
+      "type": "string",
+      "defaultValue": "End Drawer"
+    },
+    "pageType": {
+      "type": "string",
+      "defaultValue": "edgeToEdge"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getallDiscrepancyResponse": {
+      "endpoint": "getall_Discrepancy",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "action": {
+      "id": "string",
+      "label": "string",
+      "display": "string",
+      "icon": "string"
+    },
+    "functionalAction": {
+      "id": "string",
+      "label": "string",
+      "display": "string"
+    },
+    "getallDiscrepancyResponse": {
+      "items": [
+        {
+          "amount": "number",
+          "id": "number",
+          "pONumber": "string",
+          "projectNumber": "string",
+          "receiptDate": "string",
+          "receiptNumber": "number",
+          "supplierSite": "string"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "confirmNoOjAction": {
+      "chains": [
+        {
+          "chain": "dialogResponseChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}",
+            "response": "NO"
+          }
+        }
+      ]
+    },
+    "confirmYesOjAction": {
+      "chains": [
+        {
+          "chain": "dialogResponseChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}",
+            "response": "YES"
+          }
+        }
+      ]
+    },
+    "ojSpCancel": {
+      "chains": [
+        {
+          "chain": "spCancelChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}"
+          }
+        }
+      ]
+    },
+    "ojSsp1SpPrimaryAction": {
+      "chains": [
+        {
+          "chain": "SmartSearchPageTemplateSpPrimaryActionChain"
+        }
+      ]
+    },
+    "onContainerPrimaryActions": {
+      "chains": [
+        {
+          "chain": "ContainerPrimaryActions",
+          "parameters": {
+            "detail": "{{ $event.detail }}"
+          }
+        }
+      ]
+    },
+    "onOuterEndDrawerCloseAction": {
+      "chains": [
+        {
+          "chain": "closeOuterDrawerChain",
+          "parameters": {
+            "drawerName": "end"
+          }
+        }
+      ]
+    },
+    "onRemoveBannerMessage": {
+      "chains": [
+        {
+          "chain": "removeBannerMessageChain",
+          "parameters": {
+            "detail": "{{ $event.detail }}"
+          }
+        }
+      ]
+    },
+    "vbBeforeExit": {
+      "chains": [
+        {
+          "chain": "checkBeforeExit",
+          "parameters": {}
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "chain": "firePageLayoutEventChain"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-data-grid": {
+        "path": "ojs/ojdatagrid"
+      },
+      "oj-defer": {
+        "path": "ojs/ojdefer"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-bottom-drawer-template": {
+        "path": "oj-sp/bottom-drawer-template/loader"
+      },
+      "oj-sp-collection-container": {
+        "path": "oj-sp/collection-container/loader"
+      },
+      "oj-sp-collection-container-advanced": {
+        "path": "oj-sp/collection-container-advanced/loader"
+      },
+      "oj-sp-data-management-page": {
+        "path": "oj-sp/data-management-page/loader"
+      },
+      "oj-sp-general-drawer-template": {
+        "path": "oj-sp/general-drawer-template/loader"
+      },
+      "oj-sp-message-unsaved-changes": {
+        "path": "oj-sp/message-unsaved-changes/loader"
+      },
+      "oj-sp-messages-banner": {
+        "path": "oj-sp/messages-banner/loader"
+      },
+      "oj-sp-smart-search-page": {
+        "path": "oj-sp/smart-search-page/loader"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+
+    }
+  },
+  "@dt": {
+    "iconClass": "vbdt-dynamic-icon-81-icoDataGridPageTemplateSvg"
+  }
+}

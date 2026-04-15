@@ -1,0 +1,253 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "gridLayout": {
+      "type": "string",
+      "defaultValue": "above-fold"
+    },
+    "illustrationBackground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-bg-01.png"
+    },
+    "illustrationForeground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-fg-01.png"
+    },
+    "kpisArray": {
+      "type": "object[]",
+      "defaultValue": [
+        {
+          "id": "KPI_1_id",
+          "title": "KPI_1_title",
+          "metric": "KPI_1_metric",
+          "meta": "KPI_1_meta"
+        },
+        {
+          "id": "KPI_2_id",
+          "title": "KPI_2_title",
+          "metric": "KPI_2_metric",
+          "meta": "KPI_2_meta"
+        }
+      ]
+    },
+    "primaryAction": {
+      "type": "actionType"
+    },
+    "pWPCollaborationListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse3"
+      }
+    },
+    "pWPCollaborationListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse4"
+      }
+    },
+    "pWPCollaborationListSDP3": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse5"
+      }
+    },
+    "pWPCollaborationListSDP4": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse6"
+      }
+    },
+    "pWPCollaborationListSDP5": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse7"
+      }
+    },
+    "selectedKpi": {
+      "type": "string",
+      "defaultValue": "KPI_1_id"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getallPWPCollaborationResponse": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallPWPCollaborationResponse2": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallPWPCollaborationResponse3": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallPWPCollaborationResponse4": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallPWPCollaborationResponse5": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallPWPCollaborationResponse6": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getallPWPCollaborationResponse7": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "actionType": {
+      "label": "string",
+      "display": "string"
+    },
+    "getallPWPCollaborationResponse": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "string",
+          "ARInvoice": "string",
+          "ARInvoiceAmount": "string",
+          "id": "number"
+        }
+      ]
+    },
+    "getallPWPCollaborationResponse2": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "id": "number"
+        }
+      ]
+    },
+    "getallPWPCollaborationResponse3": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "APInvoiceDate": "string",
+          "id": "number"
+        }
+      ]
+    },
+    "getallPWPCollaborationResponse4": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "id": "number"
+        }
+      ]
+    },
+    "getallPWPCollaborationResponse5": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "ARInvoice": "string",
+          "ARInvoiceAmount": "number",
+          "Customer Name": "string",
+          "id": "number"
+        }
+      ]
+    },
+    "getallPWPCollaborationResponse6": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "ARInvoice": "string",
+          "id": "number"
+        }
+      ]
+    },
+    "getallPWPCollaborationResponse7": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "customerName": "string",
+          "id": "number"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "dashboardLandingPageTemplateSpPrimaryAction": {
+      "chains": [
+        {
+          "chain": "DashboardLandingPageTemplateSpPrimaryActionChain"
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "chain": "loadKpisDataChain",
+          "parameters": {}
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-chart": {
+        "path": "ojs/ojchart"
+      },
+      "oj-chart-item": {
+        "path": "ojs/ojchart"
+      },
+      "oj-defer": {
+        "path": "ojs/ojdefer"
+      },
+      "oj-sp-dashboard-grid": {
+        "path": "oj-sp/dashboard-grid/loader"
+      },
+      "oj-sp-dashboard-landing-page": {
+        "path": "oj-sp/dashboard-landing-page/loader"
+      },
+      "oj-sp-dashboard-panel": {
+        "path": "oj-sp/dashboard-panel/loader"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-switcher": {
+        "path": "ojs/ojswitcher"
+      }
+
+    }
+  },
+  "@dt": {
+    "iconClass": "vbdt-dynamic-icon-81-dashboardLandingPageTemplateSvg"
+  }
+}

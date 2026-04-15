@@ -1,0 +1,841 @@
+{
+    "items": [
+        {
+            "ExpenditureTypeId": 300000092852105,
+            "ExpenditureTypeName": "Intercompany Charge",
+            "ExpenditureTypeDescription": "Intercompany Charge",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429444,
+            "ExpenditureCategory": "Entertainment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000092852105",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000092852105",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000092852105/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000101276152,
+            "ExpenditureTypeName": "Faculty Salaries",
+            "ExpenditureTypeDescription": "Faculty Salaries",
+            "RevenueCategory": "Labor",
+            "RevenueCategoryCode": "LABOR",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429444,
+            "ExpenditureCategory": "Entertainment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276152",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276152",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276152/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000101276156,
+            "ExpenditureTypeName": "Staff Salaries",
+            "ExpenditureTypeDescription": "Staff Salaries",
+            "RevenueCategory": "Labor",
+            "RevenueCategoryCode": "LABOR",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429444,
+            "ExpenditureCategory": "Entertainment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276156",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276156",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276156/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000101276160,
+            "ExpenditureTypeName": "Graduate Students",
+            "ExpenditureTypeDescription": "Graduate Students",
+            "RevenueCategory": "Labor",
+            "RevenueCategoryCode": "LABOR",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429444,
+            "ExpenditureCategory": "Entertainment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276160",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276160",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000101276160/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429450,
+            "ExpenditureTypeName": "Administrative",
+            "ExpenditureTypeDescription": "Administrative",
+            "RevenueCategory": "Labor",
+            "RevenueCategoryCode": "LABOR",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429444,
+            "ExpenditureCategory": "Entertainment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429450",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429450",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429450/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429455,
+            "ExpenditureTypeName": "Administrative Costs",
+            "ExpenditureTypeDescription": "Administrative Costs",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Ea",
+            "UnitOfMeasureCode": "zzu",
+            "ExpenditureCategoryId": 300000047429446,
+            "ExpenditureCategory": "Equipment Hire",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429455",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429455",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429455/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429459,
+            "ExpenditureTypeName": "Airfare",
+            "ExpenditureTypeDescription": "Airline Ticket Cost",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429443,
+            "ExpenditureCategory": "Corporate Social Responsibility",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429459",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429459",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429459/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429465,
+            "ExpenditureTypeName": "Computers",
+            "ExpenditureTypeDescription": "Non-Labor Resource Usage",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429441,
+            "ExpenditureCategory": "Audit Fee",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429465",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429465",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429465/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429469,
+            "ExpenditureTypeName": "Contract Services",
+            "ExpenditureTypeDescription": "Contract Services",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429448,
+            "ExpenditureCategory": "IT Expenses",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429469",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429469",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429469/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429474,
+            "ExpenditureTypeName": "Equipment",
+            "ExpenditureTypeDescription": "Equipment",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429442,
+            "ExpenditureCategory": "Communications",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429474",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429474",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429474/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429478,
+            "ExpenditureTypeName": "Fee",
+            "ExpenditureTypeDescription": "Fee",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429447,
+            "ExpenditureCategory": "FOREIGN VAT",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429478",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429478",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429478/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429482,
+            "ExpenditureTypeName": "Fringe",
+            "ExpenditureTypeDescription": "Fringe",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429447,
+            "ExpenditureCategory": "FOREIGN VAT",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429482",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429482",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429482/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429486,
+            "ExpenditureTypeName": "Hardware",
+            "ExpenditureTypeDescription": "Hardware",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429449,
+            "ExpenditureCategory": "Labour",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429486",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429486",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429486/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429491,
+            "ExpenditureTypeName": "Hotel",
+            "ExpenditureTypeDescription": "Hotel/Motel Lodging",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429443,
+            "ExpenditureCategory": "Corporate Social Responsibility",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429491",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429491",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429491/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429509,
+            "ExpenditureTypeName": "Material",
+            "ExpenditureTypeDescription": "Material Costs for Inventory Transactions",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429445,
+            "ExpenditureCategory": "Equipment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429509",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429509",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429509/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429515,
+            "ExpenditureTypeName": "Material Handling",
+            "ExpenditureTypeDescription": "Material Handling",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429447,
+            "ExpenditureCategory": "FOREIGN VAT",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429515",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429515",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429515/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429519,
+            "ExpenditureTypeName": "Meals",
+            "ExpenditureTypeDescription": "Employee Subsistence",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429443,
+            "ExpenditureCategory": "Corporate Social Responsibility",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429519",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429519",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429519/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429525,
+            "ExpenditureTypeName": "Miscellaneous",
+            "ExpenditureTypeDescription": "Miscellaneous",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429441,
+            "ExpenditureCategory": "Audit Fee",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429525",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429525",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429525/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429530,
+            "ExpenditureTypeName": "Miscellaneous Labor",
+            "ExpenditureTypeDescription": "Miscellaneous Labor",
+            "RevenueCategory": "Labor",
+            "RevenueCategoryCode": "LABOR",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429444,
+            "ExpenditureCategory": "Entertainment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429530",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429530",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429530/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429535,
+            "ExpenditureTypeName": "Overhead",
+            "ExpenditureTypeDescription": "Overhead",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429447,
+            "ExpenditureCategory": "FOREIGN VAT",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429535",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429535",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429535/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429539,
+            "ExpenditureTypeName": "Proceeds from Sale",
+            "ExpenditureTypeDescription": "Proceeds of Sale",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429446,
+            "ExpenditureCategory": "Equipment Hire",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429539",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429539",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429539/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429543,
+            "ExpenditureTypeName": "Professional",
+            "ExpenditureTypeDescription": "Professional Labor",
+            "RevenueCategory": "Labor",
+            "RevenueCategoryCode": "LABOR",
+            "UnitOfMeasure": "Hours",
+            "UnitOfMeasureCode": "HOURS",
+            "ExpenditureCategoryId": 300000047429444,
+            "ExpenditureCategory": "Entertainment",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429543",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429543",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429543/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429548,
+            "ExpenditureTypeName": "Purchased Equipment",
+            "ExpenditureTypeDescription": "Purchased Equipment",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429442,
+            "ExpenditureCategory": "Communications",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429548",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429548",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429548/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429553,
+            "ExpenditureTypeName": "Software",
+            "ExpenditureTypeDescription": "Software",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429449,
+            "ExpenditureCategory": "Labour",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429553",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429553",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429553/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        },
+        {
+            "ExpenditureTypeId": 300000047429558,
+            "ExpenditureTypeName": "Supplies",
+            "ExpenditureTypeDescription": "General Supplies",
+            "RevenueCategory": "Other",
+            "RevenueCategoryCode": "OTHER",
+            "UnitOfMeasure": "Currency",
+            "UnitOfMeasureCode": "DOLLARS",
+            "ExpenditureCategoryId": 300000047429443,
+            "ExpenditureCategory": "Corporate Social Responsibility",
+            "ExpenditureTypeStartDate": "2001-01-01",
+            "ExpenditureTypeEndDate": null,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429558",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "canonical",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429558",
+                    "name": "expenditureTypesLOV",
+                    "kind": "item"
+                },
+                {
+                    "rel": "child",
+                    "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV/300000047429558/child/ExpenditureTypeClassesLOV",
+                    "name": "ExpenditureTypeClassesLOV",
+                    "kind": "collection"
+                }
+            ]
+        }
+    ],
+    "count": 25,
+    "hasMore": true,
+    "limit": 25,
+    "offset": 0,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/expenditureTypesLOV",
+            "name": "expenditureTypesLOV",
+            "kind": "collection"
+        }
+    ]
+}

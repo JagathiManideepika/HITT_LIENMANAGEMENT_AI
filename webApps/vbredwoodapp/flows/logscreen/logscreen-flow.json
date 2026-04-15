@@ -1,0 +1,8 @@
+{
+  "id": "logscreen",
+  "description": "Flow main",
+  "defaultPage": "logscreen-start",
+  "services": {},
+  "types": {},
+  "variables": {}
+}

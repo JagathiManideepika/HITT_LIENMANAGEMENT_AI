@@ -1,0 +1,201 @@
+<oj-sp-welcome-page id="oj-sp-wp1" page-title="Lien Management Criteria" primary-action.display="off"
+  primary-action.label="Done" illustration-background="[[ $variables.illustrationBackground ]]"
+  illustration-foreground="[[ $variables.illustrationForeground ]]" background-color="dark-pebble">
+
+  <div class="oj-flex oj-sm-flex-direction-column oj-panel">
+    <oj-form-layout columns="1" label-edge="top">
+      <oj-select-single label-hint="Project Name" item-text="project_name"
+        on-value-item-changed="[[$listeners.selectValueItem]]" value="{{ $variables.headers.project_name }}"
+        data="[[$variables.getLienManagementCriteriaProjectsLOVListSDP]]"></oj-select-single>
+    </oj-form-layout>
+
+    <div class="oj-helper-text-align-end">
+      <oj-button label="Search" chroming="callToAction" class="oj-button-sm"
+        on-oj-action="[[$listeners.buttonAction6]]">
+      </oj-button>
+      <oj-button label="Reset" chroming="danger" class="oj-button-sm" on-oj-action="[[$listeners.buttonAction8]]">
+      </oj-button>
+      <oj-button chroming="callToAction" class="oj-button-sm" label="Create"
+        on-oj-action="[[$listeners.buttonAction2]]">
+      </oj-button>
+      <oj-switch label-hint="Enable Trace" style="margin-top:-13px" value="[[$application.variables.enableTrace]]"
+        on-value-changed="[[$listeners.switchValue3]]">
+      </oj-switch>
+      <b> <oj-bind-text
+              value='[[ $application.variables.traceIdDisplay ? "Trace ID:" + $application.variables.traceIdDisplay : "Trace ID" ]]'></oj-bind-text></b>
+
+    </div>
+
+    <div class="oj-flex-item oj-sm-margin-2x-top">
+      <oj-table scroll-policy="loadMoreOnScroll" id="criteria" columns-default.resizable="enabled"
+        columns='[{"headerText":"","field":"","sortable":"disabled","template":"editicon"},{"headerText":"Criteria Name","field":"criteria_name"},{"headerText":"Project Name","field":"project_name"},{"headerText":"Top Task Name","field":"top_task_name"},{"headerText":"Task Name","field":"task_name"},{"headerText":"Expenditure Category","field":"expenditure_category"},{"headerText":"Expenditure Type","field":"expenditure_type"},{"headerText":"Supplier Name","field":"supplier_name"},{"headerText":"Start Date","field":"start_dt","template":"date"},{"headerText":"End Date","field":"end_dt","template":"date"},{"headerText":"Enabled Flag","field":"enabled_flag","template":"checkTemplate"}]'
+        display="grid" selection-mode.column="single" selection-mode.row="single" style="width:90vw;height:60vh"
+        data="[[ $variables.tableData ]]">
+        <template slot="checkTemplate" data-oj-as="cell">
+          <oj-switch value="[[cell.data === 'Y' ? true : false]]"
+            style="--oj-switch-thumb-diameter: 24px; --oj-switch-track-height: 19px; --oj-switch-track-width: 38px; --color: Green; padding-center:1vw;"
+            class="o oj-switch">
+          </oj-switch>
+          <!-- on-value-changed="[[$listeners.switchValue2]]" -->
+
+        </template>
+        <template slot="editicon">
+          <span class="oj-ux-ico-edit" style="font-weight:bold;font-size:22px;cursor:pointer"
+            on-click="[[$listeners.iconClick]]"></span>
+        </template>
+
+        <template slot="date">
+          <oj-bind-text value="[[ $functions.formatDate($current.data) ]]"></oj-bind-text>
+        </template>
+      </oj-table>
+    </div>
+
+  </div>
+
+
+  <oj-dialog dialog-title='[[ $variables.dialogLabel+ " " + " Criteria" ]]' id="Add-criteria-modal"
+    drag-affordance="none" style="width: 70%;">
+    <div slot="body">
+      <div class="oj-flex">
+        <div class="oj-flex-item">
+          <oj-validation-group id="criteriagrp">
+            <oj-form-layout class="oj-formlayout-full-width" columns="4" max-columns="4" label-edge="top">
+              <oj-input-text label-hint="Criteria Name" value="{{ $variables.createobj.criteria_name }}" required="true"
+                disabled='[[ $variables.dialogLabel === "Edit" ]]'>
+              </oj-input-text>
+
+
+              <oj-select-single label-hint="Project" value="{{ $variables.createobj.project_name }}"
+                on-value-item-changed="[[$listeners.selectValueItem2]]" item-text="NAME"
+                on-keyup="[[$listeners.selectKeyup]]" data="[[ $variables.projectsAdp ]]"
+                on-click="[[$listeners.selectClick]]">
+              </oj-select-single>
+
+
+              <!-- <oj-select-single data="[[ $variables.projectsAdp ]]" item-text="NAME"
+                value="{{ $variables.createobj.project_name }}" label-hint="Project Name">
+              </oj-select-single> -->
+
+              <oj-select-single label-hint="Top Tasks" item-text="NAME" value="{{ $variables.createobj.top_task_name }}"
+                on-value-item-changed="[[$listeners.selectValueItem5]]" data="[[ $variables.topTaskAdp ]]"
+                on-click="[[$listeners.selectClick2]]">
+              </oj-select-single>
+
+
+              <oj-select-single label-hint="Task Name" item-text="NAME" value="{{ $variables.createobj.task_name }}"
+                on-value-item-changed="[[$listeners.selectValueItem4]]" data="[[ $variables.tasksADP ]]"
+                on-click="[[$listeners.selectClick3]]">
+              </oj-select-single>
+
+              <!-- <oj-select-single label-hint="Expenditure Category" item-text="expenditure_category_name"
+              value="{{ $variables.createobj.expenditure_category }}" required="true"
+              data="[[ $variables.getexpcatname ]]"></oj-select-single> -->
+
+              <oj-select-single label-hint="Expenditure Category" item-text="NAME"
+                value="{{ $variables.createobj.expenditure_category }}"
+                on-value-item-changed="[[$listeners.selectValueItem10]]" on-keyup="[[$listeners.selectKeyup3]]"
+                data="[[ $variables.expCatADP ]]" on-click="[[$listeners.selectClick4]]">
+              </oj-select-single>
+
+              <!-- <oj-select-single label-hint="Expenditure Type" item-text="expenditure_type_name"
+              value="{{ $variables.createobj.expenditure_type }}" required="true"
+              data="[[ $variables.getexptypename ]]">
+            </oj-select-single> -->
+
+              <oj-select-single label-hint="Expenditure Type" value="{{ $variables.createobj.expenditure_type }}"
+                item-text="NAME" data="[[ $variables.expTypeAdp ]]" on-click="[[$listeners.selectClick5]]">
+              </oj-select-single>
+
+
+
+              <!-- <oj-select-single label-hint="Supplier Name" value="{{ $variables.createobj.supplier_name }}"
+              item-text="vendor_name" on-value-item-changed="[[$listeners.selectValueItem3]]"
+              data="[[$variables.pWPSupplierLOVCriteriaCreateListSDP]]"></oj-select-single> -->
+
+
+              <oj-select-single label-hint="Supplier Name" item-text="NAME"
+                on-value-item-changed="[[$listeners.selectValueItem3]]" value="{{ $variables.createobj.supplier_name }}"
+                on-keyup="[[$listeners.selectKeyup4]]" data="[[ $variables.supplierAdp ]]"
+                on-click="[[$listeners.selectClick6]]">
+              </oj-select-single>
+
+
+
+
+              <!-- <oj-select-single label-hint="Supplier Site" value="{{ $variables.createobj.supplier_site }}"
+              item-text="supplier_site" data="[[$variables.getPWPSupplierSiteLOVCriteriaCreateListSDP]]"
+              on-value-item-changed="[[$listeners.selectValueItem9]]">
+            </oj-select-single> -->
+
+              <oj-select-single label-hint="Supplier Site" value="{{ $variables.createobj.supplier_site }}"
+                item-text="NAME" on-value-item-changed="[[$listeners.selectValueItem9]]"
+                data="[[ $variables.supplierSitesAdp ]]" on-click="[[$listeners.selectClick7]]">
+              </oj-select-single>
+
+              <oj-input-date label-hint="Start Date" on-value-changed="[[$listeners.inputDateValue]]"
+                value="{{ $variables.createobj.start_dt_copy }}" required="true">
+              </oj-input-date>
+              <oj-input-date label-hint="End Date" on-value-changed="[[$listeners.inputDateValue2]]"
+                value="{{ $variables.createobj.end_dt_copy }}" required="true">
+              </oj-input-date>
+              <!-- <oj-input-number label-hint="Lag Days" on-value-changed="[[$listeners.inputNumberValue]]"
+                value="{{ $variables.createobj.lag_days }}"></oj-input-number> -->
+
+              <oj-input-number label-hint=" Minimum Invoice Amount" on-value-changed="[[$listeners.inputNumberValue2]]"
+                value="{{$variables.createobj.invoice_amount_limit}}"
+                converter='{    "options": {        "style": "currency",        "currency": "USD",        "currencyDisplay": "symbol"    },    "type": "number"}'
+                class="oj-form-control-text-align-end"> </oj-input-number>
+
+              <!--                 
+              <oj-select-single data="[[$variables.applicablestateListSDP]]" item-text="applicablestate"
+                label-hint="Applicable State" required="true" value="{{ $variables.createobj.applicable_state }}">
+              </oj-select-single> -->
+
+
+              <oj-switch label-hint="Enable Flag" class="oj-switch" on-value-changed="[[$listeners.switchValue]]"
+                value="{{ $variables.createobj.enabled_flag_copy}}">
+              </oj-switch>
+
+            </oj-form-layout>
+          </oj-validation-group>
+          <!-- <oj-form-layout> -->
+          <!-- <div>
+
+
+            <p> <b>Select Applicable Lien Wavier Types</p></b>
+              <oj-checkboxset options-keys.value="template_name" options-keys.label="template_name"
+                options="[[$variables.getLMTemplatesListSDP]]" value="{{ $variables.wavier_type_dtls}}"
+                on-value-changed="[[$listeners.checkboxSetValue]]">
+              </oj-checkboxset>
+
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+    <div slot="footer">
+      <oj-bind-if test='[[ $variables.dialogLabel === "Define" ]]'>
+        <oj-button label="Create" chroming="callToAction" on-oj-action="[[$listeners.buttonAction4]]"
+          class="oj-button-sm">
+
+        </oj-button>
+      </oj-bind-if>
+      <oj-bind-if test='[[ $variables.dialogLabel === "Edit" ]]'>
+        <oj-button label="Update" chroming="callToAction" on-oj-action="[[$listeners.buttonAction7]]"
+          class="oj-button-sm">
+        </oj-button>
+      </oj-bind-if>
+      <oj-button label="Close" chroming="callToAction" on-oj-action="[[$listeners.buttonAction3]]" class="oj-button-sm">
+      </oj-button>
+    </div>
+  </oj-dialog>
+</oj-sp-welcome-page>
+<oj-dialog dialog-title="" id="loadingDialog" class="myloader" style="width: 350px">
+  <div slot="body">
+    <div class="oj-flex-item">
+      <span style="font-size:20px;color:#006AA2;font-weight:600;margin-top:-2vh">Loading .....</span>
+      <br />
+      <oj-progress-bar value="-1" class="oj-sm-margin-3x-top"></oj-progress-bar>
+    </div>
+  </div>
+</oj-dialog>

@@ -1,0 +1,8 @@
+{
+  "id": "templates",
+  "description": "Flow main",
+  "defaultPage": "templates-start",
+  "services": {},
+  "types": {},
+  "variables": {}
+}

@@ -1,0 +1,79 @@
+{
+    "items": [
+        {
+            "child_lookup_meaning": "Approved"
+        },
+        {
+            "child_lookup_meaning": "Completed"
+        },
+        {
+            "child_lookup_meaning": "Conditional LW sent to Supplier"
+        },
+        {
+            "child_lookup_meaning": "Conditional Lien Waiver Approved"
+        },
+        {
+            "child_lookup_meaning": "Conditional Lien Waiver Generated"
+        },
+        {
+            "child_lookup_meaning": "Conditional Lien Waiver Received Signed Copy"
+        },
+        {
+            "child_lookup_meaning": "Conditional Lien Waiver Sent to Supplier"
+        },
+        {
+            "child_lookup_meaning": "Generate Conditional LW"
+        },
+        {
+            "child_lookup_meaning": "Generate Unconditional LW"
+        },
+        {
+            "child_lookup_meaning": "NEW"
+        },
+        {
+            "child_lookup_meaning": "Rejected"
+        },
+        {
+            "child_lookup_meaning": "Released For Payment"
+        },
+        {
+            "child_lookup_meaning": "Supplier Signed Conditional LW uploaded"
+        },
+        {
+            "child_lookup_meaning": "Supplier Signed Unconditional LW uploaded"
+        },
+        {
+            "child_lookup_meaning": "Unconditional LW sent to Supplier"
+        },
+        {
+            "child_lookup_meaning": "Unconditional Lien Waiver Approved"
+        },
+        {
+            "child_lookup_meaning": "Unconditional Lien Waiver Generated"
+        },
+        {
+            "child_lookup_meaning": "Unconditional Lien Waiver Received Signed Copy"
+        },
+        {
+            "child_lookup_meaning": "Unconditional Lien Waiver Sent to Supplier"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 19,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getAttachementStatus"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/LienManagement/getAttachementStatus"
+        }
+    ]
+}

@@ -1,0 +1,292 @@
+<oj-sp-welcome-page id="oj-sp-wp1" page-title="Lien Management Workbench"
+  illustration-background="[[ $variables.illustrationBackground ]]"
+  illustration-foreground="[[ $variables.illustrationForeground ]]" background-color="dark-pebble">
+
+  <div class="oj-panel">
+      <oj-form-layout columns="4" max-columns="4" label-edge="top" class="oj-formlayout-full-width">
+        <oj-select-single label-hint="AP Invoice" item-text="ap_invoice"
+          on-value-item-changed="[[$listeners.selectValueItem]]" data="[[$variables.getPWPAPInvoiceNumbersListSDP]]"
+          value="{{ $variables.headers.apInvoice }}" on-keyup="[[$listeners.selectKeyup]]"></oj-select-single>
+        <oj-select-single label-hint="Supplier" item-text="supplier_name"
+          on-value-item-changed="[[$listeners.selectValueItem2]]" data="[[$variables.getPWPSupplierDetailsListSDP]]"
+          value="{{ $variables.headers.supplier }}"></oj-select-single>
+        <oj-select-single label-hint="Project" item-text="project_number"
+          on-value-item-changed="[[$listeners.selectValueItem3]]" data="[[$variables.getPWPProjectNumbersListSDP]]"
+          value="{{ $variables.headers.project }}"></oj-select-single>
+        <oj-select-single label-hint="Status" data="[[$variables.attachementStatusListSDP3]]"
+          item-text="child_lookup_meaning" value="{{ $variables.headers.status }}">
+        </oj-select-single>
+
+    </oj-form-layout>
+
+    <div class="oj-helper-text-align-end">
+          <oj-button label="Search" chroming="callToAction" class="oj-button-sm"
+            on-oj-action="[[$listeners.buttonAction]]">
+          </oj-button>
+
+          <oj-button label="Reset" chroming="danger" on-oj-action="[[$listeners.buttonAction2]]" style="margin-left:2px"
+            class="oj-button-sm">
+          </oj-button>
+          <oj-switch label-hint="Enable Trace" value="[[$application.variables.enableTrace]]" style="margin-top:-12px"
+            on-value-changed="[[$listeners.switchValue]]"></oj-switch>
+          <b><oj-bind-text
+                     value='[[ $application.variables.traceIdDisplay ? "Trace ID:" + $application.variables.traceIdDisplay : "Trace ID" ]]'></oj-bind-text></b>
+        </div>
+  </div>
+
+  <div class="oj-flex-item">
+    <!-- {"headerText":"","field":"","template":"action","sortable":"disabled"} 
+            {"headerText":"Attachment","field":"","template":"attachment","sortable":"disabled"}-->
+    <oj-table scroll-policy="loadMoreOnScroll" style="width:92vw;height:60vh" display="grid"
+      columns-default.resizable="enabled" on-selected-changed="[[$listeners.tableSelected]]"
+      data="[[ $variables.collabration2ADP ]]"
+      columns='[{"headerText":"","field":"","template":"actionCol","sortable":"disabled","width":80},{"headerText":"Status","field":"attchment_status","width":150,"style":"overflow-y: visible;white-space: normal;word-break: break-all"},{"headerText":"AP Invoice Date","field":"ap_invoice_date"},{"headerText":"AP Invoice","field":"ap_invoice","width":200},{"headerText":"AP Invoice Amount","field":"ap_invoice_amount"},{"headerText":"Currency Code","field":"currency_code"},{"headerText":"Installment Number","field":"inv_installment_number"},{"headerText":"Installment Amount","field":"installment_amount"},{"headerText":"Installement Due Date","field":"ap_invoice_due_date"},{"headerText":"Hold Status","field":"hold_name"},{"headerText":"PO Number","field":"po_number"},{"headerText":"Project Number","field":"project_number"},{"headerText":"Supplier Name","field":"supplier_name"},{"headerText":"Payment Type","field":"payment_type","template":"paymentType","className":"ecols"},{"headerText":"Conditional","template":"conditional","sortable":"disabled"},{"headerText":"Unconditional","template":"unconditional","sortable":"disabled"},{"headerText":"Update","field":"","template":"update"}]'
+      on-oj-before-row-edit="[[$listeners.tableBeforeRowEdit]]"
+      on-oj-before-row-edit-end="[[$listeners.tableBeforeRowEditEnd]]" edit-mode="rowEdit">
+
+
+      <!-- new code to make "payment Type Editable" -->
+      <template slot="paymentType" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <oj-bind-text value="[[cell.data]]"></oj-bind-text>
+        </oj-bind-if>
+        <oj-bind-if test='[[cell.mode==="edit"]]'>
+          <oj-select-single aria-label="Select (Single)" item-text="name" data="[[ $variables.paymentTypeLOV ]]"
+            value="{{ $variables.rowData.payment_type }}">
+          </oj-select-single>
+        </oj-bind-if>
+      </template>
+      <!-- new code for row level Update -->
+
+      <template slot="update" data-oj-as="cell">
+        <oj-button class="oj-button-sm" chroming="borderless" on-oj-action="[[$listeners.buttonAction7]]">
+          <span class="oj-ux-ico-save-as" slot="startIcon"></span>
+
+        </oj-button>
+      </template>
+
+
+
+      <template slot="action" data-oj-as="cell">
+        <oj-bind-if test='[[cell.mode==="navigation"]]'>
+          <span class="oj-ux-ico-save-as" style="font-size:16px;cursor:pointer"
+            on-click="[[$listeners.iconClick]]"> </span>
+        </oj-bind-if>
+      </template>
+
+      <template slot="actionCol" data-oj-as="cell">
+        <oj-menu-button display="icons" chroming="borderless" class="oj-button-sm" style="margin-left:-1vw">
+          <span slot="startIcon" class="oj-ux-ico-action"></span>
+          Action
+          <oj-menu slot="menu">
+            <div
+              style="display: flex; flex-direction: column; gap: 8px; padding: 8px; background: transparent; box-shadow: none; min-width: 200px;">
+              <oj-text-area aria-label="Text Area" placeholder="Additional Comments"
+                style="width: 100%; resize: none; font-size: 12px;" value="{{ $variables.comments }}">
+              </oj-text-area>
+              <oj-button class="oj-button-sm" chroming="callToAction" style="align-self: flex-end;"
+                label="[[ $functions.getButtonLabel($current.row.attchment_status,$current.row.next_status) ]]"
+                on-oj-action="[[$listeners.buttonAction4]]">
+              </oj-button>
+
+
+              <oj-bind-if
+                test="[[ $current.row.attchment_status === 'Conditional LW sent to Supplier' || $current.row.attchment_status === 'Unconditional LW sent to Supplier' ]]">
+                <oj-button class="oj-button-sm" chroming="callToAction" style="align-self: flex-end;"
+                  label="Resend Mail" visible="[[ $functions.showResendButton($current.row.attchment_status) ]]"
+                  on-oj-action="[[$listeners.buttonAction8]]">
+                </oj-button>
+              </oj-bind-if>
+            </div>
+          </oj-menu>
+        </oj-menu-button>
+      </template>
+      <template slot="date">
+        <oj-bind-text value="[[ $functions.formatDate($current.data) ]]"></oj-bind-text>
+      </template>
+
+      <!-- <template slot="statustemp" data-oj-as="cell">
+          <oj-bind-if test='[[cell.mode==="navigation"]]'>
+            <oj-bind-text value="[[cell.data]]"></oj-bind-text>
+          </oj-bind-if>
+          <oj-bind-if test='[[cell.mode==="edit"]]'>
+            <oj-select-single aria-label="Select (Single)" item-text="child_lookup_meaning"
+              value="{{ $variables.rowData.attchment_status }}" data="[[$variables.attachementStatusListSDP2]]">
+            </oj-select-single>
+          </oj-bind-if>
+        </template> -->
+      <template slot="attachment">
+        <oj-toolbar>
+          <oj-file-picker accept='[".pdf",".zip"]' on-oj-select="[[$listeners.filePickerSelect]]">
+            <div slot='trigger' chroming="callToAction">
+              <span class="oj-ux-ico-document-attachment" style="font-size:20px;cursor:pointer" ></span>
+            </div>
+          </oj-file-picker>
+
+          <oj-bind-if test="[[$current.row.file_content]]">
+            <span class="oj-ux-ico-cloud-download" style="font-size:20px;cursor:pointer;margin-left:10px;"
+                on-click="[[$listeners.iconClick3]]"></span>
+          </oj-bind-if>
+          <oj-bind-if test="[[!$current.row.file_content]]">
+            <span class="oj-ux-ico-cloud-download" style="font-size:20px;cursor:pointer;margin-left:10px;color:lightgrey"></span>
+          </oj-bind-if>
+        </oj-toolbar>
+      </template>
+
+
+
+
+      <!--  <template slot="conditional">
+          <oj-bind-if test="[[ $current.row.payment_type === 'Progress' ]]">
+            <span
+      class="oj-ux-ico-file-document"
+      style="font-size:18px"
+   :style.color="[[ 'green' ]]"
+      :style.cursor="[[ $current.row.attchment_status && 
+                        $current.row.attchment_status.toUpperCase().startsWith('CONDITIONAL') 
+                        ? 'pointer' : 'pointer' ]]"
+      on-click="[[$listeners.iconClick2]]">
+    </span>
+          </oj-bind-if>
+         
+          <oj-bind-if test="[[ $current.row.payment_type === 'Final' ]]">
+            <span
+      class="oj-ux-ico-file-document"
+      style="font-size:18px"
+      :style.color="[[ 'green' ]]"
+      :style.cursor="[[ $current.row.attchment_status && 
+                        $current.row.attchment_status.toUpperCase().startsWith('CONDITIONAL') 
+                        ? 'pointer' : 'pointer' ]]"
+      on-click="[[$listeners.iconClick2]]">
+    </span>
+          </oj-bind-if> -->
+      <!-- </template> -->
+
+      <template slot="conditional">
+        <oj-bind-if test="[[ $current.row.show_cond_doc === 'Y' ]]">
+          <oj-toolbar>
+            <span class="oj-ux-ico-file-document" style="font-size:18px;cursor:pointer;color:green;"
+      on-click="[[$listeners.iconClick2]]">
+              </span>
+
+            <oj-bind-if test="[[ $current.row.conditional_signed_doc ]]">
+              <span class="oj-ux-ico-cloud-download" style="font-size:18px;cursor:pointer;margin-left:10px;"
+                on-click="[[$listeners.iconClick4]]"> </span>
+            </oj-bind-if>
+
+          </oj-toolbar>
+        </oj-bind-if>
+      </template>
+
+      <template slot="unconditional">
+        <oj-bind-if test="[[ $current.row.show_uncond_doc === 'Y' ]]">
+          <oj-toolbar>
+            <span class="oj-ux-ico-file-document" style="font-size:18px;cursor:pointer;color:green"
+                on-click="[[$listeners.iconClick6]]"
+      >
+    </span>
+            <oj-bind-if test="[[ $current.row.unconditional_signed_doc ]]">
+              <span class="oj-ux-ico-cloud-download" style="font-size:18px;cursor:pointer;margin-left:10px;"
+                on-click="[[$listeners.iconClick5]]"
+              > </span>
+            </oj-bind-if>
+          </oj-toolbar>
+        </oj-bind-if>
+
+      </template>
+
+      <!-- <oj-bind-if test="[[ $current.row.payment_type === 'Final' ]]">
+            <span
+      class="oj-ux-ico-file-document"
+      style="font-size:18px"
+      :style.color="[[ 'green' ]]"
+      :style.cursor="[[ $current.row.attchment_status && 
+                        $current.row.attchment_status.toUpperCase().startsWith('CONDITIONAL') 
+                        ? 'not-allowed' : 'pointer' ]]"
+      on-click="[[$current.row.attchment_status && 
+                  !$current.row.attchment_status.toUpperCase().startsWith('CONDITIONAL') 
+                  ? $listeners.iconClick2 : null]]">
+    </span>
+          </oj-bind-if> -->
+      <!-- </template> -->
+    </oj-table>
+  </div>
+  <oj-dialog dialog-title="Supplier Contact Email" id="emaildlg" style="width:30vw;" cancel-behavior="icon">
+    <div slot="body">
+      <div class="oj-flex" style="width:100%">
+        <oj-validation-group id="emailvalidation">
+          <oj-form-layout label-edge="top" class="oj-formlayout-full-width" style="width:150%">
+            <oj-sp-input-email label-hint="Input Email" value="{{ $variables.currentRow.supplier_email }}"
+              required="true">
+            </oj-sp-input-email>
+          </oj-form-layout>
+        </oj-validation-group>
+      </div>
+    </div>
+    <div slot="footer">
+      <oj-button on-oj-action="[[$listeners.buttonAction6]]">Send Email</oj-button>
+    </div>
+  </oj-dialog>
+
+
+
+  <oj-dialog dialog-title="Upload Attachement" id="uplddlg" style="width:30vw;" cancel-behavior="icon">
+    <div slot="body">
+      <div class="oj-flex">
+        <div class="oj-flex-item" style="width:100%">
+          <oj-form-layout columns="2" label-edge="top" class="oj-formlayout-full-width">
+            <oj-input-text label-hint="File Name" disabled="true" value="{{ $variables.currentRow.file_name }}">
+            </oj-input-text>
+            <oj-file-picker on-oj-select="[[$listeners.filePickerSelect2]]" accept='[".pdf",".zip"]'
+              style="margin-top:3vh">
+              <oj-button slot="trigger" chroming="callToAction" class="oj-button-sm">
+                <span class="oj-ux-ico-document-attachment" slot="startIcon"></span>
+              </oj-button>
+            </oj-file-picker>
+
+            <oj-button on-oj-action="[[$listeners.buttonAction5]]" chroming="callToAction"
+              disabled="[[ !$variables.currentRow.file_name ]]">Upload File</oj-button>
+          </oj-form-layout>
+        </div>
+      </div>
+    </div>
+    <!-- <div slot="footer">
+        <oj-button on-oj-action="[[$listeners.buttonAction5]]">Upload File</oj-button>
+      </div> -->
+  </oj-dialog>
+
+
+
+  </div>
+</oj-sp-welcome-page>
+<oj-dialog dialog-title="" id="loadingDialog" class="myloader" style="width: 350px">
+  <div slot="body">
+    <div class="oj-flex-item">
+      <span style="font-size:20px;color:#006AA2;font-weight:600;margin-top:-2vh">Loading .....</span>
+      <br />
+      <oj-progress-bar value="-1" class="oj-sm-margin-3x-top"></oj-progress-bar>
+    </div>
+  </div>
+</oj-dialog>
+
+<oj-dialog dialog-title="Supplier Contact Email" id="emaildlg_resend" style="width:30vw;" cancel-behavior="icon">
+  <div slot="body">
+    <div class="oj-flex" style="width:100%">
+      <oj-validation-group id="emailvalidation_resend">
+        <oj-form-layout label-edge="top" class="oj-formlayout-full-width" style="width:150%">
+          <oj-sp-input-email label-hint="Input Email" value="{{ $variables.currentRow.supplier_email }}"
+            required="true">
+          </oj-sp-input-email>
+        </oj-form-layout>
+      </oj-validation-group>
+    </div>
+  </div>
+  <div slot="footer">
+    <oj-button on-oj-action="[[$listeners.buttonAction9]]">Resend Email</oj-button>
+  </div>
+</oj-dialog>
+
+<!-- {"headerText":"AR Invoice","field":"ar_invoice"},
+  {"headerText":"Customer Name","field":"customer_name"},
+   {"headerText":"AR Invoice Amount","field":"ar_invoice_amount"},
+  {"headerText":"Receipt Number","field":"receipt_number"} -->

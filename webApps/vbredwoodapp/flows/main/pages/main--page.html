@@ -1,0 +1,37 @@
+<oj-sp-smart-search-page id="oj_ssp1" page-title="Dashboard"
+  smart-filters.expanded="{{$page.variables.expanded}}" smart-filters.value="{{$page.variables.appliedFilters}}"
+  smart-filters.ask-hint="{{$page.variables.askHint}}" smart-filters.results-data="[[$page.variables.searchResultsDP]]"
+  smart-filters.suggestions="[[$page.variables.searchSuggestionsDP]]"
+  smart-filters.suggestion-filters="[[$page.variables.suggestionFiltersDP]]"
+  select-context.data="{{$page.variables.selectContextData}}"
+  select-context.item-text="{{$page.variables.selectContextItemText}}"
+  select-context.label-hint="{{$page.variables.selectContextLabelHint}}"
+  select-context-value="{{$page.variables.selectContextValue}}"
+  select-context-value-item="{{$page.variables.selectContextValueItem}}"
+  on-sp-go-to-parent="[[$listeners.ojSpGoToParent]]" show-all-total-count="[[$page.variables.showAllTotalCount]]"
+  all-total-count-message="[[$page.variables.initialString]]"
+  on-smart-filters-changed-action="[[$listeners.ojSpSmartFiltersChangedAction]]" primary-action.display="on"
+  primary-action.label="Done" display-mode="mixed">
+  <oj-sp-collection-container display-options.add="off" display-options.delete="off"
+    functional-primary-actions="[[$page.variables.functionalPrimaryActions]]"
+    functional-secondary-actions="[[$variables.functionalSecondaryActions]]">
+    <div class="oj-panel" slot="search">
+      <div class="oj-flex">
+        <div class="oj-panel oj-flex-item oj-sm-12 oj-md-12">
+          <div class="oj-flex">
+            
+  
+  <oj-chart type="bar" class="oj-sm-flex-initial oj-flex-item oj-sm-12 oj-md-12"
+    data="[[$variables.pWPCollaborationListSDP]]" y-axis.title="AP InvoiceAmount" x-axis.title="AP Invoice"
+    legend.title="customerName" stack="on">
+    <template slot="itemTemplate">
+      <oj-chart-item value="[[ $current.data.APInvoiceAmount ]]" group-id="[[[ $current.data.APInvoice ]]]"
+        series-id="[[ $current.data.customerName ]]"></oj-chart-item>
+    </template>
+  </oj-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </oj-sp-collection-container>
+</oj-sp-smart-search-page>

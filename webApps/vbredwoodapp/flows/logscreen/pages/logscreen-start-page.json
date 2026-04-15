@@ -1,0 +1,183 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "getLMDebugSessionIDListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_Debug_SessionID",
+        "keyAttributes": "session_id",
+        "itemsPath": "items",
+        "responseType": "getLMDebugSessionIDResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "session_id"
+          ]
+        }
+      }
+    },
+    "getLMDebugUserIDListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/getLM_Debug_UserID",
+        "keyAttributes": "user_id",
+        "itemsPath": "items",
+        "responseType": "getLMDebugUserIDResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "user_id"
+          ]
+        }
+      }
+    },
+    "headers": {
+      "type": {
+        "endDate": "any",
+        "startDate": "any",
+        "traceID": "any",
+        "username": "any"
+      }
+    },
+    "illustrationBackground": {
+      "type": "string"
+    },
+    "illustrationForeground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-fg-01.png"
+    },
+    "logData": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getLMDebugLogs"
+      }
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getLMDebugLogs": {
+      "endpoint": "getLMDebugLogs",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getLMDebugSessionIDResponse": {
+      "endpoint": "getLM_Debug_SessionID",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getLMDebugUserIDResponse": {
+      "endpoint": "getLM_Debug_UserID",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "getLMDebugLogs": {
+      "api_name": "string",
+      "application_name": "string",
+      "created_by": "string",
+      "creation_date": "string",
+      "creationdatewithtimestamp": "string",
+      "debug_message": "string",
+      "environment": "any",
+      "error_code": "string",
+      "error_details": "string",
+      "host_name": "any",
+      "last_update_date": "string",
+      "last_updated_by": "string",
+      "level_id": "any",
+      "page_name": "string",
+      "procedure_name": "string",
+      "record_source": "string",
+      "request_id": "any",
+      "sequence_id": "number",
+      "session_id": "string",
+      "severity_level": "string",
+      "user_id": "string"
+    },
+    "getLMDebugSessionIDResponse": {
+      "items": [
+        {
+          "session_id": "string"
+        }
+      ]
+    },
+    "getLMDebugUserIDResponse": {
+      "items": [
+        {
+          "user_id": "string"
+        }
+      ]
+    }
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "resetButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction2": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "buttonAction3": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "chain": "PageVbEnterChain",
+          "parameters": {
+            "event": "{{$event}}"
+          }
+        }
+      ]
+    }
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-dialog": {
+        "path": "ojs/ojdialog"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-date": {
+        "path": "ojs/ojdatetimepicker"
+      },
+      "oj-progress-bar": {
+        "path": "ojs/ojprogress-bar"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      }
+    }
+  }
+}

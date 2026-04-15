@@ -1,0 +1,326 @@
+{
+    "items": [
+        {
+            "vendor_id": 300001700818463,
+            "segment1": "783_ETL_01",
+            "party_id": 300001700818461,
+            "vendor_name": "3G Communications, Inc._ETL_01"
+        },
+        {
+            "vendor_id": 300001700817152,
+            "segment1": "600_ETL_01",
+            "party_id": 300001700817150,
+            "vendor_name": "3M Health Care_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817388,
+            "segment1": "41198_ETL_01",
+            "party_id": 300001700817386,
+            "vendor_name": "3M Supplier_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818128,
+            "segment1": "1355_ETL_01",
+            "party_id": 300001700818125,
+            "vendor_name": "ACSYS Consultoria e Sistemas Ltda_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819280,
+            "segment1": "40178_ETL_01",
+            "party_id": 300001700819278,
+            "vendor_name": "ALPHABET SUPPLIER_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819252,
+            "segment1": "41189_ETL_01",
+            "party_id": 300001700819250,
+            "vendor_name": "AMD Supplier_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819172,
+            "segment1": "1221_ETL_01",
+            "party_id": 300001700819170,
+            "vendor_name": "AUTO HAUS_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817956,
+            "segment1": "601_ETL_01",
+            "party_id": 300001700817953,
+            "vendor_name": "Abbott Laboratories, Inc._ETL_01"
+        },
+        {
+            "vendor_id": 300001700817883,
+            "segment1": "1419_ETL_01",
+            "party_id": 300001700817881,
+            "vendor_name": "Abogados Perez_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818391,
+            "segment1": "804_ETL_01",
+            "party_id": 300001700818389,
+            "vendor_name": "AccessMicron_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817031,
+            "segment1": "29158_ETL_01",
+            "party_id": 300001700817029,
+            "vendor_name": "Ace Glass Inc._ETL_01"
+        },
+        {
+            "vendor_id": 300001700817217,
+            "segment1": "1477_ETL_01",
+            "party_id": 300001700817215,
+            "vendor_name": "Aceros Sudamericanos S.A._ETL_01"
+        },
+        {
+            "vendor_id": 300001700819030,
+            "segment1": "1495_ETL_01",
+            "party_id": 300001700819027,
+            "vendor_name": "Administracion Federal de Ingresos Publicos_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817926,
+            "segment1": "7130_ETL_01",
+            "party_id": 300001700817924,
+            "vendor_name": "Advanced Sterilization Products_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819273,
+            "segment1": "33163_ETL_01",
+            "party_id": 300001700819271,
+            "vendor_name": "Adventure Provider 1102_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817545,
+            "segment1": "1359_ETL_01",
+            "party_id": 300001700817542,
+            "vendor_name": "Agente Arrecadador_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818234,
+            "segment1": "1595_ETL_01",
+            "party_id": 300001700818232,
+            "vendor_name": "Agile Electronic Supplies_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819129,
+            "segment1": "13135_ETL_01",
+            "party_id": 300001700819127,
+            "vendor_name": "Air Gas Cylinder Company_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817804,
+            "segment1": "41199_ETL_01",
+            "party_id": 300001700817802,
+            "vendor_name": "Alcoa Supplier_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818227,
+            "segment1": "1220_ETL_01",
+            "party_id": 300001700818225,
+            "vendor_name": "Alliance Systems_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818520,
+            "segment1": "1536_ETL_01",
+            "party_id": 300001700818518,
+            "vendor_name": "Allianz Compania de Seguros A.G._ETL_01"
+        },
+        {
+            "vendor_id": 300001700818043,
+            "segment1": "147_ETL_01",
+            "party_id": 300001700818041,
+            "vendor_name": "Allied Manufacturing_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818113,
+            "segment1": "29159_ETL_01",
+            "party_id": 300001700818111,
+            "vendor_name": "Alltech Associates Inc_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817473,
+            "segment1": "1744_ETL_01",
+            "party_id": 300001700817470,
+            "vendor_name": "Alltrista Corporation_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817102,
+            "segment1": "1310_ETL_01",
+            "party_id": 300001700817100,
+            "vendor_name": "Ambiente_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818449,
+            "segment1": "1742_ETL_01",
+            "party_id": 300001700818446,
+            "vendor_name": "Amcan Industries_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818120,
+            "segment1": "1218_ETL_01",
+            "party_id": 300001700818118,
+            "vendor_name": "American Avionics Corporation_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817941,
+            "segment1": "475_ETL_01",
+            "party_id": 300001700817938,
+            "vendor_name": "American Power Conversion Corp_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817138,
+            "segment1": "6_ETL_01",
+            "party_id": 300001700817135,
+            "vendor_name": "American Telephone and Telegraph_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818689,
+            "segment1": "48180_ETL_01",
+            "party_id": 300001700818687,
+            "vendor_name": "American Tower_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818668,
+            "segment1": "41195_ETL_01",
+            "party_id": 300001700818666,
+            "vendor_name": "Amgen Supplier_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818909,
+            "segment1": "46178_ETL_01",
+            "party_id": 300001700818907,
+            "vendor_name": "Analog Devices_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818314,
+            "segment1": "476_ETL_01",
+            "party_id": 300001700818312,
+            "vendor_name": "Anderson Fabric Company_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818951,
+            "segment1": "41186_ETL_01",
+            "party_id": 300001700818949,
+            "vendor_name": "Apple Supplier_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817109,
+            "segment1": "2125_ETL_01",
+            "party_id": 300001700817107,
+            "vendor_name": "Applied Industrial Technologies, Inc._ETL_01"
+        },
+        {
+            "vendor_id": 300001700817587,
+            "segment1": "45179_ETL_01",
+            "party_id": 300001700817585,
+            "vendor_name": "Arista Networks_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819186,
+            "segment1": "1456_ETL_01",
+            "party_id": 300001700819184,
+            "vendor_name": "Armazéns Faria_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817685,
+            "segment1": "13140_ETL_01",
+            "party_id": 300001700817683,
+            "vendor_name": "Arnold Printed Communications_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817052,
+            "segment1": "1333_ETL_01",
+            "party_id": 300001700817050,
+            "vendor_name": "Austin Supplies_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819443,
+            "segment1": "477_ETL_01",
+            "party_id": 300001700819441,
+            "vendor_name": "Auto Repair Service, Inc_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818916,
+            "segment1": "47179_ETL_01",
+            "party_id": 300001700818914,
+            "vendor_name": "Automatic Data Processing_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817861,
+            "segment1": "949_ETL_01",
+            "party_id": 300001700817858,
+            "vendor_name": "Automotive Supplier #1_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818860,
+            "segment1": "950_ETL_01",
+            "party_id": 300001700818857,
+            "vendor_name": "Automotive Supplier #2_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819216,
+            "segment1": "1781_ETL_01",
+            "party_id": 300001700819213,
+            "vendor_name": "Automotive Supplier #3_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817891,
+            "segment1": "1782_ETL_01",
+            "party_id": 300001700817888,
+            "vendor_name": "Automotive Supplier #4_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818064,
+            "segment1": "19151_ETL_01",
+            "party_id": 300001700818062,
+            "vendor_name": "BJ Services Co_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817559,
+            "segment1": "1663_ETL_01",
+            "party_id": 300001700817557,
+            "vendor_name": "Bancolombia_ETL_01"
+        },
+        {
+            "vendor_id": 300001700817692,
+            "segment1": "803_ETL_01",
+            "party_id": 300001700817690,
+            "vendor_name": "Bank of America_ETL_01"
+        },
+        {
+            "vendor_id": 300001700819200,
+            "segment1": "1616_ETL_01",
+            "party_id": 300001700819198,
+            "vendor_name": "Banner Products_ETL_01"
+        },
+        {
+            "vendor_id": 300001700818986,
+            "segment1": "54178_ETL_01",
+            "party_id": 300001700818984,
+            "vendor_name": "Base_req_Test_ETL_01"
+        }
+    ],
+    "hasMore": true,
+    "limit": 50,
+    "offset": 0,
+    "count": 50,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_SupplierLOV_CriteriaCreate"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/pwp/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_SupplierLOV_CriteriaCreate"
+        },
+        {
+            "rel": "next",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_SupplierLOV_CriteriaCreate?offset=50"
+        }
+    ]
+}

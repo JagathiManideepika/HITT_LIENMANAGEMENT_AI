@@ -1,0 +1,39 @@
+define([
+  'vb/action/actionChain',
+  'vb/action/actions',
+  'vb/action/actionUtils',
+], (
+  ActionChain,
+  Actions,
+  ActionUtils
+) => {
+  'use strict';
+
+  class conditionalSignAction extends ActionChain {
+
+    /**
+     * @param {Object} context
+     * @param {Object} params
+     * @param {any} params.key 
+     * @param {number} params.index 
+     * @param {any} params.current 
+     */
+    async run(context, { key, index, current }) {
+      const { $page, $flow, $application, $constants, $variables, $functions } = context;
+
+      const loadingDialogOpen = await Actions.callComponentMethod(context, {
+        selector: '#loadingDialog',
+        method: 'open',
+      });
+
+      await $functions.downloadBase64File(current.row.conditional_signed_doc, current.row.con_file_name);
+
+      const loadingDialogClose = await Actions.callComponentMethod(context, {
+        selector: '#loadingDialog',
+        method: 'close',
+      });
+    }
+  }
+
+  return conditionalSignAction;
+});

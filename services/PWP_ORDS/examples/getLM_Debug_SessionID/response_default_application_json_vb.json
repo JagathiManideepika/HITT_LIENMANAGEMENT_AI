@@ -1,0 +1,37 @@
+{
+    "items": [
+        {
+            "session_id": "9999"
+        },
+        {
+            "session_id": "dYbaCSKREfGT8tHlWDJ2sQ"
+        },
+        {
+            "session_id": "4RhQ-SKTEfGqBjXkVFM27g"
+        },
+        {
+            "session_id": "IWPuzSKTEfGqBjXkVFM27g"
+        },
+        {
+            "session_id": "9998"
+        }
+    ],
+    "hasMore": false,
+    "limit": 5000,
+    "offset": 0,
+    "count": 5,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_Debug_SessionID"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/metadata-catalog/LienManagement/item"
+        },
+        {
+            "rel": "first",
+            "href": "https://g1c14d1eec1bfd1-dev1atp.adb.us-ashburn-1.oraclecloudapps.com/ords/rite_dev1/LienManagement/LM_Debug_SessionID"
+        }
+    ]
+}

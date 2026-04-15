@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "project_number": "PROJ_1049"
+        },
+        {
+            "project_number": "PROJ_1388"
+        },
+        {
+            "project_number": "PROJ_3343"
+        },
+        {
+            "project_number": "PROJ_3427"
+        },
+        {
+            "project_number": "PROJ_5186"
+        },
+        {
+            "project_number": "PROJ_5214"
+        },
+        {
+            "project_number": "PROJ_6373"
+        },
+        {
+            "project_number": "PROJ_6492"
+        },
+        {
+            "project_number": "PROJ_6610"
+        },
+        {
+            "project_number": "PROJ_6628"
+        }
+    ],
+    "hasMore": false,
+    "limit": 50,
+    "offset": 0,
+    "count": 10,
+    "links": [
+        {
+            "rel": "self",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_ProjectNumbers"
+        },
+        {
+            "rel": "describedby",
+            "href": "http://129.158.228.138:8080/ords/timerite/metadata-catalog/pwp/item"
+        },
+        {
+            "rel": "first",
+            "href": "http://129.158.228.138:8080/ords/timerite/pwp/PWP_ProjectNumbers"
+        }
+    ]
+}

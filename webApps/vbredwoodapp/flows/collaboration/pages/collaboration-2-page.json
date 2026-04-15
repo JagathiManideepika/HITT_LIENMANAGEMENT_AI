@@ -1,0 +1,1013 @@
+{
+  "title": "",
+  "description": "",
+  "variables": {
+    "actionObj": {
+      "type": {
+        "ap_invoice": "string",
+        "comments": "string",
+        "currentstatus": "string",
+        "email": "string",
+        "file": "any",
+        "filename": "string",
+        "nextstatus": "string",
+        "workbenchId": "string"
+      }
+    },
+    "allFilters": {
+      "type": "filterChip[]",
+      "defaultValue": "{{$page.variables.selectContextValueItem && $page.variables.selectContextValueItem.key ? (($page.variables.appliedFilters || []).concat([{ 'filter': 'keyword', 'label': $page.variables.selectContextValueItem.data ? $page.variables.selectContextValueItem.data.label : $page.variables.selectContextValueItem.key, 'value': $page.variables.selectContextValueItem.key }])) :  $page.variables.appliedFilters }}"
+    },
+    "attachementStatusListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/AttachementStatus",
+        "keyAttributes": "status",
+        "itemsPath": "items",
+        "responseType": "attachementStatusResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "status"
+          ]
+        },
+        "uriParameters": {
+          "current_wb_status": "{{ $variables.rowData.attchment_status }}"
+        }
+      }
+    },
+    "attachementStatusListSDP2": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "PWP_ORDS/AttachementStatus",
+        "keyAttributes": "child_lookup_meaning",
+        "itemsPath": "items",
+        "responseType": "attachementStatusResponse2",
+        "uriParameters": {
+          "current_wb_status": "{{ $variables.rowData.attchment_status }}"
+        },
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "child_lookup_meaning"
+          ]
+        }
+      }
+    },
+    "attachementStatusListSDP3": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "child_lookup_meaning",
+        "itemsPath": "items",
+        "responseType": "attachementStatusResponse3",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "child_lookup_meaning"
+          ]
+        },
+        "fetchChain": "AttachementStatusFetch"
+      }
+    },
+    "comments": {
+      "type": "string"
+    },
+    "currentRow": {
+      "type": "object"
+    },
+    "fileObj": {
+      "type": {
+        "filecontent": "any",
+        "filename": "string",
+        "filetype": "string"
+      }
+    },
+    "APinvoicesearchselectvalue": {
+      "type": "any",
+      "defaultValue": "dgv"
+    },
+    "appliedFilters": {
+      "type": "filterChip[]",
+      "defaultValue": "{{ $page.variables.appliedFiltersStr && $page.variables.appliedFiltersStr.length > 0 ? JSON.parse($page.variables.appliedFiltersStr) : [] }}",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "updateAllFilters",
+            "parameters": {
+              "value": "[[ $page.variables.appliedFilters ]]"
+            }
+          }
+        ]
+      }
+    },
+    "appliedFiltersStr": {
+      "type": "string",
+      "input": "fromUrl",
+      "defaultValue": "",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "updateAppliedFilters",
+            "parameters": {}
+          }
+        ]
+      }
+    },
+    "arapdata": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "arapdataf"
+      }
+    },
+    "askHint": {
+      "type": "string",
+      "defaultValue": "Search"
+    },
+    "collabration2ADP": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+        "itemType": "getGetaraplinkdetails",
+        "keyAttributes": "workbench_pk"
+      }
+    },
+    "displayMode": {
+      "type": "string"
+    },
+    "expanded": {
+      "type": "string",
+      "defaultValue": "auto"
+    },
+    "fileName": {
+      "type": "string"
+    },
+    "functionalPrimaryActions": {
+      "type": "action[]"
+    },
+    "functionalSecondaryActions": {
+      "type": "action[]"
+    },
+    "getGetaraplinkdetailsListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "getarapdetails/getGetaraplinkdetails",
+        "keyAttributes": "project_number",
+        "itemsPath": "items",
+        "responseType": "getGetaraplinkdetailsResponse"
+      }
+    },
+    "getPWPAPInvoiceNumbersListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "ap_invoice",
+        "itemsPath": "items",
+        "responseType": "getPWPAPInvoiceNumbersResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "ap_invoice"
+          ]
+        },
+        "fetchChain": "getPWP_APInvoiceNumbersFetch"
+      }
+    },
+    "getPWPProjectNumbersListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "project_number",
+        "itemsPath": "items",
+        "responseType": "getPWPProjectNumbersResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "project_number"
+          ]
+        },
+        "fetchChain": "getPWP_ProjectNumbersFetch"
+      }
+    },
+    "getPWPSupplierDetailsListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+
+        "keyAttributes": "supplier_name",
+        "itemsPath": "items",
+        "responseType": "getPWPSupplierDetailsResponse",
+        "transformsContext": {
+          "vb-textFilterAttributes": [
+            "supplier_name"
+          ]
+        },
+        "fetchChain": "getPWP_SupplierDetailsFetch"
+      }
+    },
+    "goToParentOption": {
+      "type": "any"
+    },
+    "headers": {
+      "type": {
+        "apInvoice": "any",
+        "invoice_id": "any",
+        "project": "any",
+        "status": "string",
+        "supplier": "any"
+
+      }
+    },
+    "holdIdsArray": {
+      "type": "object[]"
+    },
+    "illustrationBackground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-bg-01.png"
+    },
+    "illustrationForeground": {
+      "type": "string",
+      "defaultValue": "https://static.oracle.com/cdn/fnd/gallery/2307.0.2/images/illust-welcome-banner-fg-01.png"
+    },
+    "initialString": {
+      "type": "string"
+    },
+    "isRelease": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "paymentTypeArray": {
+      "type": "paymentType[]",
+      "defaultValue": [
+        {
+          "id": "Final",
+          "name": "Final"
+        },
+        {
+          "id": "Progress",
+          "name": "Progress"
+        }
+      ]
+    },
+    "paymentTypeLOV": {
+      "type": "vb/ArrayDataProvider2",
+      "defaultValue": {
+          "data": "{{ $variables.paymentTypeArray }}",
+          "itemType": "paymentType",
+          "keyAttributes": "name",
+          "textFilterAttributes": [
+            "name"
+          ]
+        }    },
+    "primaryAction": {
+      "type": "action"
+    },
+    "pWPCollaborationListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "businessObjects/getall_PWPCollaboration",
+        "keyAttributes": "id",
+        "itemsPath": "items",
+        "responseType": "getallPWPCollaborationResponse",
+        "filterCriterion": {
+          "op": "$and",
+          "criteria": [
+            {
+              "op": "$co",
+              "attribute": "projectnumber",
+              "value": "{{ $variables.searchingpwpagedatatotable3 }}"
+            },
+            {
+              "op": "$co",
+              "attribute": "APInvoice",
+              "value": "{{ $variables.searchingpwppagedatatotable }}"
+            }
+          ]
+        }
+      }
+    },
+    "releaseapprojectnumber": {
+      "type": "string"
+    },
+    "rowData": {
+      "type": "object"
+    },
+    "searchingpwpagedatatotable2": {
+      "type": "string"
+    },
+    "searchingpwpagedatatotable3": {
+      "type": "string"
+    },
+    "searchingpwppagedatatotable": {
+      "type": "string"
+    },
+    "searchResultsDP": {
+      "type": "oj-sp/data-provider/SmartSearchAndFilterDataProvider",
+      "defaultValue": {
+        "//": "specify endpoint for search all below",
+        "endpoint": null,
+        "options": {
+          "filterCriterion": {
+            "op": "$eq",
+            "value": {
+              "filters": "{{$page.variables.allFilters}}"
+            }
+          },
+          "parameters": {
+            "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+          },
+          "recentSearches": {
+            "//": "specify endpoint where recent search data is saved below",
+            "endpoint": null
+          }
+        }
+      }
+    },
+    "searchSuggestionsDP": {
+      "type": "oj-sp/data-provider/SmartSuggestionChipsDataProvider",
+      "defaultValue": {
+        "dataProviders": {
+          "recentSearches": {
+            "//": "specify endpoint for recent search below",
+            "endpoint": null,
+            "uriParameters": {
+              "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+            }
+          },
+          "autocompleteSearch": {
+            "//": "specify endpoint for search all below",
+            "endpoint": null,
+            "uriParameters": {
+              "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+            }
+          },
+          "suggestionFiltersSearch": {
+            "//": "specify endpoint for suggest search below",
+            "endpoint": null,
+            "uriParameters": {
+              "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+            }
+          }
+        }
+      }
+    },
+    "secondaryActions": {
+      "type": "action[]"
+    },
+    "select_mutliple_rows_release": {
+      "type": "string"
+    },
+    "selectContextData": {
+      "type": "vb/ArrayDataProvider"
+    },
+    "selectContextItemText": {
+      "type": "string",
+      "defaultValue": "label"
+    },
+    "selectContextLabelHint": {
+      "type": "string"
+    },
+    "selectContextValue": {
+      "type": "string",
+      "defaultValue": null,
+      "persisted": "device",
+      "input": "fromUrl"
+    },
+    "selectContextValueItem": {
+      "type": "any",
+      "onValueChanged": {
+        "chains": [
+          {
+            "chain": "updateAllFilters",
+            "parameters": {
+              "value": "[[ $page.variables.appliedFilters ]]"
+            }
+          }
+        ]
+      }
+    },
+    "selectsearchpwpprojectvalue": {
+      "type": "string"
+    },
+    "showAllTotalCount": {
+      "type": "boolean",
+      "defaultValue": false
+    },
+    "suggestionFiltersDP": {
+      "type": "oj-sp/data-provider/SuggestionFiltersDataProvider",
+      "defaultValue": {
+        "//": "specify endpoint for suggest search below",
+        "endpoint": null,
+        "uriParameters": {
+          "smartSearchName": "<The name of the Smart Search as registered by the product team>"
+        }
+      }
+    },
+    "suppliersearchselectedvalue": {
+      "type": "string"
+    }
+
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.attachementStatusResponse": {
+      "endpoint": "AttachementStatus",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.attachementStatusResponse2": {
+      "endpoint": "AttachementStatus",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.attachementStatusResponse3": {
+      "endpoint": "AttachementStatus",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getallPWPCollaborationResponse": {
+      "endpoint": "getall_PWPCollaboration",
+      "service": "businessObjects",
+      "path": "response"
+    },
+    "@decorators.getGetaraplinkdetails": {
+      "endpoint": "getGetaraplinkdetails",
+      "service": "PWP_ORDS",
+      "path": "response-_-items[0]"
+    },
+    "@decorators.getGetaraplinkdetailsResponse": {
+      "endpoint": "getGetaraplinkdetails",
+      "service": "getarapdetails",
+      "path": "response"
+    },
+    "@decorators.getPWPAPInvoiceNumbersResponse": {
+      "endpoint": "getPWP_APInvoiceNumbers",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getPWPProjectNumbersResponse": {
+      "endpoint": "getPWP_ProjectNumbers",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "@decorators.getPWPSupplierDetailsResponse": {
+      "endpoint": "getPWP_SupplierDetails",
+      "service": "PWP_ORDS",
+      "path": "response"
+    },
+    "action": {
+      "id": "string",
+      "label": "string",
+      "display": "string",
+      "icon": "string"
+    },
+    "arapdataf": {
+      "ap_invoice": "string",
+      "ap_invoice_amount": "number",
+      "ap_invoice_date": "any",
+      "ar_invoice": "string",
+      "ar_invoice_amount": "number",
+      "attribute1": "string",
+      "customer_name": "string",
+      "hold_date": "string",
+      "lag_days": "number",
+      "project_number": "string",
+      "supplier_name": "string"
+    },
+    "attachementStatusResponse": {
+      "items": [
+        {
+          "status": "string"
+        }
+      ]
+    },
+    "attachementStatusResponse2": {
+      "items": [
+        {
+          "child_lookup_meaning": "string"
+        }
+      ]
+    },
+    "attachementStatusResponse3": {
+      "items": [
+        {
+          "child_lookup_meaning": "string"
+        }
+      ]
+    },
+    "contextSelectType": {
+      "value": "string",
+      "label": "string"
+    },
+    "filterChip": {
+      "count": "number",
+      "dependencies": "string[]",
+      "filter": "string",
+      "filterLabel": "string",
+      "label": "string",
+      "value": "any"
+    },
+    "getallPWPCollaborationResponse": {
+      "items": [
+        {
+          "APInvoice": "string",
+          "APInvoiceAmount": "number",
+          "APInvoiceDate": "string",
+          "ARInvoice": "string",
+          "ARInvoiceAmount": "number",
+          "customerName": "string",
+          "holdDate": "string",
+          "holdReleaseDate": "string",
+          "id": "number",
+          "lagDays": "number",
+          "projectnumber": "string",
+          "suppliername": "string"
+        }
+      ]
+    },
+    "getGetaraplinkdetails": {
+      "ap_invoice": "string",
+      "ap_invoice_amount": "number",
+      "ap_invoice_date": "any",
+      "ap_invoice_due_date": "any",
+      "ar_invoice": "any",
+      "ar_invoice_amount": "any",
+      "attchment_status": "string",
+      "attribute_3": "any",
+      "attribute_4": "any",
+      "attribute_5": "any",
+      "attribute1": "any",
+      "attribute2": "any",
+      "comments": "string",
+      "con_file_name": "string",
+      "con_file_type": "string",
+      "cond_uncond_flag": "string",
+      "conditional_signed_doc": "string",
+      "currency_code": "string",
+      "customer_name": "string",
+      "field1": "string",
+      "file_content": "any",
+      "file_name": "any",
+      "file_type": "any",
+      "hold_date": "string",
+      "hold_id": "number",
+      "hold_name": "string",
+      "hold_released_date": "any",
+      "installment_amount": "any",
+      "installment_remain_amount": "any",
+      "inv_installment_number": "string",
+      "inv_line_number": "any",
+      "invoice_id": "any",
+      "lag_days": "number",
+      "lien_number": "any",
+      "next_status": "string",
+      "payment_type": "any",
+      "po_number": "string",
+      "project_number": "string",
+      "receipt_number": "string",
+      "show_cond_doc": "any",
+      "show_uncond_doc": "any",
+      "supplier_email": "any",
+      "supplier_name": "string",
+      "supplier_number": "string",
+      "template_code": "string",
+      "uncon_file_name": "string",
+      "uncon_file_type": "string",
+      "unconditional_signed_doc": "string",
+      "workbench_pk": "string",
+      "btnStates": "string"
+
+    },
+    "getGetaraplinkdetailsResponse": {
+      "items": [
+        {
+          "ap_invoice": "string",
+          "ap_invoice_amount": "number",
+          "ap_invoice_date": "string",
+          "ar_invoice": "string",
+          "ar_invoice_amount": "number",
+          "attribute1": "string",
+          "customer_name": "string",
+          "hold_date": "string",
+          "lag_days": "number",
+          "project_number": "string",
+          "supplier_name": "string"
+        }
+      ]
+    },
+    "getPWPAPInvoiceNumbersResponse": {
+      "items": [
+        {
+          "ap_invoice": "string",
+          "invoice_id": "number"
+        }
+      ]
+    },
+    "getPWPProjectNumbersResponse": {
+      "items": [
+        {
+          "project_number": "string"
+        }
+      ]
+    },
+    "getPWPSupplierDetailsResponse": {
+      "items": [
+        {
+          "supplier_name": "string"
+        }
+      ]
+    },
+    "paymentType": {
+      "id": "string",
+      "name": "string"
+    }
+
+  },
+  "eventListeners": {
+    "buttonAction": {
+      "chains": [
+        {
+          "chain": "SearchBtnAction"
+        }
+      ]
+    },
+    "buttonAction2": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain1"
+        }
+      ]
+    },
+    "buttonAction3": {
+      "chains": [
+        {
+          "chain": "ReleaseBtnAction"
+        }
+      ]
+    },
+    "buttonAction4": {
+      "chains": [
+        {
+          "chain": "ActionsBtnClickAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "buttonAction5": {
+      "chains": [
+        {
+          "chain": "uploadFileAction"
+        }
+      ]
+    },
+    "buttonAction6": {
+      "chains": [
+        {
+          "chain": "sendEmailAction"
+        }
+      ]
+    },
+    "buttonAction7": {
+      "chains": [
+        {
+          "chain": "updateButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}",
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "buttonAction8": {
+      "chains": [
+        {
+          "chain": "ButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}",
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "buttonAction9": {
+      "chains": [
+        {
+          "chain": "resendMail_ButtonActionChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "originalEvent": "{{$event.detail.originalEvent}}"
+          }
+        }
+      ]
+    },
+    "filePickerSelect": {
+      "chains": [
+        {
+          "chain": "FilePickerSelectChain",
+          "parameters": {
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]",
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}",
+            "rowData": "[[ $current.row ]]"
+          }
+        }
+      ]
+    },
+    "filePickerSelect2": {
+      "chains": [
+        {
+          "chain": "UploadFileToConditonAction",
+          "parameters": {
+            "files": "[[ Array.prototype.slice.call($event.detail.files) ]]"
+          }
+        }
+      ]
+    },
+    "iconClick": {
+      "chains": [
+        {
+          "chain": "UpdateStatusAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick2": {
+      "chains": [
+        {
+          "chain": "ConditionalIconClickAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick3": {
+      "chains": [
+        {
+          "chain": "DownloadFileAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick4": {
+      "chains": [
+        {
+          "chain": "conditionalSignAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick5": {
+      "chains": [
+        {
+          "chain": "UnconditionalSignAction",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "iconClick6": {
+      "chains": [
+        {
+          "chain": "unconditionaldownloadicon",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
+    "ojSpGoToParent": {
+      "chains": [
+        {
+          "chain": "goToParent",
+          "parameters": {}
+        }
+      ]
+    },
+    "ojSpSmartFiltersChangedAction": {
+      "chains": [
+        {
+          "chain": "updateAllFilters",
+          "parameters": {
+            "value": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "ojSsp1SpPrimaryAction": {
+      "chains": [
+        {
+          "chain": "SmartSearchPageTemplateSpPrimaryActionChain"
+        }
+      ]
+    },
+    "selectKeyup": {
+      "chains": [
+        {
+          "chain": "SelectKeyupChain",
+          "parameters": {
+            "event": "{{$event}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem2": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain1",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "selectValueItem3": {
+      "chains": [
+        {
+          "chain": "SelectValueItemChangeChain2",
+          "parameters": {
+            "key": "{{$event.detail.value.key}}",
+            "data": "{{$event.detail.value.data}}",
+            "metadata": "{{$event.detail.value.metadata}}"
+          }
+        }
+      ]
+    },
+    "switchValue": {
+      "chains": [
+        {
+          "chain": "SwitchValueChangeChain1",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{ $event.detail.value }}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}"
+          }
+        }
+      ]
+    },
+    "switchValue3": {
+      "chains": [
+        {
+          "chain": "SwitchValueChangeChain",
+          "parameters": {
+            "event": "{{$event}}",
+            "previousValue": "{{$event.detail.previousValue}}",
+            "value": "{{ $event.detail.value }}",
+            "updatedFrom": "{{$event.detail.updatedFrom}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEdit": {
+      "chains": [
+        {
+          "chain": "TablebeforeRowEditAction",
+          "parameters": {
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "tableBeforeRowEditEnd": {
+      "chains": [
+        {
+          "chain": "TableBeforeRowEditEnd",
+          "parameters": {
+            "cancelEdit": "{{$event.detail.cancelEdit}}",
+            "rowKey": "{{$event.detail.rowContext.status.rowKey}}",
+            "rowIndex": "{{$event.detail.rowContext.status.rowIndex}}",
+            "rowData": "{{$event.detail.rowContext.componentElement.getDataForVisibleRow($event.detail.rowContext.status.rowIndex).data}}"
+          }
+        }
+      ]
+    },
+    "tableSelected": {
+      "chains": [
+        {
+          "chain": "TableSelectedChangeChain",
+          "parameters": {
+            "keys": "{{ $event.detail.value.row.values ? Array.from($event.detail.value.row.values()) : [] }}",
+            "selected": "{{ $event.detail.value }}"
+          }
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "parameters": {},
+          "chain": "SearchBtnAction"
+        }
+      ]
+    }
+
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-dialog": {
+        "path": "ojs/ojdialog"
+      },
+      "oj-file-picker": {
+        "path": "ojs/ojfilepicker"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-label": {
+        "path": "ojs/ojlabel"
+      },
+      "oj-menu": {
+        "path": "ojs/ojmenu"
+      },
+      "oj-menu-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-option": {
+        "path": "ojs/ojoption"
+      },
+      "oj-progress-bar": {
+        "path": "ojs/ojprogress-bar"
+      },
+      "oj-select-single": {
+        "path": "ojs/ojselectsingle"
+      },
+      "oj-sp-collection-container": {
+        "path": "oj-sp/collection-container/loader"
+      },
+      "oj-sp-input-email": {
+        "path": "oj-sp/input-email/loader"
+      },
+      "oj-sp-smart-search-page": {
+        "path": "oj-sp/smart-search-page/loader"
+      },
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-switch": {
+        "path": "ojs/ojswitch"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
+      },
+      "oj-text-area": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      },
+      "oj-validation-group": {
+        "path": "ojs/ojvalidationgroup"
+      }
+
+    }
+  },
+  "@dt": {
+    "iconClass": "vbdt-dynamic-icon-90-icoSmartSearchPage48Svg"
+  }
+}
